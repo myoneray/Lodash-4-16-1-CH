@@ -12,8 +12,8 @@
 ## `Array`
 * <a href="#_chunkarray-size1">`_.chunk－－－－－指定长度切割数组`</a>
 * <a href="#_compactarray">`_.compact－－－－－数组过滤`</a>
-* <a href="#_concatarray-values">`_.concat－－－－－`</a>
-* <a href="#_differencearray-values">`_.difference－－－－－`</a>
+* <a href="#_concatarray-values">`_.concat－－－－－－数组合并`</a>
+* <a href="#_differencearray-values">`_.difference－－－－－Ａ与Ｂ做对比，取出Ａ数组中的不同部分`</a>
 * <a href="#_differencebyarray-values-iteratee_identity">`_.differenceBy－－－－－`</a>
 * <a href="#_differencewitharray-values-comparator">`_.differenceWith－－－－－`</a>
 * <a href="#_droparray-n1">`_.drop－－－－－`</a>
@@ -422,7 +422,7 @@
 <h3 id="_chunkarray-size1"><code>_.chunk(array, [size=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6670 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.chunk "查看Npm包") [&#x24C9;][1]
 
->按照指定长度切割一个数组放在新的数组中．如果数组不能均等的切分，则最后的块包含剩余部分．
+按照指定长度切割一个数组放在新的数组中．如果数组不能均等的切分，则最后的块包含剩余部分．
 
 #### 起始版本
 3.0.0
@@ -450,16 +450,15 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 <h3 id="_compactarray"><code>_.compact(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6705 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.compact "查看Npm包") [&#x24C9;][1]
 
-Creates an array with all falsey values removed. The values `false`, `null`,
-`0`, `""`, `undefined`, and `NaN` are falsey.
+创建一个数组移除所有非法字符，包括　false, null, 0, "", undefined, NaN
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to compact.
+1. `array` *(Array)*: 要处理的数组.
 
 #### 返回结果
-*(Array)*: Returns the new array of filtered values.
+*(Array)*: 返回过滤后的新数组．
 
 ####示例
 ```js
@@ -475,17 +474,16 @@ _.compact([0, 1, false, 2, '', 3]);
 <h3 id="_concatarray-values"><code>_.concat(array, [values])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6742 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.concat "查看Npm包") [&#x24C9;][1]
 
-Creates a new array concatenating `array` with any additional arrays
-and/or values.
+将一个数组与其他数组／值链接起来，放在一个新的数组中．
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to concatenate.
-2. `[values]` *(...&#42;)*: The values to concatenate.
+1. `array` *(Array)*: 链接的数组
+2. `[values]` *(...&#42;)*:  链接的值
 
 #### 返回结果
-*(Array)*: Returns the new concatenated array.
+*(Array)*: 返回新链接后的新数组
 
 ####示例
 ```js
@@ -507,13 +505,11 @@ console.log(array);
 <h3 id="_differencearray-values"><code>_.difference(array, [values])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6778 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.difference "查看Npm包") [&#x24C9;][1]
 
-Creates an array of `array` values not included in the other given arrays
-using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-for equality comparisons. The order and references of result values are
-determined by the first array.
+用 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+的方式去判断，将数组中不包含在提供的数组中的元素提取出来，放在新的数组中．
 <br>
 <br>
-**Note:** Unlike `_.pullAll`, this method returns a new array.
+**提示:** 不同于 `_.pullAll`, 这个方法返回新的数组．.
 
 #### 起始版本
 0.1.0
@@ -545,7 +541,7 @@ determined by the first array. The iteratee is invoked with one argument:<br>
 *(value)*.
 <br>
 <br>
-**Note:** Unlike `_.pullAllBy`, this method returns a new array.
+**提示:** 不同于 `_.pullAllBy`, 这个方法返回新的数组．.
 
 #### 起始版本
 4.0.0
@@ -581,7 +577,7 @@ references of result values are determined by the first array. The comparator
 is invoked with two arguments: *(arrVal, othVal)*.
 <br>
 <br>
-**Note:** Unlike `_.pullAllWith`, this method returns a new array.
+**提示:** 不同于 `_.pullAllWith`, 这个方法返回新的数组．.
 
 #### 起始版本
 4.0.0
@@ -771,7 +767,7 @@ Fills elements of `array` with `value` from `start` up to, but not
 including, `end`.
 <br>
 <br>
-**Note:** This method mutates `array`.
+**提示:** This method mutates `array`.
 
 #### 起始版本
 3.2.0
@@ -1294,7 +1290,7 @@ Removes all given values from `array` using
 for equality comparisons.
 <br>
 <br>
-**Note:** Unlike `_.without`, this method mutates `array`. Use `_.remove`
+**提示:** 不同于 `_.without`, this method mutates `array`. Use `_.remove`
 to remove elements from an array by predicate.
 
 #### 起始版本
@@ -1326,7 +1322,7 @@ console.log(array);
 This method is like `_.pull` except that it accepts an array of values to remove.
 <br>
 <br>
-**Note:** Unlike `_.difference`, this method mutates `array`.
+**提示:** 不同于 `_.difference`, this method mutates `array`.
 
 #### 起始版本
 4.0.0
@@ -1359,7 +1355,7 @@ invoked for each element of `array` and `values` to generate the criterion
 by which they're compared. The iteratee is invoked with one argument: *(value)*.
 <br>
 <br>
-**Note:** Unlike `_.differenceBy`, this method mutates `array`.
+**提示:** 不同于 `_.differenceBy`, this method mutates `array`.
 
 #### 起始版本
 4.0.0
@@ -1393,7 +1389,7 @@ is invoked to compare elements of `array` to `values`. The comparator is
 invoked with two arguments: *(arrVal, othVal)*.
 <br>
 <br>
-**Note:** Unlike `_.differenceWith`, this method mutates `array`.
+**提示:** 不同于 `_.differenceWith`, this method mutates `array`.
 
 #### 起始版本
 4.6.0
@@ -1426,7 +1422,7 @@ Removes elements from `array` corresponding to `indexes` and returns an
 array of removed elements.
 <br>
 <br>
-**Note:** Unlike `_.at`, this method mutates `array`.
+**提示:** 不同于 `_.at`, this method mutates `array`.
 
 #### 起始版本
 3.0.0
@@ -1462,7 +1458,7 @@ and returns an array of the removed elements. The predicate is invoked
 with three arguments: *(value, index, array)*.
 <br>
 <br>
-**Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
+**提示:** 不同于 `_.filter`, this method mutates `array`. Use `_.pull`
 to pull elements from an array by value.
 
 #### 起始版本
@@ -1500,7 +1496,7 @@ Reverses `array` so that the first element becomes the last, the second
 element becomes the second to last, and so on.
 <br>
 <br>
-**Note:** This method mutates `array` and is based on
+**提示:** This method mutates `array` and is based on
 [`Array#reverse`](https://mdn.io/Array/reverse).
 
 #### 起始版本
@@ -1533,7 +1529,7 @@ console.log(array);
 Creates a slice of `array` from `start` up to, but not including, `end`.
 <br>
 <br>
-**Note:** This method is used instead of
+**提示:** This method is used instead of
 [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
 returned.
 
@@ -2207,7 +2203,7 @@ Creates an array excluding all given values using
 for equality comparisons.
 <br>
 <br>
-**Note:** Unlike `_.pull`, this method returns a new array.
+**提示:** 不同于 `_.pull`, 这个方法返回新的数组．.
 
 #### 起始版本
 0.1.0
@@ -2472,7 +2468,7 @@ Iteration is stopped once `predicate` returns falsey. The predicate is
 invoked with three arguments: *(value, index|key, collection)*.
 <br>
 <br>
-**Note:** This method returns `true` for
+**提示:** This method returns `true` for
 [empty collections](https://en.wikipedia.org/wiki/Empty_set) because
 [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
 elements of empty collections.
@@ -2522,7 +2518,7 @@ Iterates over elements of `collection`, returning an array of all elements
 arguments: *(value, index|key, collection)*.
 <br>
 <br>
-**Note:** Unlike `_.remove`, this method returns a new array.
+**提示:** 不同于 `_.remove`, 这个方法返回新的数组．.
 
 #### 起始版本
 0.1.0
@@ -2736,7 +2732,7 @@ The iteratee is invoked with three arguments: *(value, index|key, collection)*.
 Iteratee functions may exit iteration early by explicitly returning `false`.
 <br>
 <br>
-**Note:** As with other "Collections" methods, objects with a "length"
+**提示:** As with other "Collections" methods, objects with a "length"
 property are iterated like arrays. To avoid this behavior use `_.forIn`
 or `_.forOwn` for object iteration.
 
@@ -3527,7 +3523,7 @@ The `_.bind.placeholder` value, which defaults to `_` in monolithic builds,
 may be used as a placeholder for partially applied arguments.
 <br>
 <br>
-**Note:** Unlike native `Function#bind`, this method doesn't set the "length"
+**提示:** 不同于 native `Function#bind`, this method doesn't set the "length"
 property of bound functions.
 
 #### 起始版本
@@ -3634,7 +3630,7 @@ The `_.curry.placeholder` value, which defaults to `_` in monolithic builds,
 may be used as a placeholder for provided arguments.
 <br>
 <br>
-**Note:** This method doesn't set the "length" property of curried functions.
+**提示:** This method doesn't set the "length" property of curried functions.
 
 #### 起始版本
 2.0.0
@@ -3683,7 +3679,7 @@ The `_.curryRight.placeholder` value, which defaults to `_` in monolithic
 builds, may be used as a placeholder for provided arguments.
 <br>
 <br>
-**Note:** This method doesn't set the "length" property of curried functions.
+**提示:** This method doesn't set the "length" property of curried functions.
 
 #### 起始版本
 3.0.0
@@ -3735,7 +3731,7 @@ calls to the debounced function return the result of the last `func`
 invocation.
 <br>
 <br>
-**Note:** If `leading` and `trailing` options are `true`, `func` is
+**提示:** If `leading` and `trailing` options are `true`, `func` is
 invoked on the trailing edge of the timeout only if the debounced function
 is invoked more than once during the `wait` timeout.
 <br>
@@ -3880,7 +3876,7 @@ provided to the memoized function is used as the map cache key. The `func`
 is invoked with the `this` binding of the memoized function.
 <br>
 <br>
-**Note:** The cache is exposed as the `cache` property on the memoized
+**提示:** The cache is exposed as the `cache` property on the memoized
 function. Its creation may be customized by replacing the `_.memoize.Cache`
 constructor with one whose instances implement the
 [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
@@ -4035,7 +4031,7 @@ The `_.partial.placeholder` value, which defaults to `_` in monolithic
 builds, may be used as a placeholder for partially applied arguments.
 <br>
 <br>
-**Note:** This method doesn't set the "length" property of partially
+**提示:** This method doesn't set the "length" property of partially
 applied functions.
 
 #### 起始版本
@@ -4079,7 +4075,7 @@ The `_.partialRight.placeholder` value, which defaults to `_` in monolithic
 builds, may be used as a placeholder for partially applied arguments.
 <br>
 <br>
-**Note:** This method doesn't set the "length" property of partially
+**提示:** This method doesn't set the "length" property of partially
 applied functions.
 
 #### 起始版本
@@ -4152,7 +4148,7 @@ created function and arguments from `start` and beyond provided as
 an array.
 <br>
 <br>
-**Note:** This method is based on the
+**提示:** This method is based on the
 [rest parameter](https://mdn.io/rest_parameters).
 
 #### 起始版本
@@ -4188,7 +4184,7 @@ create function and an array of arguments much like
 [`Function#apply`](http://www.ecma-international.org/ecma-262/7.0/#sec-function.prototype.apply).
 <br>
 <br>
-**Note:** This method is based on the
+**提示:** This method is based on the
 [spread operator](https://mdn.io/spread_operator).
 
 #### 起始版本
@@ -4238,7 +4234,7 @@ throttled function. Subsequent calls to the throttled function return the
 result of the last `func` invocation.
 <br>
 <br>
-**Note:** If `leading` and `trailing` options are `true`, `func` is
+**提示:** If `leading` and `trailing` options are `true`, `func` is
 invoked on the trailing edge of the timeout only if the throttled function
 is invoked more than once during the `wait` timeout.
 <br>
@@ -4392,7 +4388,7 @@ console.log(_.castArray(array) === array);
 Creates a shallow clone of `value`.
 <br>
 <br>
-**Note:** This method is loosely based on the
+**提示:** This method is loosely based on the
 [structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
 and supports cloning arrays, array buffers, booleans, date objects, maps,
 numbers, `Object` objects, regexes, sets, strings, symbols, and typed
@@ -4533,7 +4529,7 @@ Checks if `object` conforms to `source` by invoking the predicate
 properties of `source` with the corresponding property values of `object`.
 <br>
 <br>
-**Note:** This method is equivalent to `_.conforms` when `source` is
+**提示:** This method is equivalent to `_.conforms` when `source` is
 partially applied.
 
 #### 起始版本
@@ -4981,7 +4977,7 @@ Performs a deep comparison between two values to determine if they are
 equivalent.
 <br>
 <br>
-**Note:** This method supports comparing arrays, array buffers, booleans,
+**提示:** This method supports comparing arrays, array buffers, booleans,
 date objects, error objects, maps, numbers, `Object` objects, regexes,
 sets, strings, symbols, and typed arrays. `Object` objects are compared
 by their own, not inherited, enumerable properties. Functions and DOM
@@ -5089,7 +5085,7 @@ _.isError(Error);
 Checks if `value` is a finite primitive number.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`Number.isFinite`](https://mdn.io/Number/isFinite).
 
 #### 起始版本
@@ -5153,7 +5149,7 @@ _.isFunction(/abc/);
 Checks if `value` is an integer.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`Number.isInteger`](https://mdn.io/Number/isInteger).
 
 #### 起始版本
@@ -5190,7 +5186,7 @@ _.isInteger('3');
 Checks if `value` is a valid array-like length.
 <br>
 <br>
-**Note:** This method is loosely based on
+**提示:** This method is loosely based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
 #### 起始版本
@@ -5255,7 +5251,7 @@ Performs a partial deep comparison between `object` and `source` to
 determine if `object` contains equivalent property values.
 <br>
 <br>
-**Note:** This method is equivalent to `_.matches` when `source` is
+**提示:** This method is equivalent to `_.matches` when `source` is
 partially applied.
 <br>
 <br>
@@ -5336,7 +5332,7 @@ _.isMatchWith(object, source, customizer);
 Checks if `value` is `NaN`.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`Number.isNaN`](https://mdn.io/Number/isNaN) and is not the same as
 global [`isNaN`](https://mdn.io/isNaN) which returns `true` for
 `undefined` and other non-number values.
@@ -5375,7 +5371,7 @@ _.isNaN(undefined);
 Checks if `value` is a pristine native function.
 <br>
 <br>
-**Note:** This method can't reliably detect native functions in the presence
+**提示:** This method can't reliably detect native functions in the presence
 of the core-js package because core-js circumvents this kind of detection.
 Despite multiple requests, the core-js maintainer has made it clear: any
 attempt to fix the detection will be obstructed. As a result, we're left
@@ -5468,7 +5464,7 @@ _.isNull(void 0);
 Checks if `value` is classified as a `Number` primitive or object.
 <br>
 <br>
-**Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
+**提示:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
 classified as numbers, use the `_.isFinite` method.
 
 #### 起始版本
@@ -5640,7 +5636,7 @@ Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754
 double precision number which isn't the result of a rounded unsafe integer.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
 
 #### 起始版本
@@ -5994,7 +5990,7 @@ _.toFinite('3.2');
 Converts `value` to an integer.
 <br>
 <br>
-**Note:** This method is loosely based on
+**提示:** This method is loosely based on
 [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
 
 #### 起始版本
@@ -6032,7 +6028,7 @@ Converts `value` to an integer suitable for use as the length of an
 array-like object.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
 #### 起始版本
@@ -6721,7 +6717,7 @@ is returned. If `floating` is `true`, or either `lower` or `upper` are
 floats, a floating-point number is returned instead of an integer.
 <br>
 <br>
-**Note:** JavaScript follows the IEEE-754 standard for resolving
+**提示:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
 
 #### 起始版本
@@ -6768,7 +6764,7 @@ destination object. Source objects are applied from left to right.
 Subsequent sources overwrite property assignments of previous sources.
 <br>
 <br>
-**Note:** This method mutates `object` and is loosely based on
+**提示:** This method mutates `object` and is loosely based on
 [`Object.assign`](https://mdn.io/Object/assign).
 
 #### 起始版本
@@ -6809,7 +6805,7 @@ This method is like `_.assign` except that it iterates over own and
 inherited source properties.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -6854,7 +6850,7 @@ which is invoked to produce the assigned values. If `customizer` returns
 is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -6895,7 +6891,7 @@ which is invoked to produce the assigned values. If `customizer` returns
 is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -7004,7 +7000,7 @@ resolve to `undefined`. Source objects are applied from left to right.
 Once a property is set, additional values of the same property are ignored.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 0.1.0
@@ -7033,7 +7029,7 @@ This method is like `_.defaults` except that it recursively assigns
 default properties.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 3.10.0
@@ -7557,7 +7553,7 @@ _.invoke(object, 'a[0].b.c.slice', 1, 3);
 Creates an array of the own enumerable property names of `object`.
 <br>
 <br>
-**Note:** Non-object values are coerced to objects. See the
+**提示:** Non-object values are coerced to objects. See the
 [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
 for more details.
 
@@ -7596,7 +7592,7 @@ _.keys('hi');
 Creates an array of the own and inherited enumerable property names of `object`.
 <br>
 <br>
-**Note:** Non-object values are coerced to objects.
+**提示:** Non-object values are coerced to objects.
 
 #### 起始版本
 3.0.0
@@ -7703,7 +7699,7 @@ assignment. Source objects are applied from left to right. Subsequent
 sources overwrite property assignments of previous sources.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 0.5.0
@@ -7743,7 +7739,7 @@ method instead. The `customizer` is invoked with six arguments:<br>
 *(objValue, srcValue, key, object, source, stack)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -7937,7 +7933,7 @@ are created for all other missing properties. Use `_.setWith` to customize
 `path` creation.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 3.7.0
@@ -7976,7 +7972,7 @@ path creation is handled by the method instead. The `customizer` is invoked
 with three arguments: *(nsValue, key, nsObject)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -8120,7 +8116,7 @@ _.transform({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
 Removes the property at `path` of `object`.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.0.0
@@ -8160,7 +8156,7 @@ value to set. Use `_.updateWith` to customize `path` creation. The `updater`
 is invoked with one argument: *(value)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.6.0
@@ -8199,7 +8195,7 @@ path creation is handled by the method instead. The `customizer` is invoked
 with three arguments: *(nsValue, key, nsObject)*.
 <br>
 <br>
-**Note:** This method mutates `object`.
+**提示:** This method mutates `object`.
 
 #### 起始版本
 4.6.0
@@ -8231,7 +8227,7 @@ _.updateWith(object, '[0][1]', _.constant('a'), Object);
 Creates an array of the own enumerable string keyed property values of `object`.
 <br>
 <br>
-**Note:** Non-object values are coerced to objects.
+**提示:** Non-object values are coerced to objects.
 
 #### 起始版本
 0.1.0
@@ -8269,7 +8265,7 @@ Creates an array of the own and inherited enumerable string keyed property
 values of `object`.
 <br>
 <br>
-**Note:** Non-object values are coerced to objects.
+**提示:** Non-object values are coerced to objects.
 
 #### 起始版本
 3.0.0
@@ -8735,7 +8731,7 @@ wrapped.value();
 This method is the wrapper version of `_.reverse`.
 <br>
 <br>
-**Note:** This method mutates the wrapped array.
+**提示:** This method mutates the wrapped array.
 
 #### 起始版本
 0.1.0
@@ -8910,7 +8906,7 @@ Converts the characters "&", "<", ">", '"', and "'" in `string` to their
 corresponding HTML entities.
 <br>
 <br>
-**Note:** No other characters are escaped. To escape additional
+**提示:** No other characters are escaped. To escape additional
 characters use a third-party library like [_he_](https://mths.be/he).
 <br>
 <br>
@@ -9164,7 +9160,7 @@ Converts `string` to an integer of the specified radix. If `radix` is
 hexadecimal, in which case a `radix` of `16` is used.
 <br>
 <br>
-**Note:** This method aligns with the
+**提示:** This method aligns with the
 [ES5 implementation](https://es5.github.io/#x15.1.2.2) of `parseInt`.
 
 #### 起始版本
@@ -9227,7 +9223,7 @@ _.repeat('abc', 0);
 Replaces matches for `pattern` in `string` with `replacement`.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`String#replace`](https://mdn.io/String/replace).
 
 #### 起始版本
@@ -9288,7 +9284,7 @@ _.snakeCase('--FOO-BAR--');
 Splits `string` by `separator`.
 <br>
 <br>
-**Note:** This method is based on
+**提示:** This method is based on
 [`String#split`](https://mdn.io/String/split).
 
 #### 起始版本
@@ -9385,7 +9381,7 @@ properties may be accessed as free variables in the template. If a setting
 object is given, it takes precedence over `_.templateSettings` values.
 <br>
 <br>
-**Note:** In the development build `_.template` utilizes
+**提示:** In the development build `_.template` utilizes
 [sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
 for easier debugging.
 <br>
@@ -9689,7 +9685,7 @@ The inverse of `_.escape`; this method converts the HTML entities
 their corresponding characters.
 <br>
 <br>
-**Note:** No other HTML entities are unescaped. To unescape additional
+**提示:** No other HTML entities are unescaped. To unescape additional
 HTML entities use a third-party library like [_he_](https://mths.be/he).
 
 #### 起始版本
@@ -9841,7 +9837,7 @@ Binds methods of an object to the object itself, overwriting the existing
 method.
 <br>
 <br>
-**Note:** This method doesn't set the "length" property of bound functions.
+**提示:** This method doesn't set the "length" property of bound functions.
 
 #### 起始版本
 0.1.0
@@ -9918,7 +9914,7 @@ the corresponding property values of a given object, returning `true` if
 all predicates return truthy, else `false`.
 <br>
 <br>
-**Note:** The created function is equivalent to `_.conformsTo` with
+**提示:** The created function is equivalent to `_.conformsTo` with
 `source` partially applied.
 
 #### 起始版本
@@ -10151,7 +10147,7 @@ object and `source`, returning `true` if the given object has equivalent
 property values, else `false`.
 <br>
 <br>
-**Note:** The created function is equivalent to `_.isMatch` with `source`
+**提示:** The created function is equivalent to `_.isMatch` with `source`
 partially applied.
 <br>
 <br>
@@ -10191,7 +10187,7 @@ value at `path` of a given object to `srcValue`, returning `true` if the
 object value is equivalent, else `false`.
 <br>
 <br>
-**Note:** Partial comparisons will match empty array and empty object
+**提示:** Partial comparisons will match empty array and empty object
 `srcValue` values against any array or object value, respectively. See
 `_.isEqual` for a list of supported value comparisons.
 
@@ -10295,7 +10291,7 @@ object to the destination object. If `object` is a function, then methods
 are added to its prototype as well.
 <br>
 <br>
-**Note:** Use `_.runInContext` to create a pristine `lodash` function to
+**提示:** Use `_.runInContext` to create a pristine `lodash` function to
 avoid conflicts caused by modifying the original.
 
 #### 起始版本
@@ -10568,7 +10564,7 @@ Creates an array of numbers *(positive and/or negative)* progressing from
 it's set to `start` with `start` then set to `0`.
 <br>
 <br>
-**Note:** JavaScript follows the IEEE-754 standard for resolving
+**提示:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
 
 #### 起始版本
