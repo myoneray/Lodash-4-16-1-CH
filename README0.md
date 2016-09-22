@@ -5,7 +5,7 @@
 <!-- div -->
 
 ## `Array`
-* <a href="#_chunkarray-size1">`_.chunk`</a>
+* <a href="#_chunkarray-size1">`_.chunk－指定长度切割`</a>
 * <a href="#_compactarray">`_.compact`</a>
 * <a href="#_concatarray-values">`_.concat`</a>
 * <a href="#_differencearray-values">`_.difference`</a>
@@ -417,20 +417,19 @@
 <h3 id="_chunkarray-size1"><code>_.chunk(array, [size=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6670 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.chunk "See the npm package") [&#x24C9;][1]
 
-Creates an array of elements split into groups the length of `size`.
-If `array` can't be split evenly, the final chunk will be the remaining
-elements.
+>Creates an array of elements split into groups the length of `size`. If `array` can't be split evenly, the final chunk will be the remaining elements.
+>按照指定长度切割一个数组放在新的数组中．如果数组不能均等的切分，则最后的块包含剩余部分．
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
-1. `array` *(Array)*: The array to process.
-2. `[size=1]` *(number)*: The length of each chunk
+#### 参数
+1. `array` *(Array)*: The array to process.要处理的数组.
+2. `[size=1]` *(number)*: The length of each chunk.每个块的长度
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of chunks.
 
-#### Example
+####示例
 ```js
 _.chunk(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
@@ -450,15 +449,15 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 Creates an array with all falsey values removed. The values `false`, `null`,
 `0`, `""`, `undefined`, and `NaN` are falsey.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to compact.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
@@ -475,16 +474,16 @@ _.compact([0, 1, false, 2, '', 3]);
 Creates a new array concatenating `array` with any additional arrays
 and/or values.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to concatenate.
 2. `[values]` *(...&#42;)*: The values to concatenate.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new concatenated array.
 
-#### Example
+####示例
 ```js
 var array = [1];
 var other = _.concat(array, 2, [3], [[4]]);
@@ -512,16 +511,16 @@ determined by the first array.
 <br>
 **Note:** Unlike `_.pullAll`, this method returns a new array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[values]` *(...Array)*: The values to exclude.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.difference([2, 1], [2, 3]);
 // => [1]
@@ -544,17 +543,17 @@ determined by the first array. The iteratee is invoked with one argument:<br>
 <br>
 **Note:** Unlike `_.pullAllBy`, this method returns a new array.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[values]` *(...Array)*: The values to exclude.
 3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // => [1.2]
@@ -580,17 +579,17 @@ is invoked with two arguments: *(arrVal, othVal)*.
 <br>
 **Note:** Unlike `_.pullAllWith`, this method returns a new array.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[values]` *(...Array)*: The values to exclude.
 3. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 
@@ -608,16 +607,16 @@ _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
 
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
-#### Since
+#### 起始版本
 0.5.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=1]` *(number)*: The number of elements to drop.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.drop([1, 2, 3]);
 // => [2, 3]
@@ -642,16 +641,16 @@ _.drop([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements dropped from the end.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=1]` *(number)*: The number of elements to drop.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.dropRight([1, 2, 3]);
 // => [1, 2]
@@ -678,16 +677,16 @@ Creates a slice of `array` excluding elements dropped from the end.
 Elements are dropped until `predicate` returns falsey. The predicate is
 invoked with three arguments: *(value, index, array)*.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': true },
@@ -723,16 +722,16 @@ Creates a slice of `array` excluding elements dropped from the beginning.
 Elements are dropped until `predicate` returns falsey. The predicate is
 invoked with three arguments: *(value, index, array)*.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': false },
@@ -770,18 +769,18 @@ including, `end`.
 <br>
 **Note:** This method mutates `array`.
 
-#### Since
+#### 起始版本
 3.2.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to fill.
 2. `value` *(&#42;)*: The value to fill `array` with.
 3. `[start=0]` *(number)*: The start position.
 4. `[end=array.length]` *(number)*: The end position.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = [1, 2, 3];
 
@@ -807,17 +806,17 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 This method is like `_.find` except that it returns the index of the first
 element `predicate` returns truthy for instead of the element itself.
 
-#### Since
+#### 起始版本
 1.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[fromIndex=0]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the found element, else `-1`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': false },
@@ -852,17 +851,17 @@ _.findIndex(users, 'active');
 This method is like `_.findIndex` except that it iterates over elements
 of `collection` from right to left.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[fromIndex=array.length-1]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the found element, else `-1`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': true },
@@ -896,15 +895,15 @@ _.findLastIndex(users, 'active');
 
 Flattens `array` a single level deep.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to flatten.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 _.flatten([1, [2, [3, [4]], 5]]);
 // => [1, 2, [3, [4]], 5]
@@ -920,15 +919,15 @@ _.flatten([1, [2, [3, [4]], 5]]);
 
 Recursively flattens `array`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to flatten.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 _.flattenDeep([1, [2, [3, [4]], 5]]);
 // => [1, 2, 3, 4, 5]
@@ -944,16 +943,16 @@ _.flattenDeep([1, [2, [3, [4]], 5]]);
 
 Recursively flatten `array` up to `depth` times.
 
-#### Since
+#### 起始版本
 4.4.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to flatten.
 2. `[depth=1]` *(number)*: The maximum recursion depth.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 var array = [1, [2, [3, [4]], 5]];
 
@@ -975,15 +974,15 @@ _.flattenDepth(array, 2);
 The inverse of `_.toPairs`; this method returns an object composed
 from key-value `pairs`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `pairs` *(Array)*: The key-value pairs.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 _.fromPairs([['a', 1], ['b', 2]]);
 // => { 'a': 1, 'b': 2 }
@@ -999,18 +998,18 @@ _.fromPairs([['a', 1], ['b', 2]]);
 
 Gets the first element of `array`.
 
-#### Since
+#### 起始版本
 0.1.0
 #### Aliases
 *_.first*
 
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the first element of `array`.
 
-#### Example
+####示例
 ```js
 _.head([1, 2, 3]);
 // => 1
@@ -1032,17 +1031,17 @@ using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevalu
 for equality comparisons. If `fromIndex` is negative, it's used as the
 offset from the end of `array`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `value` *(&#42;)*: The value to search for.
 3. `[fromIndex=0]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the matched value, else `-1`.
 
-#### Example
+####示例
 ```js
 _.indexOf([1, 2, 1, 2], 2);
 // => 1
@@ -1062,15 +1061,15 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 
 Gets all but the last element of `array`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.initial([1, 2, 3]);
 // => [1, 2]
@@ -1089,15 +1088,15 @@ using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevalu
 for equality comparisons. The order and references of result values are
 determined by the first array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of intersecting values.
 
-#### Example
+####示例
 ```js
 _.intersection([2, 1], [2, 3]);
 // => [2]
@@ -1117,16 +1116,16 @@ by which they're compared. The order and references of result values are
 determined by the first array. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of intersecting values.
 
-#### Example
+####示例
 ```js
 _.intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // => [2.1]
@@ -1149,16 +1148,16 @@ which is invoked to compare elements of `arrays`. The order and references
 of result values are determined by the first array. The comparator is
 invoked with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of intersecting values.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
@@ -1177,16 +1176,16 @@ _.intersectionWith(objects, others, _.isEqual);
 
 Converts all elements in `array` into a string separated by `separator`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to convert.
 2. `[separator=',']` *(string)*: The element separator.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the joined string.
 
-#### Example
+####示例
 ```js
 _.join(['a', 'b', 'c'], '~');
 // => 'a~b~c'
@@ -1202,15 +1201,15 @@ _.join(['a', 'b', 'c'], '~');
 
 Gets the last element of `array`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the last element of `array`.
 
-#### Example
+####示例
 ```js
 _.last([1, 2, 3]);
 // => 3
@@ -1227,17 +1226,17 @@ _.last([1, 2, 3]);
 This method is like `_.indexOf` except that it iterates over elements of
 `array` from right to left.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `value` *(&#42;)*: The value to search for.
 3. `[fromIndex=array.length-1]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the matched value, else `-1`.
 
-#### Example
+####示例
 ```js
 _.lastIndexOf([1, 2, 1, 2], 2);
 // => 3
@@ -1258,16 +1257,16 @@ _.lastIndexOf([1, 2, 1, 2], 2, 2);
 Gets the element at index `n` of `array`. If `n` is negative, the nth
 element from the end is returned.
 
-#### Since
+#### 起始版本
 4.11.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=0]` *(number)*: The index of the element to return.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the nth element of `array`.
 
-#### Example
+####示例
 ```js
 var array = ['a', 'b', 'c', 'd'];
 
@@ -1294,16 +1293,16 @@ for equality comparisons.
 **Note:** Unlike `_.without`, this method mutates `array`. Use `_.remove`
 to remove elements from an array by predicate.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `[values]` *(...&#42;)*: The values to remove.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = ['a', 'b', 'c', 'a', 'b', 'c'];
 
@@ -1325,16 +1324,16 @@ This method is like `_.pull` except that it accepts an array of values to remove
 <br>
 **Note:** Unlike `_.difference`, this method mutates `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `values` *(Array)*: The values to remove.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = ['a', 'b', 'c', 'a', 'b', 'c'];
 
@@ -1358,17 +1357,17 @@ by which they're compared. The iteratee is invoked with one argument: *(value)*.
 <br>
 **Note:** Unlike `_.differenceBy`, this method mutates `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `values` *(Array)*: The values to remove.
 3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = [{ 'x': 1 }, { 'x': 2 }, { 'x': 3 }, { 'x': 1 }];
 
@@ -1392,17 +1391,17 @@ invoked with two arguments: *(arrVal, othVal)*.
 <br>
 **Note:** Unlike `_.differenceWith`, this method mutates `array`.
 
-#### Since
+#### 起始版本
 4.6.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `values` *(Array)*: The values to remove.
 3. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = [{ 'x': 1, 'y': 2 }, { 'x': 3, 'y': 4 }, { 'x': 5, 'y': 6 }];
 
@@ -1425,16 +1424,16 @@ array of removed elements.
 <br>
 **Note:** Unlike `_.at`, this method mutates `array`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `[indexes]` *(...(number|number&#91;&#93;))*: The indexes of elements to remove.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of removed elements.
 
-#### Example
+####示例
 ```js
 var array = ['a', 'b', 'c', 'd'];
 var pulled = _.pullAt(array, [1, 3]);
@@ -1462,16 +1461,16 @@ with three arguments: *(value, index, array)*.
 **Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
 to pull elements from an array by value.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of removed elements.
 
-#### Example
+####示例
 ```js
 var array = [1, 2, 3, 4];
 var evens = _.remove(array, function(n) {
@@ -1500,15 +1499,15 @@ element becomes the second to last, and so on.
 **Note:** This method mutates `array` and is based on
 [`Array#reverse`](https://mdn.io/Array/reverse).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to modify.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns `array`.
 
-#### Example
+####示例
 ```js
 var array = [1, 2, 3];
 
@@ -1534,14 +1533,14 @@ Creates a slice of `array` from `start` up to, but not including, `end`.
 [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
 returned.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to slice.
 2. `[start=0]` *(number)*: The start position.
 3. `[end=array.length]` *(number)*: The end position.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
 ---
@@ -1556,16 +1555,16 @@ returned.
 Uses a binary search to determine the lowest index at which `value`
 should be inserted into `array` in order to maintain its sort order.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The sorted array to inspect.
 2. `value` *(&#42;)*: The value to evaluate.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index at which `value` should be inserted into `array`.
 
-#### Example
+####示例
 ```js
 _.sortedIndex([30, 50], 40);
 // => 1
@@ -1583,17 +1582,17 @@ This method is like `_.sortedIndex` except that it accepts `iteratee`
 which is invoked for `value` and each element of `array` to compute their
 sort ranking. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The sorted array to inspect.
 2. `value` *(&#42;)*: The value to evaluate.
 3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index at which `value` should be inserted into `array`.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 4 }, { 'x': 5 }];
 
@@ -1616,16 +1615,16 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 This method is like `_.indexOf` except that it performs a binary
 search on a sorted `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `value` *(&#42;)*: The value to search for.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the matched value, else `-1`.
 
-#### Example
+####示例
 ```js
 _.sortedIndexOf([4, 5, 5, 5, 6], 5);
 // => 1
@@ -1643,16 +1642,16 @@ This method is like `_.sortedIndex` except that it returns the highest
 index at which `value` should be inserted into `array` in order to
 maintain its sort order.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The sorted array to inspect.
 2. `value` *(&#42;)*: The value to evaluate.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index at which `value` should be inserted into `array`.
 
-#### Example
+####示例
 ```js
 _.sortedLastIndex([4, 5, 5, 5, 6], 5);
 // => 4
@@ -1670,17 +1669,17 @@ This method is like `_.sortedLastIndex` except that it accepts `iteratee`
 which is invoked for `value` and each element of `array` to compute their
 sort ranking. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The sorted array to inspect.
 2. `value` *(&#42;)*: The value to evaluate.
 3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index at which `value` should be inserted into `array`.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 4 }, { 'x': 5 }];
 
@@ -1703,16 +1702,16 @@ _.sortedLastIndexBy(objects, { 'x': 4 }, 'x');
 This method is like `_.lastIndexOf` except that it performs a binary
 search on a sorted `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `value` *(&#42;)*: The value to search for.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the index of the matched value, else `-1`.
 
-#### Example
+####示例
 ```js
 _.sortedLastIndexOf([4, 5, 5, 5, 6], 5);
 // => 3
@@ -1729,15 +1728,15 @@ _.sortedLastIndexOf([4, 5, 5, 5, 6], 5);
 This method is like `_.uniq` except that it's designed and optimized
 for sorted arrays.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new duplicate free array.
 
-#### Example
+####示例
 ```js
 _.sortedUniq([1, 1, 2]);
 // => [1, 2]
@@ -1754,16 +1753,16 @@ _.sortedUniq([1, 1, 2]);
 This method is like `_.uniqBy` except that it's designed and optimized
 for sorted arrays.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[iteratee]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new duplicate free array.
 
-#### Example
+####示例
 ```js
 _.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor);
 // => [1.1, 2.3]
@@ -1779,15 +1778,15 @@ _.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor);
 
 Gets all but the first element of `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.tail([1, 2, 3]);
 // => [2, 3]
@@ -1803,16 +1802,16 @@ _.tail([1, 2, 3]);
 
 Creates a slice of `array` with `n` elements taken from the beginning.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=1]` *(number)*: The number of elements to take.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.take([1, 2, 3]);
 // => [1]
@@ -1837,16 +1836,16 @@ _.take([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements taken from the end.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=1]` *(number)*: The number of elements to take.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 _.takeRight([1, 2, 3]);
 // => [3]
@@ -1873,16 +1872,16 @@ Creates a slice of `array` with elements taken from the end. Elements are
 taken until `predicate` returns falsey. The predicate is invoked with
 three arguments: *(value, index, array)*.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': true },
@@ -1918,16 +1917,16 @@ Creates a slice of `array` with elements taken from the beginning. Elements
 are taken until `predicate` returns falsey. The predicate is invoked with
 three arguments: *(value, index, array)*.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the slice of `array`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'active': false },
@@ -1963,15 +1962,15 @@ Creates an array of unique values, in order, from all given arrays using
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 for equality comparisons.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of combined values.
 
-#### Example
+####示例
 ```js
 _.union([2], [1, 2]);
 // => [2, 1]
@@ -1991,16 +1990,16 @@ which uniqueness is computed. Result values are chosen from the first
 array in which the value occurs. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of combined values.
 
-#### Example
+####示例
 ```js
 _.unionBy([2.1], [1.2, 2.3], Math.floor);
 // => [2.1, 1.2]
@@ -2023,16 +2022,16 @@ is invoked to compare elements of `arrays`. Result values are chosen from
 the first array in which the value occurs. The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of combined values.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
@@ -2055,15 +2054,15 @@ for equality comparisons, in which only the first occurrence of each element
 is kept. The order of result values is determined by the order they occur
 in the array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new duplicate free array.
 
-#### Example
+####示例
 ```js
 _.uniq([2, 1, 2]);
 // => [2, 1]
@@ -2083,16 +2082,16 @@ uniqueness is computed. The order of result values is determined by the
 order they occur in the array. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new duplicate free array.
 
-#### Example
+####示例
 ```js
 _.uniqBy([2.1, 1.2, 2.3], Math.floor);
 // => [2.1, 1.2]
@@ -2115,16 +2114,16 @@ is invoked to compare elements of `array`. The order of result values is
 determined by the order they occur in the array.The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new duplicate free array.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 2 }];
 
@@ -2144,15 +2143,15 @@ This method is like `_.zip` except that it accepts an array of grouped
 elements and creates an array regrouping the elements to their pre-zip
 configuration.
 
-#### Since
+#### 起始版本
 1.2.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array of grouped elements to process.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of regrouped elements.
 
-#### Example
+####示例
 ```js
 var zipped = _.zip(['a', 'b'], [1, 2], [true, false]);
 // => [['a', 1, true], ['b', 2, false]]
@@ -2173,16 +2172,16 @@ This method is like `_.unzip` except that it accepts `iteratee` to specify
 how regrouped values should be combined. The iteratee is invoked with the
 elements of each group: *(...group)*.
 
-#### Since
+#### 起始版本
 3.8.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array of grouped elements to process.
 2. `[iteratee=_.identity]` *(Function)*: The function to combine regrouped values.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of regrouped elements.
 
-#### Example
+####示例
 ```js
 var zipped = _.zip([1, 2], [10, 20], [100, 200]);
 // => [[1, 10, 100], [2, 20, 200]]
@@ -2206,16 +2205,16 @@ for equality comparisons.
 <br>
 **Note:** Unlike `_.pull`, this method returns a new array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to inspect.
 2. `[values]` *(...&#42;)*: The values to exclude.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.without([2, 1, 2, 3], 1, 2);
 // => [3]
@@ -2234,15 +2233,15 @@ Creates an array of unique values that is the
 of the given arrays. The order of result values is determined by the order
 they occur in the arrays.
 
-#### Since
+#### 起始版本
 2.4.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.xor([2, 1], [2, 3]);
 // => [1, 3]
@@ -2262,16 +2261,16 @@ which by which they're compared. The order of result values is determined
 by the order they occur in the arrays. The iteratee is invoked with one
 argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 _.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // => [1.2, 3.4]
@@ -2294,16 +2293,16 @@ invoked to compare elements of `arrays`. The order of result values is
 determined by the order they occur in the arrays. The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to inspect.
 2. `[comparator]` *(Function)*: The comparator invoked per element.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of filtered values.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
@@ -2324,15 +2323,15 @@ Creates an array of grouped elements, the first of which contains the
 first elements of the given arrays, the second of which contains the
 second elements of the given arrays, and so on.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to process.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of grouped elements.
 
-#### Example
+####示例
 ```js
 _.zip(['a', 'b'], [1, 2], [true, false]);
 // => [['a', 1, true], ['b', 2, false]]
@@ -2349,16 +2348,16 @@ _.zip(['a', 'b'], [1, 2], [true, false]);
 This method is like `_.fromPairs` except that it accepts two arrays,
 one of property identifiers and one of corresponding values.
 
-#### Since
+#### 起始版本
 0.4.0
-#### Arguments
+#### 参数
 1. `[props=[]]` *(Array)*: The property identifiers.
 2. `[values=[]]` *(Array)*: The property values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 _.zipObject(['a', 'b'], [1, 2]);
 // => { 'a': 1, 'b': 2 }
@@ -2374,16 +2373,16 @@ _.zipObject(['a', 'b'], [1, 2]);
 
 This method is like `_.zipObject` except that it supports property paths.
 
-#### Since
+#### 起始版本
 4.1.0
-#### Arguments
+#### 参数
 1. `[props=[]]` *(Array)*: The property identifiers.
 2. `[values=[]]` *(Array)*: The property values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 _.zipObjectDeep(['a.b[0].c', 'a.b[1].d'], [1, 2]);
 // => { 'a': { 'b': [{ 'c': 1 }, { 'd': 2 }] } }
@@ -2401,16 +2400,16 @@ This method is like `_.zip` except that it accepts `iteratee` to specify
 how grouped values should be combined. The iteratee is invoked with the
 elements of each group: *(...group)*.
 
-#### Since
+#### 起始版本
 3.8.0
-#### Arguments
+#### 参数
 1. `[arrays]` *(...Array)*: The arrays to process.
 2. `[iteratee=_.identity]` *(Function)*: The function to combine grouped values.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new array of grouped elements.
 
-#### Example
+####示例
 ```js
 _.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
   return a + b + c;
@@ -2437,16 +2436,16 @@ each element of `collection` thru `iteratee`. The corresponding value of
 each key is the number of times the key was returned by `iteratee`. The
 iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 0.5.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee to transform keys.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the composed aggregate object.
 
-#### Example
+####示例
 ```js
 _.countBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': 1, '6': 2 }
@@ -2474,16 +2473,16 @@ invoked with three arguments: *(value, index|key, collection)*.
 [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
 elements of empty collections.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if all elements pass the predicate check, else `false`.
 
-#### Example
+####示例
 ```js
 _.every([true, 1, null, 'yes'], Boolean);
 // => false
@@ -2521,16 +2520,16 @@ arguments: *(value, index|key, collection)*.
 <br>
 **Note:** Unlike `_.remove`, this method returns a new array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new filtered array.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney', 'age': 36, 'active': true },
@@ -2565,17 +2564,17 @@ Iterates over elements of `collection`, returning the first element
 `predicate` returns truthy for. The predicate is invoked with three
 arguments: *(value, index|key, collection)*.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[fromIndex=0]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the matched element, else `undefined`.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'age': 36, 'active': true },
@@ -2610,17 +2609,17 @@ _.find(users, 'active');
 This method is like `_.find` except that it iterates over elements of
 `collection` from right to left.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[fromIndex=collection.length-1]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the matched element, else `undefined`.
 
-#### Example
+####示例
 ```js
 _.findLast([1, 2, 3, 4], function(n) {
   return n % 2 == 1;
@@ -2640,16 +2639,16 @@ Creates a flattened array of values by running each element in `collection`
 thru `iteratee` and flattening the mapped results. The iteratee is invoked
 with three arguments: *(value, index|key, collection)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 function duplicate(n) {
   return [n, n];
@@ -2670,16 +2669,16 @@ _.flatMap([1, 2], duplicate);
 This method is like `_.flatMap` except that it recursively flattens the
 mapped results.
 
-#### Since
+#### 起始版本
 4.7.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 function duplicate(n) {
   return [[[n, n]]];
@@ -2700,17 +2699,17 @@ _.flatMapDeep([1, 2], duplicate);
 This method is like `_.flatMap` except that it recursively flattens the
 mapped results up to `depth` times.
 
-#### Since
+#### 起始版本
 4.7.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[depth=1]` *(number)*: The maximum recursion depth.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new flattened array.
 
-#### Example
+####示例
 ```js
 function duplicate(n) {
   return [[[n, n]]];
@@ -2737,19 +2736,19 @@ Iteratee functions may exit iteration early by explicitly returning `false`.
 property are iterated like arrays. To avoid this behavior use `_.forIn`
 or `_.forOwn` for object iteration.
 
-#### Since
+#### 起始版本
 0.1.0
 #### Aliases
 *_.each*
 
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns `collection`.
 
-#### Example
+####示例
 ```js
 _.forEach([1, 2], function(value) {
   console.log(value);
@@ -2773,19 +2772,19 @@ _.forEach({ 'a': 1, 'b': 2 }, function(value, key) {
 This method is like `_.forEach` except that it iterates over elements of
 `collection` from right to left.
 
-#### Since
+#### 起始版本
 2.0.0
 #### Aliases
 *_.eachRight*
 
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns `collection`.
 
-#### Example
+####示例
 ```js
 _.forEachRight([1, 2], function(value) {
   console.log(value);
@@ -2807,16 +2806,16 @@ is determined by the order they occur in `collection`. The corresponding
 value of each key is an array of elements responsible for generating the
 key. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee to transform keys.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the composed aggregate object.
 
-#### Example
+####示例
 ```js
 _.groupBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': [4.2], '6': [6.1, 6.3] }
@@ -2840,17 +2839,17 @@ checked for a substring of `value`, otherwise
 is used for equality comparisons. If `fromIndex` is negative, it's used as
 the offset from the end of `collection`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object|string)*: The collection to inspect.
 2. `value` *(&#42;)*: The value to search for.
 3. `[fromIndex=0]` *(number)*: The index to search from.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is found, else `false`.
 
-#### Example
+####示例
 ```js
 _.includes([1, 2, 3], 1);
 // => true
@@ -2878,17 +2877,17 @@ an array of the results of each invoked method. Any additional arguments
 are provided to each invoked method. If `path` is a function, it's invoked
 for, and `this` bound to, each element in `collection`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `path` *(Array|Function|string)*: The path of the method to invoke or the function invoked per iteration.
 3. `[args]` *(...&#42;)*: The arguments to invoke each method with.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of results.
 
-#### Example
+####示例
 ```js
 _.invokeMap([[5, 1, 7], [3, 2, 1]], 'sort');
 // => [[1, 5, 7], [1, 2, 3]]
@@ -2910,16 +2909,16 @@ each element of `collection` thru `iteratee`. The corresponding value of
 each key is the last element responsible for generating the key. The
 iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee to transform keys.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the composed aggregate object.
 
-#### Example
+####示例
 ```js
 var array = [
   { 'dir': 'left', 'code': 97 },
@@ -2958,16 +2957,16 @@ The guarded methods are:<br>
 `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
 `template`, `trim`, `trimEnd`, `trimStart`, and `words`
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new mapped array.
 
-#### Example
+####示例
 ```js
 function square(n) {
   return n * n;
@@ -3002,17 +3001,17 @@ orders of the iteratees to sort by. If `orders` is unspecified, all values
 are sorted in ascending order. Otherwise, specify an order of "desc" for
 descending or "asc" for ascending sort order of corresponding values.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratees=[_.identity]]` *(Array&#91;&#93;|Function&#91;&#93;|Object&#91;&#93;|string&#91;&#93;)*: The iteratees to sort by.
 3. `[orders]` *(string&#91;&#93;)*: The sort orders of `iteratees`.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new sorted array.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'fred',   'age': 48 },
@@ -3039,16 +3038,16 @@ contains elements `predicate` returns truthy for, the second of which
 contains elements `predicate` returns falsey for. The predicate is
 invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of grouped elements.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'age': 36, 'active': false },
@@ -3096,17 +3095,17 @@ The guarded methods are:<br>
 `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
 and `sortBy`
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[accumulator]` *(&#42;)*: The initial value.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the accumulated value.
 
-#### Example
+####示例
 ```js
 _.reduce([1, 2], function(sum, n) {
   return sum + n;
@@ -3131,17 +3130,17 @@ _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
 This method is like `_.reduce` except that it iterates over elements of
 `collection` from right to left.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[accumulator]` *(&#42;)*: The initial value.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the accumulated value.
 
-#### Example
+####示例
 ```js
 var array = [[0, 1], [2, 3], [4, 5]];
 
@@ -3162,16 +3161,16 @@ _.reduceRight(array, function(flattened, other) {
 The opposite of `_.filter`; this method returns the elements of `collection`
 that `predicate` does **not** return truthy for.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new filtered array.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney', 'age': 36, 'active': false },
@@ -3204,15 +3203,15 @@ _.reject(users, 'active');
 
 Gets a random element from `collection`.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to sample.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the random element.
 
-#### Example
+####示例
 ```js
 _.sample([1, 2, 3, 4]);
 // => 2
@@ -3229,16 +3228,16 @@ _.sample([1, 2, 3, 4]);
 Gets `n` random elements at unique keys from `collection` up to the
 size of `collection`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to sample.
 2. `[n=1]` *(number)*: The number of elements to sample.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the random elements.
 
-#### Example
+####示例
 ```js
 _.sampleSize([1, 2, 3], 2);
 // => [3, 1]
@@ -3258,15 +3257,15 @@ _.sampleSize([1, 2, 3], 4);
 Creates an array of shuffled values, using a version of the
 [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle).
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to shuffle.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new shuffled array.
 
-#### Example
+####示例
 ```js
 _.shuffle([1, 2, 3, 4]);
 // => [4, 1, 3, 2]
@@ -3283,15 +3282,15 @@ _.shuffle([1, 2, 3, 4]);
 Gets the size of `collection` by returning its length for array-like
 values or the number of own enumerable string keyed properties for objects.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object|string)*: The collection to inspect.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the collection size.
 
-#### Example
+####示例
 ```js
 _.size([1, 2, 3]);
 // => 3
@@ -3315,16 +3314,16 @@ Checks if `predicate` returns truthy for **any** element of `collection`.
 Iteration is stopped once `predicate` returns truthy. The predicate is
 invoked with three arguments: *(value, index|key, collection)*.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if any element passes the predicate check, else `false`.
 
-#### Example
+####示例
 ```js
 _.some([null, 0, 'yes', false], Boolean);
 // => true
@@ -3360,16 +3359,16 @@ running each element in a collection thru each iteratee. This method
 performs a stable sort, that is, it preserves the original sort order of
 equal elements. The iteratees are invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
 2. `[iteratees=[_.identity]]` *(...(Function|Function&#91;&#93;))*: The iteratees to sort by.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new sorted array.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'fred',   'age': 48 },
@@ -3402,12 +3401,12 @@ _.sortBy(users, ['user', 'age']);
 Gets the timestamp of the number of milliseconds that have elapsed since
 the Unix epoch *(1 January `1970 00`:00:00 UTC)*.
 
-#### Since
+#### 起始版本
 2.4.0
-#### Returns
+#### 返回结果
 *(number)*: Returns the timestamp.
 
-#### Example
+####示例
 ```js
 _.defer(function(stamp) {
   console.log(_.now() - stamp);
@@ -3432,16 +3431,16 @@ _.defer(function(stamp) {
 The opposite of `_.before`; this method creates a function that invokes
 `func` once it's called `n` or more times.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `n` *(number)*: The number of calls before `func` is invoked.
 2. `func` *(Function)*: The function to restrict.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new restricted function.
 
-#### Example
+####示例
 ```js
 var saves = ['profile', 'settings'];
 
@@ -3466,16 +3465,16 @@ _.forEach(saves, function(type) {
 Creates a function that invokes `func`, with up to `n` arguments,
 ignoring any additional arguments.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to cap arguments for.
 2. `[n=func.length]` *(number)*: The arity cap.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new capped function.
 
-#### Example
+####示例
 ```js
 _.map(['6', '8', '10'], _.ary(parseInt, 1));
 // => [6, 8, 10]
@@ -3493,16 +3492,16 @@ Creates a function that invokes `func`, with the `this` binding and arguments
 of the created function, while it's called less than `n` times. Subsequent
 calls to the created function return the result of the last `func` invocation.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `n` *(number)*: The number of calls at which `func` is no longer invoked.
 2. `func` *(Function)*: The function to restrict.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new restricted function.
 
-#### Example
+####示例
 ```js
 jQuery(element).on('click', _.before(5, addContactToList));
 // => Allows adding up to 4 contacts to the list.
@@ -3527,17 +3526,17 @@ may be used as a placeholder for partially applied arguments.
 **Note:** Unlike native `Function#bind`, this method doesn't set the "length"
 property of bound functions.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to bind.
 2. `thisArg` *(&#42;)*: The `this` binding of `func`.
 3. `[partials]` *(...&#42;)*: The arguments to be partially applied.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new bound function.
 
-#### Example
+####示例
 ```js
 function greet(greeting, punctuation) {
   return greeting + ' ' + this.user + punctuation;
@@ -3576,17 +3575,17 @@ for more details.
 The `_.bindKey.placeholder` value, which defaults to `_` in monolithic
 builds, may be used as a placeholder for partially applied arguments.
 
-#### Since
+#### 起始版本
 0.10.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to invoke the method on.
 2. `key` *(string)*: The key of the method.
 3. `[partials]` *(...&#42;)*: The arguments to be partially applied.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new bound function.
 
-#### Example
+####示例
 ```js
 var object = {
   'user': 'fred',
@@ -3633,16 +3632,16 @@ may be used as a placeholder for provided arguments.
 <br>
 **Note:** This method doesn't set the "length" property of curried functions.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to curry.
 2. `[arity=func.length]` *(number)*: The arity of `func`.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new curried function.
 
-#### Example
+####示例
 ```js
 var abc = function(a, b, c) {
   return [a, b, c];
@@ -3682,16 +3681,16 @@ builds, may be used as a placeholder for provided arguments.
 <br>
 **Note:** This method doesn't set the "length" property of curried functions.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to curry.
 2. `[arity=func.length]` *(number)*: The arity of `func`.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new curried function.
 
-#### Example
+####示例
 ```js
 var abc = function(a, b, c) {
   return [a, b, c];
@@ -3744,9 +3743,9 @@ until to the next tick, similar to `setTimeout` with a timeout of `0`.
 See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
 for details over the differences between `_.debounce` and `_.throttle`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to debounce.
 2. `[wait=0]` *(number)*: The number of milliseconds to delay.
 3. `[options={}]` *(Object)*: The options object.
@@ -3754,10 +3753,10 @@ for details over the differences between `_.debounce` and `_.throttle`.
 5. `[options.maxWait]` *(number)*: The maximum time `func` is allowed to be delayed before it's invoked.
 6. `[options.trailing=true]` *(boolean)*: Specify invoking on the trailing edge of the timeout.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new debounced function.
 
-#### Example
+####示例
 ```js
 // Avoid costly calculations while the window size is in flux.
 jQuery(window).on('resize', _.debounce(calculateLayout, 150));
@@ -3788,16 +3787,16 @@ jQuery(window).on('popstate', debounced.cancel);
 Defers invoking the `func` until the current call stack has cleared. Any
 additional arguments are provided to `func` when it's invoked.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to defer.
 2. `[args]` *(...&#42;)*: The arguments to invoke `func` with.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the timer id.
 
-#### Example
+####示例
 ```js
 _.defer(function(text) {
   console.log(text);
@@ -3816,17 +3815,17 @@ _.defer(function(text) {
 Invokes `func` after `wait` milliseconds. Any additional arguments are
 provided to `func` when it's invoked.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to delay.
 2. `wait` *(number)*: The number of milliseconds to delay invocation.
 3. `[args]` *(...&#42;)*: The arguments to invoke `func` with.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the timer id.
 
-#### Example
+####示例
 ```js
 _.delay(function(text) {
   console.log(text);
@@ -3844,15 +3843,15 @@ _.delay(function(text) {
 
 Creates a function that invokes `func` with arguments reversed.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to flip arguments for.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new flipped function.
 
-#### Example
+####示例
 ```js
 var flipped = _.flip(function() {
   return _.toArray(arguments);
@@ -3883,16 +3882,16 @@ constructor with one whose instances implement the
 [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
 method interface of `delete`, `get`, `has`, and `set`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to have its output memoized.
 2. `[resolver]` *(Function)*: The function to resolve the cache key.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new memoized function.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': 2 };
 var other = { 'c': 3, 'd': 4 };
@@ -3929,15 +3928,15 @@ Creates a function that negates the result of the predicate `func`. The
 `func` predicate is invoked with the `this` binding and arguments of the
 created function.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `predicate` *(Function)*: The predicate to negate.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new negated function.
 
-#### Example
+####示例
 ```js
 function isEven(n) {
   return n % 2 == 0;
@@ -3959,15 +3958,15 @@ Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first invocation. The `func` is
 invoked with the `this` binding and arguments of the created function.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to restrict.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new restricted function.
 
-#### Example
+####示例
 ```js
 var initialize = _.once(createApplication);
 initialize();
@@ -3985,16 +3984,16 @@ initialize();
 
 Creates a function that invokes `func` with its arguments transformed.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to wrap.
 2. `[transforms=[_.identity]]` *(...(Function|Function&#91;&#93;))*: The argument transforms.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 function doubled(n) {
   return n * 2;
@@ -4035,16 +4034,16 @@ builds, may be used as a placeholder for partially applied arguments.
 **Note:** This method doesn't set the "length" property of partially
 applied functions.
 
-#### Since
+#### 起始版本
 0.2.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to partially apply arguments to.
 2. `[partials]` *(...&#42;)*: The arguments to be partially applied.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new partially applied function.
 
-#### Example
+####示例
 ```js
 function greet(greeting, name) {
   return greeting + ' ' + name;
@@ -4079,16 +4078,16 @@ builds, may be used as a placeholder for partially applied arguments.
 **Note:** This method doesn't set the "length" property of partially
 applied functions.
 
-#### Since
+#### 起始版本
 1.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to partially apply arguments to.
 2. `[partials]` *(...&#42;)*: The arguments to be partially applied.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new partially applied function.
 
-#### Example
+####示例
 ```js
 function greet(greeting, name) {
   return greeting + ' ' + name;
@@ -4117,16 +4116,16 @@ to the specified `indexes` where the argument value at the first index is
 provided as the first argument, the argument value at the second index is
 provided as the second argument, and so on.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to rearrange arguments for.
 2. `indexes` *(...(number|number&#91;&#93;))*: The arranged argument indexes.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var rearged = _.rearg(function(a, b, c) {
   return [a, b, c];
@@ -4152,16 +4151,16 @@ an array.
 **Note:** This method is based on the
 [rest parameter](https://mdn.io/rest_parameters).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to apply a rest parameter to.
 2. `[start=func.length-1]` *(number)*: The start position of the rest parameter.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var say = _.rest(function(what, names) {
   return what + ' ' + _.initial(names).join(', ') +
@@ -4188,16 +4187,16 @@ create function and an array of arguments much like
 **Note:** This method is based on the
 [spread operator](https://mdn.io/spread_operator).
 
-#### Since
+#### 起始版本
 3.2.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to spread arguments over.
 2. `[start=0]` *(number)*: The start position of the spread.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var say = _.spread(function(who, what) {
   return who + ' says ' + what;
@@ -4247,19 +4246,19 @@ until to the next tick, similar to `setTimeout` with a timeout of `0`.
 See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
 for details over the differences between `_.throttle` and `_.debounce`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to throttle.
 2. `[wait=0]` *(number)*: The number of milliseconds to throttle invocations to.
 3. `[options={}]` *(Object)*: The options object.
 4. `[options.leading=true]` *(boolean)*: Specify invoking on the leading edge of the timeout.
 5. `[options.trailing=true]` *(boolean)*: Specify invoking on the trailing edge of the timeout.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new throttled function.
 
-#### Example
+####示例
 ```js
 // Avoid excessively updating the position while scrolling.
 jQuery(window).on('scroll', _.throttle(updatePosition, 100));
@@ -4283,15 +4282,15 @@ jQuery(window).on('popstate', throttled.cancel);
 Creates a function that accepts up to one argument, ignoring any
 additional arguments.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to cap arguments for.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new capped function.
 
-#### Example
+####示例
 ```js
 _.map(['6', '8', '10'], _.unary(parseInt));
 // => [6, 8, 10]
@@ -4310,16 +4309,16 @@ argument. Any additional arguments provided to the function are appended
 to those provided to the `wrapper`. The wrapper is invoked with the `this`
 binding of the created function.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to wrap.
 2. `[wrapper=identity]` *(Function)*: The wrapper function.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var p = _.wrap(_.escape, function(func, text) {
   return '<p>' + func(text) + '</p>';
@@ -4345,15 +4344,15 @@ p('fred, barney, & pebbles');
 
 Casts `value` as an array if it's not one.
 
-#### Since
+#### 起始版本
 4.4.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the cast array.
 
-#### Example
+####示例
 ```js
 _.castArray(1);
 // => [1]
@@ -4397,15 +4396,15 @@ arrays. The own enumerable properties of `arguments` objects are cloned
 as plain objects. An empty object is returned for uncloneable values such
 as error objects, functions, DOM nodes, and WeakMaps.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to clone.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the cloned value.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'a': 1 }, { 'b': 2 }];
 
@@ -4424,15 +4423,15 @@ console.log(shallow[0] === objects[0]);
 
 This method is like `_.clone` except that it recursively clones `value`.
 
-#### Since
+#### 起始版本
 1.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to recursively clone.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the deep cloned value.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'a': 1 }, { 'b': 2 }];
 
@@ -4451,16 +4450,16 @@ console.log(deep[0] === objects[0]);
 
 This method is like `_.cloneWith` except that it recursively clones `value`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to recursively clone.
 2. `[customizer]` *(Function)*: The function to customize cloning.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the deep cloned value.
 
-#### Example
+####示例
 ```js
 function customizer(value) {
   if (_.isElement(value)) {
@@ -4491,16 +4490,16 @@ is invoked to produce the cloned value. If `customizer` returns `undefined`,
 cloning is handled by the method instead. The `customizer` is invoked with
 up to four arguments; *(value [, index|key, object, stack])*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to clone.
 2. `[customizer]` *(Function)*: The function to customize cloning.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the cloned value.
 
-#### Example
+####示例
 ```js
 function customizer(value) {
   if (_.isElement(value)) {
@@ -4533,16 +4532,16 @@ properties of `source` with the corresponding property values of `object`.
 **Note:** This method is equivalent to `_.conforms` when `source` is
 partially applied.
 
-#### Since
+#### 起始版本
 4.14.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 2. `source` *(Object)*: The object of property predicates to conform to.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `object` conforms, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': 2 };
 
@@ -4565,16 +4564,16 @@ Performs a
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 comparison between two values to determine if they are equivalent.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if the values are equivalent, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1 };
 var other = { 'a': 1 };
@@ -4605,16 +4604,16 @@ _.eq(NaN, NaN);
 
 Checks if `value` is greater than `other`.
 
-#### Since
+#### 起始版本
 3.9.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is greater than `other`, else `false`.
 
-#### Example
+####示例
 ```js
 _.gt(3, 1);
 // => true
@@ -4636,16 +4635,16 @@ _.gt(1, 3);
 
 Checks if `value` is greater than or equal to `other`.
 
-#### Since
+#### 起始版本
 3.9.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is greater than or equal to `other`, else `false`.
 
-#### Example
+####示例
 ```js
 _.gte(3, 1);
 // => true
@@ -4667,15 +4666,15 @@ _.gte(1, 3);
 
 Checks if `value` is likely an `arguments` object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an `arguments` object, else `false`.
 
-#### Example
+####示例
 ```js
 _.isArguments(function() { return arguments; }());
 // => true
@@ -4694,15 +4693,15 @@ _.isArguments([1, 2, 3]);
 
 Checks if `value` is classified as an `Array` object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an array, else `false`.
 
-#### Example
+####示例
 ```js
 _.isArray([1, 2, 3]);
 // => true
@@ -4727,15 +4726,15 @@ _.isArray(_.noop);
 
 Checks if `value` is classified as an `ArrayBuffer` object.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an array buffer, else `false`.
 
-#### Example
+####示例
 ```js
 _.isArrayBuffer(new ArrayBuffer(2));
 // => true
@@ -4756,15 +4755,15 @@ Checks if `value` is array-like. A value is considered array-like if it's
 not a function and has a `value.length` that's an integer greater than or
 equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is array-like, else `false`.
 
-#### Example
+####示例
 ```js
 _.isArrayLike([1, 2, 3]);
 // => true
@@ -4790,15 +4789,15 @@ _.isArrayLike(_.noop);
 This method is like `_.isArrayLike` except that it also checks if `value`
 is an object.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an array-like object, else `false`.
 
-#### Example
+####示例
 ```js
 _.isArrayLikeObject([1, 2, 3]);
 // => true
@@ -4823,15 +4822,15 @@ _.isArrayLikeObject(_.noop);
 
 Checks if `value` is classified as a boolean primitive or object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a boolean, else `false`.
 
-#### Example
+####示例
 ```js
 _.isBoolean(false);
 // => true
@@ -4850,15 +4849,15 @@ _.isBoolean(null);
 
 Checks if `value` is a buffer.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a buffer, else `false`.
 
-#### Example
+####示例
 ```js
 _.isBuffer(new Buffer(2));
 // => true
@@ -4877,15 +4876,15 @@ _.isBuffer(new Uint8Array(2));
 
 Checks if `value` is classified as a `Date` object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a date object, else `false`.
 
-#### Example
+####示例
 ```js
 _.isDate(new Date);
 // => true
@@ -4904,15 +4903,15 @@ _.isDate('Mon April 23 2012');
 
 Checks if `value` is likely a DOM element.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a DOM element, else `false`.
 
-#### Example
+####示例
 ```js
 _.isElement(document.body);
 // => true
@@ -4940,15 +4939,15 @@ Array-like values such as `arguments` objects, arrays, buffers, strings, or
 jQuery-like collections are considered empty if they have a `length` of `0`.
 Similarly, maps and sets are considered empty if they have a `size` of `0`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is empty, else `false`.
 
-#### Example
+####示例
 ```js
 _.isEmpty(null);
 // => true
@@ -4984,16 +4983,16 @@ sets, strings, symbols, and typed arrays. `Object` objects are compared
 by their own, not inherited, enumerable properties. Functions and DOM
 nodes are **not** supported.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if the values are equivalent, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1 };
 var other = { 'a': 1 };
@@ -5018,17 +5017,17 @@ is invoked to compare values. If `customizer` returns `undefined`, comparisons
 are handled by the method instead. The `customizer` is invoked with up to
 six arguments: *(objValue, othValue [, index|key, object, other, stack])*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 3. `[customizer]` *(Function)*: The function to customize comparisons.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if the values are equivalent, else `false`.
 
-#### Example
+####示例
 ```js
 function isGreeting(value) {
   return /^h(?:i|ello)$/.test(value);
@@ -5058,15 +5057,15 @@ _.isEqualWith(array, other, customizer);
 Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 `SyntaxError`, `TypeError`, or `URIError` object.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an error object, else `false`.
 
-#### Example
+####示例
 ```js
 _.isError(new Error);
 // => true
@@ -5089,15 +5088,15 @@ Checks if `value` is a finite primitive number.
 **Note:** This method is based on
 [`Number.isFinite`](https://mdn.io/Number/isFinite).
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a finite number, else `false`.
 
-#### Example
+####示例
 ```js
 _.isFinite(3);
 // => true
@@ -5122,15 +5121,15 @@ _.isFinite('3');
 
 Checks if `value` is classified as a `Function` object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a function, else `false`.
 
-#### Example
+####示例
 ```js
 _.isFunction(_);
 // => true
@@ -5153,15 +5152,15 @@ Checks if `value` is an integer.
 **Note:** This method is based on
 [`Number.isInteger`](https://mdn.io/Number/isInteger).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an integer, else `false`.
 
-#### Example
+####示例
 ```js
 _.isInteger(3);
 // => true
@@ -5190,15 +5189,15 @@ Checks if `value` is a valid array-like length.
 **Note:** This method is loosely based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a valid length, else `false`.
 
-#### Example
+####示例
 ```js
 _.isLength(3);
 // => true
@@ -5223,15 +5222,15 @@ _.isLength('3');
 
 Checks if `value` is classified as a `Map` object.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a map, else `false`.
 
-#### Example
+####示例
 ```js
 _.isMap(new Map);
 // => true
@@ -5260,16 +5259,16 @@ Partial comparisons will match empty array and empty object `source`
 values against any array or object value, respectively. See `_.isEqual`
 for a list of supported value comparisons.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 2. `source` *(Object)*: The object of property values to match.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `object` is a match, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': 2 };
 
@@ -5293,17 +5292,17 @@ is invoked to compare values. If `customizer` returns `undefined`, comparisons
 are handled by the method instead. The `customizer` is invoked with five
 arguments: *(objValue, srcValue, index|key, object, source)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 2. `source` *(Object)*: The object of property values to match.
 3. `[customizer]` *(Function)*: The function to customize comparisons.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `object` is a match, else `false`.
 
-#### Example
+####示例
 ```js
 function isGreeting(value) {
   return /^h(?:i|ello)$/.test(value);
@@ -5338,15 +5337,15 @@ Checks if `value` is `NaN`.
 global [`isNaN`](https://mdn.io/isNaN) which returns `true` for
 `undefined` and other non-number values.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is `NaN`, else `false`.
 
-#### Example
+####示例
 ```js
 _.isNaN(NaN);
 // => true
@@ -5380,15 +5379,15 @@ with little choice but to throw an error. Unfortunately, this also affects
 packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
 which rely on core-js.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a native function, else `false`.
 
-#### Example
+####示例
 ```js
 _.isNative(Array.prototype.push);
 // => true
@@ -5407,15 +5406,15 @@ _.isNative(_);
 
 Checks if `value` is `null` or `undefined`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is nullish, else `false`.
 
-#### Example
+####示例
 ```js
 _.isNil(null);
 // => true
@@ -5437,15 +5436,15 @@ _.isNil(NaN);
 
 Checks if `value` is `null`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is `null`, else `false`.
 
-#### Example
+####示例
 ```js
 _.isNull(null);
 // => true
@@ -5468,15 +5467,15 @@ Checks if `value` is classified as a `Number` primitive or object.
 **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
 classified as numbers, use the `_.isFinite` method.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a number, else `false`.
 
-#### Example
+####示例
 ```js
 _.isNumber(3);
 // => true
@@ -5503,15 +5502,15 @@ Checks if `value` is the
 [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
 of `Object`. *(e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)*
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is an object, else `false`.
 
-#### Example
+####示例
 ```js
 _.isObject({});
 // => true
@@ -5537,15 +5536,15 @@ _.isObject(null);
 Checks if `value` is object-like. A value is object-like if it's not `null`
 and has a `typeof` result of "object".
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is object-like, else `false`.
 
-#### Example
+####示例
 ```js
 _.isObjectLike({});
 // => true
@@ -5571,15 +5570,15 @@ _.isObjectLike(null);
 Checks if `value` is a plain object, that is, an object created by the
 `Object` constructor or one with a `[[Prototype]]` of `null`.
 
-#### Since
+#### 起始版本
 0.8.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a plain object, else `false`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -5608,15 +5607,15 @@ _.isPlainObject(Object.create(null));
 
 Checks if `value` is classified as a `RegExp` object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a regexp, else `false`.
 
-#### Example
+####示例
 ```js
 _.isRegExp(/abc/);
 // => true
@@ -5640,15 +5639,15 @@ double precision number which isn't the result of a rounded unsafe integer.
 **Note:** This method is based on
 [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a safe integer, else `false`.
 
-#### Example
+####示例
 ```js
 _.isSafeInteger(3);
 // => true
@@ -5673,15 +5672,15 @@ _.isSafeInteger('3');
 
 Checks if `value` is classified as a `Set` object.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a set, else `false`.
 
-#### Example
+####示例
 ```js
 _.isSet(new Set);
 // => true
@@ -5700,15 +5699,15 @@ _.isSet(new WeakSet);
 
 Checks if `value` is classified as a `String` primitive or object.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a string, else `false`.
 
-#### Example
+####示例
 ```js
 _.isString('abc');
 // => true
@@ -5727,15 +5726,15 @@ _.isString(1);
 
 Checks if `value` is classified as a `Symbol` primitive or object.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a symbol, else `false`.
 
-#### Example
+####示例
 ```js
 _.isSymbol(Symbol.iterator);
 // => true
@@ -5754,15 +5753,15 @@ _.isSymbol('abc');
 
 Checks if `value` is classified as a typed array.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a typed array, else `false`.
 
-#### Example
+####示例
 ```js
 _.isTypedArray(new Uint8Array);
 // => true
@@ -5781,15 +5780,15 @@ _.isTypedArray([]);
 
 Checks if `value` is `undefined`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is `undefined`, else `false`.
 
-#### Example
+####示例
 ```js
 _.isUndefined(void 0);
 // => true
@@ -5808,15 +5807,15 @@ _.isUndefined(null);
 
 Checks if `value` is classified as a `WeakMap` object.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a weak map, else `false`.
 
-#### Example
+####示例
 ```js
 _.isWeakMap(new WeakMap);
 // => true
@@ -5835,15 +5834,15 @@ _.isWeakMap(new Map);
 
 Checks if `value` is classified as a `WeakSet` object.
 
-#### Since
+#### 起始版本
 4.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is a weak set, else `false`.
 
-#### Example
+####示例
 ```js
 _.isWeakSet(new WeakSet);
 // => true
@@ -5862,16 +5861,16 @@ _.isWeakSet(new Set);
 
 Checks if `value` is less than `other`.
 
-#### Since
+#### 起始版本
 3.9.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is less than `other`, else `false`.
 
-#### Example
+####示例
 ```js
 _.lt(1, 3);
 // => true
@@ -5893,16 +5892,16 @@ _.lt(3, 1);
 
 Checks if `value` is less than or equal to `other`.
 
-#### Since
+#### 起始版本
 3.9.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to compare.
 2. `other` *(&#42;)*: The other value to compare.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `value` is less than or equal to `other`, else `false`.
 
-#### Example
+####示例
 ```js
 _.lte(1, 3);
 // => true
@@ -5924,15 +5923,15 @@ _.lte(3, 1);
 
 Converts `value` to an array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the converted array.
 
-#### Example
+####示例
 ```js
 _.toArray({ 'a': 1, 'b': 2 });
 // => [1, 2]
@@ -5957,15 +5956,15 @@ _.toArray(null);
 
 Converts `value` to a finite number.
 
-#### Since
+#### 起始版本
 4.12.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the converted number.
 
-#### Example
+####示例
 ```js
 _.toFinite(3.2);
 // => 3.2
@@ -5994,15 +5993,15 @@ Converts `value` to an integer.
 **Note:** This method is loosely based on
 [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the converted integer.
 
-#### Example
+####示例
 ```js
 _.toInteger(3.2);
 // => 3
@@ -6032,15 +6031,15 @@ array-like object.
 **Note:** This method is based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the converted integer.
 
-#### Example
+####示例
 ```js
 _.toLength(3.2);
 // => 3
@@ -6065,15 +6064,15 @@ _.toLength('3.2');
 
 Converts `value` to a number.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to process.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the number.
 
-#### Example
+####示例
 ```js
 _.toNumber(3.2);
 // => 3.2
@@ -6099,15 +6098,15 @@ _.toNumber('3.2');
 Converts `value` to a plain object flattening inherited enumerable string
 keyed properties of `value` to own properties of the plain object.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the converted plain object.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.b = 2;
@@ -6133,15 +6132,15 @@ _.assign({ 'a': 1 }, _.toPlainObject(new Foo));
 Converts `value` to a safe integer. A safe integer can be compared and
 represented correctly.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the converted integer.
 
-#### Example
+####示例
 ```js
 _.toSafeInteger(3.2);
 // => 3
@@ -6167,15 +6166,15 @@ _.toSafeInteger('3.2');
 Converts `value` to a string. An empty string is returned for `null`
 and `undefined` values. The sign of `-0` is preserved.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to process.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the string.
 
-#### Example
+####示例
 ```js
 _.toString(null);
 // => ''
@@ -6203,16 +6202,16 @@ _.toString([1, 2, 3]);
 
 Adds two numbers.
 
-#### Since
+#### 起始版本
 3.4.0
-#### Arguments
+#### 参数
 1. `augend` *(number)*: The first number in an addition.
 2. `addend` *(number)*: The second number in an addition.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the total.
 
-#### Example
+####示例
 ```js
 _.add(6, 4);
 // => 10
@@ -6228,16 +6227,16 @@ _.add(6, 4);
 
 Computes `number` rounded up to `precision`.
 
-#### Since
+#### 起始版本
 3.10.0
-#### Arguments
+#### 参数
 1. `number` *(number)*: The number to round up.
 2. `[precision=0]` *(number)*: The precision to round up to.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the rounded up number.
 
-#### Example
+####示例
 ```js
 _.ceil(4.006);
 // => 5
@@ -6259,16 +6258,16 @@ _.ceil(6040, -2);
 
 Divide two numbers.
 
-#### Since
+#### 起始版本
 4.7.0
-#### Arguments
+#### 参数
 1. `dividend` *(number)*: The first number in a division.
 2. `divisor` *(number)*: The second number in a division.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the quotient.
 
-#### Example
+####示例
 ```js
 _.divide(6, 4);
 // => 1.5
@@ -6284,16 +6283,16 @@ _.divide(6, 4);
 
 Computes `number` rounded down to `precision`.
 
-#### Since
+#### 起始版本
 3.10.0
-#### Arguments
+#### 参数
 1. `number` *(number)*: The number to round down.
 2. `[precision=0]` *(number)*: The precision to round down to.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the rounded down number.
 
-#### Example
+####示例
 ```js
 _.floor(4.006);
 // => 4
@@ -6316,15 +6315,15 @@ _.floor(4060, -2);
 Computes the maximum value of `array`. If `array` is empty or falsey,
 `undefined` is returned.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the maximum value.
 
-#### Example
+####示例
 ```js
 _.max([4, 2, 8, 6]);
 // => 8
@@ -6345,16 +6344,16 @@ This method is like `_.max` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the criterion by which
 the value is ranked. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the maximum value.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'n': 1 }, { 'n': 2 }];
 
@@ -6376,15 +6375,15 @@ _.maxBy(objects, 'n');
 
 Computes the mean of the values in `array`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the mean.
 
-#### Example
+####示例
 ```js
 _.mean([4, 2, 8, 6]);
 // => 5
@@ -6402,16 +6401,16 @@ This method is like `_.mean` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the value to be averaged.
 The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.7.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the mean.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }];
 
@@ -6434,15 +6433,15 @@ _.meanBy(objects, 'n');
 Computes the minimum value of `array`. If `array` is empty or falsey,
 `undefined` is returned.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the minimum value.
 
-#### Example
+####示例
 ```js
 _.min([4, 2, 8, 6]);
 // => 2
@@ -6463,16 +6462,16 @@ This method is like `_.min` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the criterion by which
 the value is ranked. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the minimum value.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'n': 1 }, { 'n': 2 }];
 
@@ -6494,16 +6493,16 @@ _.minBy(objects, 'n');
 
 Multiply two numbers.
 
-#### Since
+#### 起始版本
 4.7.0
-#### Arguments
+#### 参数
 1. `multiplier` *(number)*: The first number in a multiplication.
 2. `multiplicand` *(number)*: The second number in a multiplication.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the product.
 
-#### Example
+####示例
 ```js
 _.multiply(6, 4);
 // => 24
@@ -6519,16 +6518,16 @@ _.multiply(6, 4);
 
 Computes `number` rounded to `precision`.
 
-#### Since
+#### 起始版本
 3.10.0
-#### Arguments
+#### 参数
 1. `number` *(number)*: The number to round.
 2. `[precision=0]` *(number)*: The precision to round to.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the rounded number.
 
-#### Example
+####示例
 ```js
 _.round(4.006);
 // => 4
@@ -6550,16 +6549,16 @@ _.round(4060, -2);
 
 Subtract two numbers.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `minuend` *(number)*: The first number in a subtraction.
 2. `subtrahend` *(number)*: The second number in a subtraction.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the difference.
 
-#### Example
+####示例
 ```js
 _.subtract(6, 4);
 // => 2
@@ -6575,15 +6574,15 @@ _.subtract(6, 4);
 
 Computes the sum of the values in `array`.
 
-#### Since
+#### 起始版本
 3.4.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the sum.
 
-#### Example
+####示例
 ```js
 _.sum([4, 2, 8, 6]);
 // => 20
@@ -6601,16 +6600,16 @@ This method is like `_.sum` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the value to be summed.
 The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the sum.
 
-#### Example
+####示例
 ```js
 var objects = [{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }];
 
@@ -6638,17 +6637,17 @@ _.sumBy(objects, 'n');
 
 Clamps `number` within the inclusive `lower` and `upper` bounds.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `number` *(number)*: The number to clamp.
 2. `[lower]` *(number)*: The lower bound.
 3. `upper` *(number)*: The upper bound.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the clamped number.
 
-#### Example
+####示例
 ```js
 _.clamp(-10, -5, 5);
 // => -5
@@ -6670,17 +6669,17 @@ Checks if `n` is between `start` and up to, but not including, `end`. If
 If `start` is greater than `end` the params are swapped to support
 negative ranges.
 
-#### Since
+#### 起始版本
 3.3.0
-#### Arguments
+#### 参数
 1. `number` *(number)*: The number to check.
 2. `[start=0]` *(number)*: The start of the range.
 3. `end` *(number)*: The end of the range.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `number` is in the range, else `false`.
 
-#### Example
+####示例
 ```js
 _.inRange(3, 2, 4);
 // => true
@@ -6721,17 +6720,17 @@ floats, a floating-point number is returned instead of an integer.
 **Note:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
 
-#### Since
+#### 起始版本
 0.7.0
-#### Arguments
+#### 参数
 1. `[lower=0]` *(number)*: The lower bound.
 2. `[upper=1]` *(number)*: The upper bound.
 3. `[floating]` *(boolean)*: Specify returning a floating-point number.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the random number.
 
-#### Example
+####示例
 ```js
 _.random(0, 5);
 // => an integer between 0 and 5
@@ -6768,16 +6767,16 @@ Subsequent sources overwrite property assignments of previous sources.
 **Note:** This method mutates `object` and is loosely based on
 [`Object.assign`](https://mdn.io/Object/assign).
 
-#### Since
+#### 起始版本
 0.10.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `[sources]` *(...Object)*: The source objects.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -6808,19 +6807,19 @@ inherited source properties.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
 #### Aliases
 *_.extend*
 
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `[sources]` *(...Object)*: The source objects.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -6853,20 +6852,20 @@ is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
 #### Aliases
 *_.extendWith*
 
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `sources` *(...Object)*: The source objects.
 3. `[customizer]` *(Function)*: The function to customize assigned values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function customizer(objValue, srcValue) {
   return _.isUndefined(objValue) ? srcValue : objValue;
@@ -6894,17 +6893,17 @@ is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `sources` *(...Object)*: The source objects.
 3. `[customizer]` *(Function)*: The function to customize assigned values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function customizer(objValue, srcValue) {
   return _.isUndefined(objValue) ? srcValue : objValue;
@@ -6926,16 +6925,16 @@ defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 });
 
 Creates an array of values corresponding to `paths` of `object`.
 
-#### Since
+#### 起始版本
 1.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[paths]` *(...(string|string&#91;&#93;))*: The property paths of elements to pick.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the picked values.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
 
@@ -6955,16 +6954,16 @@ Creates an object that inherits from the `prototype` object. If a
 `properties` object is given, its own enumerable string keyed properties
 are assigned to the created object.
 
-#### Since
+#### 起始版本
 2.3.0
-#### Arguments
+#### 参数
 1. `prototype` *(Object)*: The object to inherit from.
 2. `[properties]` *(Object)*: The properties to assign to the object.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 function Shape() {
   this.x = 0;
@@ -7003,16 +7002,16 @@ Once a property is set, additional values of the same property are ignored.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `[sources]` *(...Object)*: The source objects.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 _.defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 });
 // => { 'a': 1, 'b': 2 }
@@ -7032,16 +7031,16 @@ default properties.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 3.10.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `[sources]` *(...Object)*: The source objects.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 _.defaultsDeep({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } });
 // => { 'a': { 'b': 2, 'c': 3 } }
@@ -7058,16 +7057,16 @@ _.defaultsDeep({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } });
 This method is like `_.find` except that it returns the key of the first
 element `predicate` returns truthy for instead of the element itself.
 
-#### Since
+#### 起始版本
 1.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the key of the matched element, else `undefined`.
 
-#### Example
+####示例
 ```js
 var users = {
   'barney':  { 'age': 36, 'active': true },
@@ -7102,16 +7101,16 @@ _.findKey(users, 'active');
 This method is like `_.findKey` except that it iterates over elements of
 a collection in the opposite order.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the key of the matched element, else `undefined`.
 
-#### Example
+####示例
 ```js
 var users = {
   'barney':  { 'age': 36, 'active': true },
@@ -7148,16 +7147,16 @@ object and invokes `iteratee` for each property. The iteratee is invoked
 with three arguments: *(value, key, object)*. Iteratee functions may exit
 iteration early by explicitly returning `false`.
 
-#### Since
+#### 起始版本
 0.3.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7183,16 +7182,16 @@ _.forIn(new Foo, function(value, key) {
 This method is like `_.forIn` except that it iterates over properties of
 `object` in the opposite order.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7220,16 +7219,16 @@ invokes `iteratee` for each property. The iteratee is invoked with three
 arguments: *(value, key, object)*. Iteratee functions may exit iteration
 early by explicitly returning `false`.
 
-#### Since
+#### 起始版本
 0.3.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7255,16 +7254,16 @@ _.forOwn(new Foo, function(value, key) {
 This method is like `_.forOwn` except that it iterates over properties of
 `object` in the opposite order.
 
-#### Since
+#### 起始版本
 2.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7290,15 +7289,15 @@ _.forOwnRight(new Foo, function(value, key) {
 Creates an array of function property names from own enumerable properties
 of `object`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the function names.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = _.constant('a');
@@ -7322,15 +7321,15 @@ _.functions(new Foo);
 Creates an array of function property names from own and inherited
 enumerable properties of `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to inspect.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the function names.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = _.constant('a');
@@ -7354,17 +7353,17 @@ _.functionsIn(new Foo);
 Gets the value at `path` of `object`. If the resolved value is
 `undefined`, the `defaultValue` is returned in its place.
 
-#### Since
+#### 起始版本
 3.7.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `path` *(Array|string)*: The path of the property to get.
 3. `[defaultValue]` *(&#42;)*: The value returned for `undefined` resolved values.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the resolved value.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 3 } }] };
 
@@ -7388,16 +7387,16 @@ _.get(object, 'a.b.c', 'default');
 
 Checks if `path` is a direct property of `object`.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `path` *(Array|string)*: The path to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `path` exists, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': { 'b': 2 } };
 var other = _.create({ 'a': _.create({ 'b': 2 }) });
@@ -7425,16 +7424,16 @@ _.has(other, 'a');
 
 Checks if `path` is a direct or inherited property of `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `path` *(Array|string)*: The path to check.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `path` exists, else `false`.
 
-#### Example
+####示例
 ```js
 var object = _.create({ 'a': _.create({ 'b': 2 }) });
 
@@ -7463,15 +7462,15 @@ Creates an object composed of the inverted keys and values of `object`.
 If `object` contains duplicate values, subsequent values overwrite
 property assignments of previous values.
 
-#### Since
+#### 起始版本
 0.7.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to invert.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new inverted object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': 2, 'c': 1 };
 
@@ -7493,16 +7492,16 @@ corresponding inverted value of each inverted key is an array of keys
 responsible for generating the inverted value. The iteratee is invoked
 with one argument: *(value)*.
 
-#### Since
+#### 起始版本
 4.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to invert.
 2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new inverted object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': 2, 'c': 1 };
 
@@ -7525,17 +7524,17 @@ _.invertBy(object, function(value) {
 
 Invokes the method at `path` of `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `path` *(Array|string)*: The path of the method to invoke.
 3. `[args]` *(...&#42;)*: The arguments to invoke the method with.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the result of the invoked method.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': [1, 2, 3, 4] } }] };
 
@@ -7558,15 +7557,15 @@ Creates an array of the own enumerable property names of `object`.
 [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
 for more details.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of property names.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7595,15 +7594,15 @@ Creates an array of the own and inherited enumerable property names of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of property names.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -7629,16 +7628,16 @@ same values as `object` and keys generated by running each own enumerable
 string keyed property of `object` thru `iteratee`. The iteratee is invoked
 with three arguments: *(value, key, object)*.
 
-#### Since
+#### 起始版本
 3.8.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new mapped object.
 
-#### Example
+####示例
 ```js
 _.mapKeys({ 'a': 1, 'b': 2 }, function(value, key) {
   return key + value;
@@ -7659,16 +7658,16 @@ by running each own enumerable string keyed property of `object` thru
 `iteratee`. The iteratee is invoked with three arguments:<br>
 *(value, key, object)*.
 
-#### Since
+#### 起始版本
 2.4.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new mapped object.
 
-#### Example
+####示例
 ```js
 var users = {
   'fred':    { 'user': 'fred',    'age': 40 },
@@ -7702,16 +7701,16 @@ sources overwrite property assignments of previous sources.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 0.5.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `[sources]` *(...Object)*: The source objects.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var object = {
   'a': [{ 'b': 2 }, { 'd': 4 }]
@@ -7742,17 +7741,17 @@ method instead. The `customizer` is invoked with six arguments:<br>
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The destination object.
 2. `sources` *(...Object)*: The source objects.
 3. `customizer` *(Function)*: The function to customize assigned values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function customizer(objValue, srcValue) {
   if (_.isArray(objValue)) {
@@ -7779,16 +7778,16 @@ The opposite of `_.pick`; this method creates an object composed of the
 own and inherited enumerable string keyed properties of `object` that are
 not omitted.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The source object.
 2. `[props]` *(...(string|string&#91;&#93;))*: The property identifiers to omit.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': '2', 'c': 3 };
 
@@ -7809,16 +7808,16 @@ the own and inherited enumerable string keyed properties of `object` that
 `predicate` doesn't return truthy for. The predicate is invoked with two
 arguments: *(value, key)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The source object.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per property.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': '2', 'c': 3 };
 
@@ -7836,16 +7835,16 @@ _.omitBy(object, _.isNumber);
 
 Creates an object composed of the picked `object` properties.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The source object.
 2. `[props]` *(...(string|string&#91;&#93;))*: The property identifiers to pick.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': '2', 'c': 3 };
 
@@ -7864,16 +7863,16 @@ _.pick(object, ['a', 'c']);
 Creates an object composed of the `object` properties `predicate` returns
 truthy for. The predicate is invoked with two arguments: *(value, key)*.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The source object.
 2. `[predicate=_.identity]` *(Function)*: The function invoked per property.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new object.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1, 'b': '2', 'c': 3 };
 
@@ -7893,17 +7892,17 @@ This method is like `_.get` except that if the resolved value is a
 function it's invoked with the `this` binding of its parent object and
 its result is returned.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `path` *(Array|string)*: The path of the property to resolve.
 3. `[defaultValue]` *(&#42;)*: The value returned for `undefined` resolved values.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the resolved value.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c1': 3, 'c2': _.constant(4) } }] };
 
@@ -7936,17 +7935,17 @@ are created for all other missing properties. Use `_.setWith` to customize
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 3.7.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to modify.
 2. `path` *(Array|string)*: The path of the property to set.
 3. `value` *(&#42;)*: The value to set.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 3 } }] };
 
@@ -7975,18 +7974,18 @@ with three arguments: *(nsValue, key, nsObject)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to modify.
 2. `path` *(Array|string)*: The path of the property to set.
 3. `value` *(&#42;)*: The value to set.
 4. `[customizer]` *(Function)*: The function to customize assigned values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var object = {};
 
@@ -8006,18 +8005,18 @@ Creates an array of own enumerable string keyed-value pairs for `object`
 which can be consumed by `_.fromPairs`. If `object` is a map or set, its
 entries are returned.
 
-#### Since
+#### 起始版本
 4.0.0
 #### Aliases
 *_.entries*
 
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the key-value pairs.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -8042,18 +8041,18 @@ Creates an array of own and inherited enumerable string keyed-value pairs
 for `object` which can be consumed by `_.fromPairs`. If `object` is a map
 or set, its entries are returned.
 
-#### Since
+#### 起始版本
 4.0.0
 #### Aliases
 *_.entriesIn*
 
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the key-value pairs.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -8082,17 +8081,17 @@ provided, a new object with the same `[[Prototype]]` will be used. The
 iteratee is invoked with four arguments: *(accumulator, value, key, object)*.
 Iteratee functions may exit iteration early by explicitly returning `false`.
 
-#### Since
+#### 起始版本
 1.3.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to iterate over.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 3. `[accumulator]` *(&#42;)*: The custom accumulator value.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the accumulated value.
 
-#### Example
+####示例
 ```js
 _.transform([2, 3, 4], function(result, n) {
   result.push(n *= n);
@@ -8119,16 +8118,16 @@ Removes the property at `path` of `object`.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to modify.
 2. `path` *(Array|string)*: The path of the property to unset.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if the property is deleted, else `false`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 7 } }] };
 _.unset(object, 'a[0].b.c');
@@ -8159,17 +8158,17 @@ is invoked with one argument: *(value)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.6.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to modify.
 2. `path` *(Array|string)*: The path of the property to set.
 3. `updater` *(Function)*: The function to produce the updated value.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 3 } }] };
 
@@ -8198,18 +8197,18 @@ with three arguments: *(nsValue, key, nsObject)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### 起始版本
 4.6.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to modify.
 2. `path` *(Array|string)*: The path of the property to set.
 3. `updater` *(Function)*: The function to produce the updated value.
 4. `[customizer]` *(Function)*: The function to customize assigned values.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var object = {};
 
@@ -8230,15 +8229,15 @@ Creates an array of the own enumerable string keyed property values of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of property values.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -8268,15 +8267,15 @@ values of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of property values.
 
-#### Example
+####示例
 ```js
 function Foo() {
   this.a = 1;
@@ -8403,13 +8402,13 @@ The wrapper methods that are **not** chainable by default are:<br>
 `trimEnd`, `trimStart`, `truncate`, `unescape`, `uniqueId`, `upperCase`,
 `upperFirst`, `value`, and `words`
 
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to wrap in a `lodash` instance.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 function square(n) {
   return n * n;
@@ -8443,15 +8442,15 @@ Creates a `lodash` wrapper instance that wraps `value` with explicit method
 chain sequences enabled. The result of such sequences must be unwrapped
 with `_#value`.
 
-#### Since
+#### 起始版本
 1.3.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to wrap.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney',  'age': 36 },
@@ -8482,16 +8481,16 @@ This method invokes `interceptor` and returns `value`. The interceptor
 is invoked with one argument; *(value)*. The purpose of this method is to
 "tap into" a method chain sequence in order to modify intermediate results.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to provide to `interceptor`.
 2. `interceptor` *(Function)*: The function to invoke.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns `value`.
 
-#### Example
+####示例
 ```js
 _([1, 2, 3])
  .tap(function(array) {
@@ -8515,16 +8514,16 @@ This method is like `_.tap` except that it returns the result of `interceptor`.
 The purpose of this method is to "pass thru" values replacing intermediate
 results in a method chain sequence.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to provide to `interceptor`.
 2. `interceptor` *(Function)*: The function to invoke.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the result of `interceptor`.
 
-#### Example
+####示例
 ```js
 _('  abc  ')
  .chain()
@@ -8546,12 +8545,12 @@ _('  abc  ')
 
 Enables the wrapper to be iterable.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the wrapper object.
 
-#### Example
+####示例
 ```js
 var wrapped = _([1, 2]);
 
@@ -8572,15 +8571,15 @@ Array.from(wrapped);
 
 This method is the wrapper version of `_.at`.
 
-#### Since
+#### 起始版本
 1.0.0
-#### Arguments
+#### 参数
 1. `[paths]` *(...(string|string&#91;&#93;))*: The property paths of elements to pick.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 var object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
 
@@ -8598,12 +8597,12 @@ _(object).at(['a[0].b.c', 'a[1]']).value();
 
 Creates a `lodash` wrapper instance with explicit method chain sequences enabled.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney', 'age': 36 },
@@ -8633,12 +8632,12 @@ _(users)
 
 Executes the chain sequence and returns the wrapped result.
 
-#### Since
+#### 起始版本
 3.2.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 var array = [1, 2];
 var wrapped = _(array).push(3);
@@ -8668,12 +8667,12 @@ console.log(array);
 Gets the next value on a wrapped object following the
 [iterator protocol](https://mdn.io/iteration_protocols#iterator).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the next iterator value.
 
-#### Example
+####示例
 ```js
 var wrapped = _([1, 2]);
 
@@ -8697,15 +8696,15 @@ wrapped.next();
 
 Creates a clone of the chain sequence planting `value` as the wrapped value.
 
-#### Since
+#### 起始版本
 3.2.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to plant.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 function square(n) {
   return n * n;
@@ -8734,12 +8733,12 @@ This method is the wrapper version of `_.reverse`.
 <br>
 **Note:** This method mutates the wrapped array.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new `lodash` wrapper instance.
 
-#### Example
+####示例
 ```js
 var array = [1, 2, 3];
 
@@ -8760,15 +8759,15 @@ console.log(array);
 
 Executes the chain sequence to resolve the unwrapped value.
 
-#### Since
+#### 起始版本
 0.1.0
 #### Aliases
 *_.prototype.toJSON, _.prototype.valueOf*
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the resolved unwrapped value.
 
-#### Example
+####示例
 ```js
 _([1, 2, 3]).value();
 // => [1, 2, 3]
@@ -8790,15 +8789,15 @@ _([1, 2, 3]).value();
 
 Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the camel cased string.
 
-#### Example
+####示例
 ```js
 _.camelCase('Foo Bar');
 // => 'fooBar'
@@ -8821,15 +8820,15 @@ _.camelCase('__FOO_BAR__');
 Converts the first character of `string` to upper case and the remaining
 to lower case.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to capitalize.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the capitalized string.
 
-#### Example
+####示例
 ```js
 _.capitalize('FRED');
 // => 'Fred'
@@ -8849,15 +8848,15 @@ and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A)
 letters to basic Latin letters and removing
 [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to deburr.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the deburred string.
 
-#### Example
+####示例
 ```js
 _.deburr('déjà vu');
 // => 'deja vu'
@@ -8873,17 +8872,17 @@ _.deburr('déjà vu');
 
 Checks if `string` ends with the given target string.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to inspect.
 2. `[target]` *(string)*: The string to search for.
 3. `[position=string.length]` *(number)*: The position to search up to.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `string` ends with `target`, else `false`.
 
-#### Example
+####示例
 ```js
 _.endsWith('abc', 'c');
 // => true
@@ -8922,15 +8921,15 @@ When working with HTML you should always
 [quote attribute values](http://wonko.com/post/html-escaping) to reduce
 XSS vectors.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to escape.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the escaped string.
 
-#### Example
+####示例
 ```js
 _.escape('fred, barney, & pebbles');
 // => 'fred, barney, &amp; pebbles'
@@ -8947,15 +8946,15 @@ _.escape('fred, barney, & pebbles');
 Escapes the `RegExp` special characters "^", "$", "\", ".", "*", "+",
 "?", "(", ")", "[", "]", "{", "}", and "|" in `string`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to escape.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the escaped string.
 
-#### Example
+####示例
 ```js
 _.escapeRegExp('[lodash](https://lodash.com/)');
 // => '\[lodash\]\(https://lodash\.com/\)'
@@ -8972,15 +8971,15 @@ _.escapeRegExp('[lodash](https://lodash.com/)');
 Converts `string` to
 [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the kebab cased string.
 
-#### Example
+####示例
 ```js
 _.kebabCase('Foo Bar');
 // => 'foo-bar'
@@ -9002,15 +9001,15 @@ _.kebabCase('__FOO_BAR__');
 
 Converts `string`, as space separated words, to lower case.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the lower cased string.
 
-#### Example
+####示例
 ```js
 _.lowerCase('--Foo-Bar--');
 // => 'foo bar'
@@ -9032,15 +9031,15 @@ _.lowerCase('__FOO_BAR__');
 
 Converts the first character of `string` to lower case.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the converted string.
 
-#### Example
+####示例
 ```js
 _.lowerFirst('Fred');
 // => 'fred'
@@ -9060,17 +9059,17 @@ _.lowerFirst('FRED');
 Pads `string` on the left and right sides if it's shorter than `length`.
 Padding characters are truncated if they can't be evenly divided by `length`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to pad.
 2. `[length=0]` *(number)*: The padding length.
 3. `[chars=' ']` *(string)*: The string used as padding.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the padded string.
 
-#### Example
+####示例
 ```js
 _.pad('abc', 8);
 // => '  abc   '
@@ -9093,17 +9092,17 @@ _.pad('abc', 3);
 Pads `string` on the right side if it's shorter than `length`. Padding
 characters are truncated if they exceed `length`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to pad.
 2. `[length=0]` *(number)*: The padding length.
 3. `[chars=' ']` *(string)*: The string used as padding.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the padded string.
 
-#### Example
+####示例
 ```js
 _.padEnd('abc', 6);
 // => 'abc   '
@@ -9126,17 +9125,17 @@ _.padEnd('abc', 3);
 Pads `string` on the left side if it's shorter than `length`. Padding
 characters are truncated if they exceed `length`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to pad.
 2. `[length=0]` *(number)*: The padding length.
 3. `[chars=' ']` *(string)*: The string used as padding.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the padded string.
 
-#### Example
+####示例
 ```js
 _.padStart('abc', 6);
 // => '   abc'
@@ -9164,16 +9163,16 @@ hexadecimal, in which case a `radix` of `16` is used.
 **Note:** This method aligns with the
 [ES5 implementation](https://es5.github.io/#x15.1.2.2) of `parseInt`.
 
-#### Since
+#### 起始版本
 1.1.0
-#### Arguments
+#### 参数
 1. `string` *(string)*: The string to convert.
 2. `[radix=10]` *(number)*: The radix to interpret `value` by.
 
-#### Returns
+#### 返回结果
 *(number)*: Returns the converted integer.
 
-#### Example
+####示例
 ```js
 _.parseInt('08');
 // => 8
@@ -9192,16 +9191,16 @@ _.map(['6', '08', '10'], _.parseInt);
 
 Repeats the given string `n` times.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to repeat.
 2. `[n=1]` *(number)*: The number of times to repeat the string.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the repeated string.
 
-#### Example
+####示例
 ```js
 _.repeat('*', 3);
 // => '***'
@@ -9227,17 +9226,17 @@ Replaces matches for `pattern` in `string` with `replacement`.
 **Note:** This method is based on
 [`String#replace`](https://mdn.io/String/replace).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to modify.
 2. `pattern` *(RegExp|string)*: The pattern to replace.
 3. `replacement` *(Function|string)*: The match replacement.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the modified string.
 
-#### Example
+####示例
 ```js
 _.replace('Hi Fred', 'Fred', 'Barney');
 // => 'Hi Barney'
@@ -9254,15 +9253,15 @@ _.replace('Hi Fred', 'Fred', 'Barney');
 Converts `string` to
 [snake case](https://en.wikipedia.org/wiki/Snake_case).
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the snake cased string.
 
-#### Example
+####示例
 ```js
 _.snakeCase('Foo Bar');
 // => 'foo_bar'
@@ -9288,17 +9287,17 @@ Splits `string` by `separator`.
 **Note:** This method is based on
 [`String#split`](https://mdn.io/String/split).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to split.
 2. `separator` *(RegExp|string)*: The separator pattern to split by.
 3. `[limit]` *(number)*: The length to truncate results to.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the string segments.
 
-#### Example
+####示例
 ```js
 _.split('a-b-c', '-', 2);
 // => ['a', 'b']
@@ -9315,15 +9314,15 @@ _.split('a-b-c', '-', 2);
 Converts `string` to
 [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
 
-#### Since
+#### 起始版本
 3.1.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the start cased string.
 
-#### Example
+####示例
 ```js
 _.startCase('--foo-bar--');
 // => 'Foo Bar'
@@ -9345,17 +9344,17 @@ _.startCase('__FOO_BAR__');
 
 Checks if `string` starts with the given target string.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to inspect.
 2. `[target]` *(string)*: The string to search for.
 3. `[position=0]` *(number)*: The position to search from.
 
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true` if `string` starts with `target`, else `false`.
 
-#### Example
+####示例
 ```js
 _.startsWith('abc', 'a');
 // => true
@@ -9394,9 +9393,9 @@ For more information on precompiling templates see
 For more information on Chrome extension sandboxes see
 [Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The template string.
 2. `[options={}]` *(Object)*: The options object.
 3. `[options.escape=_.templateSettings.escape]` *(RegExp)*: The HTML "escape" delimiter.
@@ -9406,10 +9405,10 @@ For more information on Chrome extension sandboxes see
 7. `[options.sourceURL='lodash.templateSources[n]']` *(string)*: The sourceURL of the compiled template.
 8. `[options.variable='obj']` *(string)*: The data object variable name.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the compiled template function.
 
-#### Example
+####示例
 ```js
 // Use the "interpolate" delimiter to create a compiled template.
 var compiled = _.template('hello <%= user %>!');
@@ -9488,15 +9487,15 @@ fs.writeFileSync(path.join(process.cwd(), 'jst.js'), '\
 Converts `string`, as a whole, to lower case just like
 [String#toLowerCase](https://mdn.io/toLowerCase).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the lower cased string.
 
-#### Example
+####示例
 ```js
 _.toLower('--Foo-Bar--');
 // => '--foo-bar--'
@@ -9519,15 +9518,15 @@ _.toLower('__FOO_BAR__');
 Converts `string`, as a whole, to upper case just like
 [String#toUpperCase](https://mdn.io/toUpperCase).
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the upper cased string.
 
-#### Example
+####示例
 ```js
 _.toUpper('--foo-bar--');
 // => '--FOO-BAR--'
@@ -9549,16 +9548,16 @@ _.toUpper('__foo_bar__');
 
 Removes leading and trailing whitespace or specified characters from `string`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to trim.
 2. `[chars=whitespace]` *(string)*: The characters to trim.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the trimmed string.
 
-#### Example
+####示例
 ```js
 _.trim('  abc  ');
 // => 'abc'
@@ -9580,16 +9579,16 @@ _.map(['  foo  ', '  bar  '], _.trim);
 
 Removes trailing whitespace or specified characters from `string`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to trim.
 2. `[chars=whitespace]` *(string)*: The characters to trim.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the trimmed string.
 
-#### Example
+####示例
 ```js
 _.trimEnd('  abc  ');
 // => '  abc'
@@ -9608,16 +9607,16 @@ _.trimEnd('-_-abc-_-', '_-');
 
 Removes leading whitespace or specified characters from `string`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to trim.
 2. `[chars=whitespace]` *(string)*: The characters to trim.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the trimmed string.
 
-#### Example
+####示例
 ```js
 _.trimStart('  abc  ');
 // => 'abc  '
@@ -9638,19 +9637,19 @@ Truncates `string` if it's longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to "...".
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to truncate.
 2. `[options={}]` *(Object)*: The options object.
 3. `[options.length=30]` *(number)*: The maximum string length.
 4. `[options.omission='...']` *(string)*: The string to indicate text is omitted.
 5. `[options.separator]` *(RegExp|string)*: The separator pattern to truncate to.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the truncated string.
 
-#### Example
+####示例
 ```js
 _.truncate('hi-diddly-ho there, neighborino');
 // => 'hi-diddly-ho there, neighbo...'
@@ -9689,15 +9688,15 @@ their corresponding characters.
 **Note:** No other HTML entities are unescaped. To unescape additional
 HTML entities use a third-party library like [_he_](https://mths.be/he).
 
-#### Since
+#### 起始版本
 0.6.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to unescape.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the unescaped string.
 
-#### Example
+####示例
 ```js
 _.unescape('fred, barney, &amp; pebbles');
 // => 'fred, barney, & pebbles'
@@ -9713,15 +9712,15 @@ _.unescape('fred, barney, &amp; pebbles');
 
 Converts `string`, as space separated words, to upper case.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the upper cased string.
 
-#### Example
+####示例
 ```js
 _.upperCase('--foo-bar');
 // => 'FOO BAR'
@@ -9743,15 +9742,15 @@ _.upperCase('__foo_bar__');
 
 Converts the first character of `string` to upper case.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to convert.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the converted string.
 
-#### Example
+####示例
 ```js
 _.upperFirst('fred');
 // => 'Fred'
@@ -9770,16 +9769,16 @@ _.upperFirst('FRED');
 
 Splits `string` into an array of its words.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[string='']` *(string)*: The string to inspect.
 2. `[pattern]` *(RegExp|string)*: The pattern to match words.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the words of `string`.
 
-#### Example
+####示例
 ```js
 _.words('fred, barney, & pebbles');
 // => ['fred', 'barney', 'pebbles']
@@ -9805,16 +9804,16 @@ _.words('fred, barney, & pebbles', /[^, ]+/g);
 Attempts to invoke `func`, returning either the result or the caught error
 object. Any additional arguments are provided to `func` when it's invoked.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `func` *(Function)*: The function to attempt.
 2. `[args]` *(...&#42;)*: The arguments to invoke `func` with.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the `func` result or error object.
 
-#### Example
+####示例
 ```js
 // Avoid throwing errors for invalid selectors.
 var elements = _.attempt(function(selector) {
@@ -9840,16 +9839,16 @@ method.
 <br>
 **Note:** This method doesn't set the "length" property of bound functions.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to bind and assign the bound methods to.
 2. `methodNames` *(...(string|string&#91;&#93;))*: The object method names to bind.
 
-#### Returns
+#### 返回结果
 *(Object)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 var view = {
   'label': 'docs',
@@ -9876,15 +9875,15 @@ function of the first predicate to return truthy. The predicate-function
 pairs are invoked with the `this` binding and arguments of the created
 function.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `pairs` *(Array)*: The predicate-function pairs.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new composite function.
 
-#### Example
+####示例
 ```js
 var func = _.cond([
   [_.matches({ 'a': 1 }),           _.constant('matches A')],
@@ -9918,15 +9917,15 @@ all predicates return truthy, else `false`.
 **Note:** The created function is equivalent to `_.conformsTo` with
 `source` partially applied.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `source` *(Object)*: The object of property predicates to conform to.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new spec function.
 
-#### Example
+####示例
 ```js
 var objects = [
   { 'a': 2, 'b': 1 },
@@ -9947,15 +9946,15 @@ _.filter(objects, _.conforms({ 'b': function(n) { return n > 1; } }));
 
 Creates a function that returns `value`.
 
-#### Since
+#### 起始版本
 2.4.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to return from the new function.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new constant function.
 
-#### Example
+####示例
 ```js
 var objects = _.times(2, _.constant({ 'a': 1 }));
 
@@ -9978,16 +9977,16 @@ Checks `value` to determine whether a default value should be returned in
 its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
 or `undefined`.
 
-#### Since
+#### 起始版本
 4.14.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to check.
 2. `defaultValue` *(&#42;)*: The default value.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns the resolved value.
 
-#### Example
+####示例
 ```js
 _.defaultTo(1, 10);
 // => 1
@@ -10008,15 +10007,15 @@ Creates a function that returns the result of invoking the given functions
 with the `this` binding of the created function, where each successive
 invocation is supplied the return value of the previous.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[funcs]` *(...(Function|Function&#91;&#93;))*: The functions to invoke.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new composite function.
 
-#### Example
+####示例
 ```js
 function square(n) {
   return n * n;
@@ -10038,15 +10037,15 @@ addSquare(1, 2);
 This method is like `_.flow` except that it creates a function that
 invokes the given functions from right to left.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `[funcs]` *(...(Function|Function&#91;&#93;))*: The functions to invoke.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new composite function.
 
-#### Example
+####示例
 ```js
 function square(n) {
   return n * n;
@@ -10067,15 +10066,15 @@ addSquare(1, 2);
 
 This method returns the first argument it receives.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: Any value.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns `value`.
 
-#### Example
+####示例
 ```js
 var object = { 'a': 1 };
 
@@ -10097,15 +10096,15 @@ property value for a given element. If `func` is an array or object, the
 created function returns `true` for elements that contain the equivalent
 source properties, otherwise it returns `false`.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[func=_.identity]` *(&#42;)*: The value to convert to a callback.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the callback.
 
-#### Example
+####示例
 ```js
 var users = [
   { 'user': 'barney', 'age': 36, 'active': true },
@@ -10156,15 +10155,15 @@ Partial comparisons will match empty array and empty object `source`
 values against any array or object value, respectively. See `_.isEqual`
 for a list of supported value comparisons.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `source` *(Object)*: The object of property values to match.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new spec function.
 
-#### Example
+####示例
 ```js
 var objects = [
   { 'a': 1, 'b': 2, 'c': 3 },
@@ -10192,16 +10191,16 @@ object value is equivalent, else `false`.
 `srcValue` values against any array or object value, respectively. See
 `_.isEqual` for a list of supported value comparisons.
 
-#### Since
+#### 起始版本
 3.2.0
-#### Arguments
+#### 参数
 1. `path` *(Array|string)*: The path of the property to get.
 2. `srcValue` *(&#42;)*: The value to match.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new spec function.
 
-#### Example
+####示例
 ```js
 var objects = [
   { 'a': 1, 'b': 2, 'c': 3 },
@@ -10223,16 +10222,16 @@ _.find(objects, _.matchesProperty('a', 4));
 Creates a function that invokes the method at `path` of a given object.
 Any additional arguments are provided to the invoked method.
 
-#### Since
+#### 起始版本
 3.7.0
-#### Arguments
+#### 参数
 1. `path` *(Array|string)*: The path of the method to invoke.
 2. `[args]` *(...&#42;)*: The arguments to invoke the method with.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new invoker function.
 
-#### Example
+####示例
 ```js
 var objects = [
   { 'a': { 'b': _.constant(2) } },
@@ -10258,16 +10257,16 @@ The opposite of `_.method`; this method creates a function that invokes
 the method at a given path of `object`. Any additional arguments are
 provided to the invoked method.
 
-#### Since
+#### 起始版本
 3.7.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 2. `[args]` *(...&#42;)*: The arguments to invoke the method with.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new invoker function.
 
-#### Example
+####示例
 ```js
 var array = _.times(3, _.constant),
     object = { 'a': array, 'b': array, 'c': array };
@@ -10295,18 +10294,18 @@ are added to its prototype as well.
 **Note:** Use `_.runInContext` to create a pristine `lodash` function to
 avoid conflicts caused by modifying the original.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[object=lodash]` *(Function|Object)*: The destination object.
 2. `source` *(Object)*: The object of functions to add.
 3. `[options={}]` *(Object)*: The options object.
 4. `[options.chain=true]` *(boolean)*: Specify whether mixins are chainable.
 
-#### Returns
+#### 返回结果
 *(&#42;)*: Returns `object`.
 
-#### Example
+####示例
 ```js
 function vowels(string) {
   return _.filter(string, function(v) {
@@ -10337,12 +10336,12 @@ _('fred').vowels();
 Reverts the `_` variable to its previous value and returns a reference to
 the `lodash` function.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Returns
+#### 返回结果
 *(Function)*: Returns the `lodash` function.
 
-#### Example
+####示例
 ```js
 var lodash = _.noConflict();
 ```
@@ -10357,9 +10356,9 @@ var lodash = _.noConflict();
 
 This method returns `undefined`.
 
-#### Since
+#### 起始版本
 2.3.0
-#### Example
+####示例
 ```js
 _.times(2, _.noop);
 // => [undefined, undefined]
@@ -10376,15 +10375,15 @@ _.times(2, _.noop);
 Creates a function that gets the argument at index `n`. If `n` is negative,
 the nth argument from the end is returned.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[n=0]` *(number)*: The index of the argument to return.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new pass-thru function.
 
-#### Example
+####示例
 ```js
 var func = _.nthArg(1);
 func('a', 'b', 'c', 'd');
@@ -10406,15 +10405,15 @@ func('a', 'b', 'c', 'd');
 Creates a function that invokes `iteratees` with the arguments it receives
 and returns their results.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[iteratees=[_.identity]]` *(...(Function|Function&#91;&#93;))*: The iteratees to invoke.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var func = _.over([Math.max, Math.min]);
 
@@ -10433,15 +10432,15 @@ func(1, 2, 3, 4);
 Creates a function that checks if **all** of the `predicates` return
 truthy when invoked with the arguments it receives.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[predicates=[_.identity]]` *(...(Function|Function&#91;&#93;))*: The predicates to check.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var func = _.overEvery([Boolean, isFinite]);
 
@@ -10466,15 +10465,15 @@ func(NaN);
 Creates a function that checks if **any** of the `predicates` return
 truthy when invoked with the arguments it receives.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[predicates=[_.identity]]` *(...(Function|Function&#91;&#93;))*: The predicates to check.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new function.
 
-#### Example
+####示例
 ```js
 var func = _.overSome([Boolean, isFinite]);
 
@@ -10498,15 +10497,15 @@ func(NaN);
 
 Creates a function that returns the value at `path` of a given object.
 
-#### Since
+#### 起始版本
 2.4.0
-#### Arguments
+#### 参数
 1. `path` *(Array|string)*: The path of the property to get.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new accessor function.
 
-#### Example
+####示例
 ```js
 var objects = [
   { 'a': { 'b': 2 } },
@@ -10531,15 +10530,15 @@ _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
 The opposite of `_.property`; this method creates a function that returns
 the value at a given path of `object`.
 
-#### Since
+#### 起始版本
 3.0.0
-#### Arguments
+#### 参数
 1. `object` *(Object)*: The object to query.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns the new accessor function.
 
-#### Example
+####示例
 ```js
 var array = [0, 1, 2],
     object = { 'a': array, 'b': array, 'c': array };
@@ -10568,17 +10567,17 @@ it's set to `start` with `start` then set to `0`.
 **Note:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[start=0]` *(number)*: The start of the range.
 2. `end` *(number)*: The end of the range.
 3. `[step=1]` *(number)*: The value to increment or decrement by.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the range of numbers.
 
-#### Example
+####示例
 ```js
 _.range(4);
 // => [0, 1, 2, 3]
@@ -10613,17 +10612,17 @@ _.range(0);
 This method is like `_.range` except that it populates values in
 descending order.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `[start=0]` *(number)*: The start of the range.
 2. `end` *(number)*: The end of the range.
 3. `[step=1]` *(number)*: The value to increment or decrement by.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the range of numbers.
 
-#### Example
+####示例
 ```js
 _.rangeRight(4);
 // => [3, 2, 1, 0]
@@ -10657,15 +10656,15 @@ _.rangeRight(0);
 
 Create a new pristine `lodash` function using the `context` object.
 
-#### Since
+#### 起始版本
 1.1.0
-#### Arguments
+#### 参数
 1. `[context=root]` *(Object)*: The context object.
 
-#### Returns
+#### 返回结果
 *(Function)*: Returns a new `lodash` function.
 
-#### Example
+####示例
 ```js
 _.mixin({ 'foo': _.constant('foo') });
 
@@ -10696,12 +10695,12 @@ var defer = _.runInContext({ 'setTimeout': setImmediate }).defer;
 
 This method returns a new empty array.
 
-#### Since
+#### 起始版本
 4.13.0
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new empty array.
 
-#### Example
+####示例
 ```js
 var arrays = _.times(2, _.stubArray);
 
@@ -10722,12 +10721,12 @@ console.log(arrays[0] === arrays[1]);
 
 This method returns `false`.
 
-#### Since
+#### 起始版本
 4.13.0
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `false`.
 
-#### Example
+####示例
 ```js
 _.times(2, _.stubFalse);
 // => [false, false]
@@ -10743,12 +10742,12 @@ _.times(2, _.stubFalse);
 
 This method returns a new empty object.
 
-#### Since
+#### 起始版本
 4.13.0
-#### Returns
+#### 返回结果
 *(Object)*: Returns the new empty object.
 
-#### Example
+####示例
 ```js
 var objects = _.times(2, _.stubObject);
 
@@ -10769,12 +10768,12 @@ console.log(objects[0] === objects[1]);
 
 This method returns an empty string.
 
-#### Since
+#### 起始版本
 4.13.0
-#### Returns
+#### 返回结果
 *(string)*: Returns the empty string.
 
-#### Example
+####示例
 ```js
 _.times(2, _.stubString);
 // => ['', '']
@@ -10790,12 +10789,12 @@ _.times(2, _.stubString);
 
 This method returns `true`.
 
-#### Since
+#### 起始版本
 4.13.0
-#### Returns
+#### 返回结果
 *(boolean)*: Returns `true`.
 
-#### Example
+####示例
 ```js
 _.times(2, _.stubTrue);
 // => [true, true]
@@ -10812,16 +10811,16 @@ _.times(2, _.stubTrue);
 Invokes the iteratee `n` times, returning an array of the results of
 each invocation. The iteratee is invoked with one argument; *(index)*.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `n` *(number)*: The number of times to invoke `iteratee`.
 2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the array of results.
 
-#### Example
+####示例
 ```js
 _.times(3, String);
 // => ['0', '1', '2']
@@ -10840,15 +10839,15 @@ _.times(3, String);
 
 Converts `value` to a property path array.
 
-#### Since
+#### 起始版本
 4.0.0
-#### Arguments
+#### 参数
 1. `value` *(&#42;)*: The value to convert.
 
-#### Returns
+#### 返回结果
 *(Array)*: Returns the new property path array.
 
-#### Example
+####示例
 ```js
 _.toPath('a.b.c');
 // => ['a', 'b', 'c']
@@ -10867,15 +10866,15 @@ _.toPath('a[0].b.c');
 
 Generates a unique ID. If `prefix` is given, the ID is appended to it.
 
-#### Since
+#### 起始版本
 0.1.0
-#### Arguments
+#### 参数
 1. `[prefix='']` *(string)*: The value to prefix the ID with.
 
-#### Returns
+#### 返回结果
 *(string)*: Returns the unique ID.
 
-#### Example
+####示例
 ```js
 _.uniqueId('contact_');
 // => 'contact_104'
