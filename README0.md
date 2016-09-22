@@ -509,7 +509,7 @@ console.log(array);
 的方式去判断，将数组中不包含在提供的数组中的元素提取出来，放在新的数组中．
 <br>
 <br>
-**提示:** 不同于 `_.pullAll`, 这个方法返回新的数组．.
+**提示:** 不同于 `_.pullAll`, 这个方法返回新的数组．
 
 #### 起始版本
 0.1.0
@@ -534,33 +534,34 @@ _.difference([2, 1], [2, 3]);
 <h3 id="_differencebyarray-values-iteratee_identity"><code>_.differenceBy(array, [values], [iteratee=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6810 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.differenceby "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.difference` except that it accepts `iteratee` which
-is invoked for each element of `array` and `values` to generate the criterion
-by which they're compared. The order and references of result values are
-determined by the first array. The iteratee is invoked with one argument:<br>
+这个方法类似于 `_.difference` 的排除，他用`iteratee` 作为`array` 和 `values` 的比较标准
+结果值是从第一数组中选出，iteratee比较时调用一个参数:<br>
 *(value)*.
 <br>
 <br>
-**提示:** 不同于 `_.pullAllBy`, 这个方法返回新的数组．.
+**提示:** 不同于 `_.pullAllBy`, 这个方法返回新的数组．
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `[values]` *(...Array)*: The values to exclude.
-3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
+1. `array` *(Array)*: 取值数组.
+2. `[values]` *(...Array)*: 比对数组.
+3. `[iteratee=_.identity]` *(Function)*: 每个元素比对调用的方法
 
 #### 返回结果
-*(Array)*: Returns the new array of filtered values.
+*(Array)*: 返回新的数组
 
 ####示例
 ```js
-_.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor);
-// => [1.2]
+console.log(_.differenceBy([2.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7], [1.9,2.0,2.3, 3.4], Math.floor));
+// => [1.2, 1.3, 1.4, 1.5]
 
-// The `_.property` iteratee shorthand.
-_.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
-// => [{ 'x': 2 }]
+console.log(Math.floor(0.1));
+//0
+//Math.floor求一个最接近它的整数，它的值小于或等于这个浮点数。
+// The `_.property` iteratee shorthand.
+_.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
+// => [{ 'x': 2 }]
 ```
 ---
 
@@ -571,20 +572,17 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 <h3 id="_differencewitharray-values-comparator"><code>_.differenceWith(array, [values], [comparator])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6843 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.differencewith "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.difference` except that it accepts `comparator`
-which is invoked to compare elements of `array` to `values`. The order and
-references of result values are determined by the first array. The comparator
-is invoked with two arguments: *(arrVal, othVal)*.
+这个方法类似于 `_.difference` 的去除， 它接受`array` to `values中的元素比较`. 结果值是从第一数组中选出. 这种比较使用两个参数: *(arrVal, othVal)*.
 <br>
 <br>
-**提示:** 不同于 `_.pullAllWith`, 这个方法返回新的数组．.
+**提示:** 不同于 `_.pullAllWith`, 这个方法返回新的数组．
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `[values]` *(...Array)*: The values to exclude.
-3. `[comparator]` *(Function)*: The comparator invoked per element.
+1. `array` *(Array)*: 要检查的数组
+2. `[values]` *(...Array)*: 排除这些值
+3. `[comparator]` *(Function)*: 每个元素比较调用。
 
 #### 返回结果
 *(Array)*: Returns the new array of filtered values.
@@ -2203,7 +2201,7 @@ Creates an array excluding all given values using
 for equality comparisons.
 <br>
 <br>
-**提示:** 不同于 `_.pull`, 这个方法返回新的数组．.
+**提示:** 不同于 `_.pull`, 这个方法返回新的数组．
 
 #### 起始版本
 0.1.0
@@ -2518,7 +2516,7 @@ Iterates over elements of `collection`, returning an array of all elements
 arguments: *(value, index|key, collection)*.
 <br>
 <br>
-**提示:** 不同于 `_.remove`, 这个方法返回新的数组．.
+**提示:** 不同于 `_.remove`, 这个方法返回新的数组．
 
 #### 起始版本
 0.1.0
