@@ -10,402 +10,402 @@
 <!-- div -->
 
 ## `Array`
-* <a href="#_chunkarray-size1">`_.chunk－指定长度切割`</a>
-* <a href="#_compactarray">`_.compact`</a>
-* <a href="#_concatarray-values">`_.concat`</a>
-* <a href="#_differencearray-values">`_.difference`</a>
-* <a href="#_differencebyarray-values-iteratee_identity">`_.differenceBy`</a>
-* <a href="#_differencewitharray-values-comparator">`_.differenceWith`</a>
-* <a href="#_droparray-n1">`_.drop`</a>
-* <a href="#_droprightarray-n1">`_.dropRight`</a>
-* <a href="#_droprightwhilearray-predicate_identity">`_.dropRightWhile`</a>
-* <a href="#_dropwhilearray-predicate_identity">`_.dropWhile`</a>
-* <a href="#_fillarray-value-start0-endarraylength">`_.fill`</a>
-* <a href="#_findindexarray-predicate_identity-fromindex0">`_.findIndex`</a>
-* <a href="#_findlastindexarray-predicate_identity-fromindexarraylength-1">`_.findLastIndex`</a>
-* <a href="#_headarray" class="alias">`_.first` -> `head`</a>
-* <a href="#_flattenarray">`_.flatten`</a>
-* <a href="#_flattendeeparray">`_.flattenDeep`</a>
-* <a href="#_flattendeptharray-depth1">`_.flattenDepth`</a>
-* <a href="#_frompairspairs">`_.fromPairs`</a>
-* <a href="#_headarray">`_.head`</a>
-* <a href="#_indexofarray-value-fromindex0">`_.indexOf`</a>
-* <a href="#_initialarray">`_.initial`</a>
-* <a href="#_intersectionarrays">`_.intersection`</a>
-* <a href="#_intersectionbyarrays-iteratee_identity">`_.intersectionBy`</a>
-* <a href="#_intersectionwitharrays-comparator">`_.intersectionWith`</a>
-* <a href="#_joinarray-separator-">`_.join`</a>
-* <a href="#_lastarray">`_.last`</a>
-* <a href="#_lastindexofarray-value-fromindexarraylength-1">`_.lastIndexOf`</a>
-* <a href="#_ntharray-n0">`_.nth`</a>
-* <a href="#_pullarray-values">`_.pull`</a>
-* <a href="#_pullallarray-values">`_.pullAll`</a>
-* <a href="#_pullallbyarray-values-iteratee_identity">`_.pullAllBy`</a>
-* <a href="#_pullallwitharray-values-comparator">`_.pullAllWith`</a>
-* <a href="#_pullatarray-indexes">`_.pullAt`</a>
-* <a href="#_removearray-predicate_identity">`_.remove`</a>
-* <a href="#_reversearray">`_.reverse`</a>
-* <a href="#_slicearray-start0-endarraylength">`_.slice`</a>
-* <a href="#_sortedindexarray-value">`_.sortedIndex`</a>
-* <a href="#_sortedindexbyarray-value-iteratee_identity">`_.sortedIndexBy`</a>
-* <a href="#_sortedindexofarray-value">`_.sortedIndexOf`</a>
-* <a href="#_sortedlastindexarray-value">`_.sortedLastIndex`</a>
-* <a href="#_sortedlastindexbyarray-value-iteratee_identity">`_.sortedLastIndexBy`</a>
-* <a href="#_sortedlastindexofarray-value">`_.sortedLastIndexOf`</a>
-* <a href="#_sorteduniqarray">`_.sortedUniq`</a>
-* <a href="#_sorteduniqbyarray-iteratee">`_.sortedUniqBy`</a>
-* <a href="#_tailarray">`_.tail`</a>
-* <a href="#_takearray-n1">`_.take`</a>
-* <a href="#_takerightarray-n1">`_.takeRight`</a>
-* <a href="#_takerightwhilearray-predicate_identity">`_.takeRightWhile`</a>
-* <a href="#_takewhilearray-predicate_identity">`_.takeWhile`</a>
-* <a href="#_unionarrays">`_.union`</a>
-* <a href="#_unionbyarrays-iteratee_identity">`_.unionBy`</a>
-* <a href="#_unionwitharrays-comparator">`_.unionWith`</a>
-* <a href="#_uniqarray">`_.uniq`</a>
-* <a href="#_uniqbyarray-iteratee_identity">`_.uniqBy`</a>
-* <a href="#_uniqwitharray-comparator">`_.uniqWith`</a>
-* <a href="#_unziparray">`_.unzip`</a>
-* <a href="#_unzipwitharray-iteratee_identity">`_.unzipWith`</a>
-* <a href="#_withoutarray-values">`_.without`</a>
-* <a href="#_xorarrays">`_.xor`</a>
-* <a href="#_xorbyarrays-iteratee_identity">`_.xorBy`</a>
-* <a href="#_xorwitharrays-comparator">`_.xorWith`</a>
-* <a href="#_ziparrays">`_.zip`</a>
-* <a href="#_zipobjectprops-values">`_.zipObject`</a>
-* <a href="#_zipobjectdeepprops-values">`_.zipObjectDeep`</a>
-* <a href="#_zipwitharrays-iteratee_identity">`_.zipWith`</a>
+* <a href="#_chunkarray-size1">`_.chunk－－－－－指定长度切割数组`</a>
+* <a href="#_compactarray">`_.compact－－－－－数组过滤`</a>
+* <a href="#_concatarray-values">`_.concat－－－－－`</a>
+* <a href="#_differencearray-values">`_.difference－－－－－`</a>
+* <a href="#_differencebyarray-values-iteratee_identity">`_.differenceBy－－－－－`</a>
+* <a href="#_differencewitharray-values-comparator">`_.differenceWith－－－－－`</a>
+* <a href="#_droparray-n1">`_.drop－－－－－`</a>
+* <a href="#_droprightarray-n1">`_.dropRight－－－－－`</a>
+* <a href="#_droprightwhilearray-predicate_identity">`_.dropRightWhile－－－－－`</a>
+* <a href="#_dropwhilearray-predicate_identity">`_.dropWhile－－－－－`</a>
+* <a href="#_fillarray-value-start0-endarraylength">`_.fill－－－－－`</a>
+* <a href="#_findindexarray-predicate_identity-fromindex0">`_.findIndex－－－－－`</a>
+* <a href="#_findlastindexarray-predicate_identity-fromindexarraylength-1">`_.findLastIndex－－－－－`</a>
+* <a href="#_headarray" class="alias">`_.first` -> `head－－－－－`</a>
+* <a href="#_flattenarray">`_.flatten－－－－－`</a>
+* <a href="#_flattendeeparray">`_.flattenDeep－－－－－`</a>
+* <a href="#_flattendeptharray-depth1">`_.flattenDepth－－－－－`</a>
+* <a href="#_frompairspairs">`_.fromPairs－－－－－`</a>
+* <a href="#_headarray">`_.head－－－－－`</a>
+* <a href="#_indexofarray-value-fromindex0">`_.indexOf－－－－－`</a>
+* <a href="#_initialarray">`_.initial－－－－－－－－－－`</a>
+* <a href="#_intersectionarrays">`_.intersection－－－－－`</a>
+* <a href="#_intersectionbyarrays-iteratee_identity">`_.intersectionBy－－－－－`</a>
+* <a href="#_intersectionwitharrays-comparator">`_.intersectionWith－－－－－`</a>
+* <a href="#_joinarray-separator-">`_.join－－－－－`</a>
+* <a href="#_lastarray">`_.last－－－－－`</a>
+* <a href="#_lastindexofarray-value-fromindexarraylength-1">`_.lastIndexOf－－－－－`</a>
+* <a href="#_ntharray-n0">`_.nth－－－－－`</a>
+* <a href="#_pullarray-values">`_.pull－－－－－`</a>
+* <a href="#_pullallarray-values">`_.pullAll－－－－－`</a>
+* <a href="#_pullallbyarray-values-iteratee_identity">`_.pullAllBy－－－－－`</a>
+* <a href="#_pullallwitharray-values-comparator">`_.pullAllWith－－－－－`</a>
+* <a href="#_pullatarray-indexes">`_.pullAt－－－－－`</a>
+* <a href="#_removearray-predicate_identity">`_.remove－－－－－`</a>
+* <a href="#_reversearray">`_.reverse－－－－－`</a>
+* <a href="#_slicearray-start0-endarraylength">`_.slice－－－－－`</a>
+* <a href="#_sortedindexarray-value">`_.sortedIndex－－－－－`</a>
+* <a href="#_sortedindexbyarray-value-iteratee_identity">`_.sortedIndexBy－－－－－`</a>
+* <a href="#_sortedindexofarray-value">`_.sortedIndexOf－－－－－`</a>
+* <a href="#_sortedlastindexarray-value">`_.sortedLastIndex－－－－－`</a>
+* <a href="#_sortedlastindexbyarray-value-iteratee_identity">`_.sortedLastIndexBy－－－－－`</a>
+* <a href="#_sortedlastindexofarray-value">`_.sortedLastIndexOf－－－－－`</a>
+* <a href="#_sorteduniqarray">`_.sortedUniq－－－－－`</a>
+* <a href="#_sorteduniqbyarray-iteratee">`_.sortedUniqBy－－－－－`</a>
+* <a href="#_tailarray">`_.tail－－－－－`</a>
+* <a href="#_takearray-n1">`_.take－－－－－`</a>
+* <a href="#_takerightarray-n1">`_.takeRight－－－－－`</a>
+* <a href="#_takerightwhilearray-predicate_identity">`_.takeRightWhile－－－－－`</a>
+* <a href="#_takewhilearray-predicate_identity">`_.takeWhile－－－－－`</a>
+* <a href="#_unionarrays">`_.union－－－－－`</a>
+* <a href="#_unionbyarrays-iteratee_identity">`_.unionBy－－－－－`</a>
+* <a href="#_unionwitharrays-comparator">`_.unionWith－－－－－`</a>
+* <a href="#_uniqarray">`_.uniq－－－－－`</a>
+* <a href="#_uniqbyarray-iteratee_identity">`_.uniqBy－－－－－`</a>
+* <a href="#_uniqwitharray-comparator">`_.uniqWith－－－－－`</a>
+* <a href="#_unziparray">`_.unzip－－－－－`</a>
+* <a href="#_unzipwitharray-iteratee_identity">`_.unzipWith－－－－－`</a>
+* <a href="#_withoutarray-values">`_.without－－－－－`</a>
+* <a href="#_xorarrays">`_.xor－－－－－`</a>
+* <a href="#_xorbyarrays-iteratee_identity">`_.xorBy－－－－－`</a>
+* <a href="#_xorwitharrays-comparator">`_.xorWith－－－－－`</a>
+* <a href="#_ziparrays">`_.zip－－－－－`</a>
+* <a href="#_zipobjectprops-values">`_.zipObject－－－－－`</a>
+* <a href="#_zipobjectdeepprops-values">`_.zipObjectDeep－－－－－`</a>
+* <a href="#_zipwitharrays-iteratee_identity">`_.zipWith－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Collection`
-* <a href="#_countbycollection-iteratee_identity">`_.countBy`</a>
-* <a href="#_foreachcollection-iteratee_identity" class="alias">`_.each` -> `forEach`</a>
-* <a href="#_foreachrightcollection-iteratee_identity" class="alias">`_.eachRight` -> `forEachRight`</a>
-* <a href="#_everycollection-predicate_identity">`_.every`</a>
-* <a href="#_filtercollection-predicate_identity">`_.filter`</a>
-* <a href="#_findcollection-predicate_identity-fromindex0">`_.find`</a>
-* <a href="#_findlastcollection-predicate_identity-fromindexcollectionlength-1">`_.findLast`</a>
-* <a href="#_flatmapcollection-iteratee_identity">`_.flatMap`</a>
-* <a href="#_flatmapdeepcollection-iteratee_identity">`_.flatMapDeep`</a>
-* <a href="#_flatmapdepthcollection-iteratee_identity-depth1">`_.flatMapDepth`</a>
-* <a href="#_foreachcollection-iteratee_identity">`_.forEach`</a>
-* <a href="#_foreachrightcollection-iteratee_identity">`_.forEachRight`</a>
-* <a href="#_groupbycollection-iteratee_identity">`_.groupBy`</a>
-* <a href="#_includescollection-value-fromindex0">`_.includes`</a>
-* <a href="#_invokemapcollection-path-args">`_.invokeMap`</a>
-* <a href="#_keybycollection-iteratee_identity">`_.keyBy`</a>
-* <a href="#_mapcollection-iteratee_identity">`_.map`</a>
-* <a href="#_orderbycollection-iteratees_identity-orders">`_.orderBy`</a>
-* <a href="#_partitioncollection-predicate_identity">`_.partition`</a>
-* <a href="#_reducecollection-iteratee_identity-accumulator">`_.reduce`</a>
-* <a href="#_reducerightcollection-iteratee_identity-accumulator">`_.reduceRight`</a>
-* <a href="#_rejectcollection-predicate_identity">`_.reject`</a>
-* <a href="#_samplecollection">`_.sample`</a>
-* <a href="#_samplesizecollection-n1">`_.sampleSize`</a>
-* <a href="#_shufflecollection">`_.shuffle`</a>
-* <a href="#_sizecollection">`_.size`</a>
-* <a href="#_somecollection-predicate_identity">`_.some`</a>
-* <a href="#_sortbycollection-iteratees_identity">`_.sortBy`</a>
+* <a href="#_countbycollection-iteratee_identity">`_.countBy－－－－－`</a>
+* <a href="#_foreachcollection-iteratee_identity" class="alias">`_.each` -> `forEach－－－－－`</a>
+* <a href="#_foreachrightcollection-iteratee_identity" class="alias">`_.eachRight` -> `forEachRight－－－－－`</a>
+* <a href="#_everycollection-predicate_identity">`_.every－－－－－`</a>
+* <a href="#_filtercollection-predicate_identity">`_.filter－－－－－`</a>
+* <a href="#_findcollection-predicate_identity-fromindex0">`_.find－－－－－`</a>
+* <a href="#_findlastcollection-predicate_identity-fromindexcollectionlength-1">`_.findLast－－－－－`</a>
+* <a href="#_flatmapcollection-iteratee_identity">`_.flatMap－－－－－`</a>
+* <a href="#_flatmapdeepcollection-iteratee_identity">`_.flatMapDeep－－－－－`</a>
+* <a href="#_flatmapdepthcollection-iteratee_identity-depth1">`_.flatMapDepth－－－－－`</a>
+* <a href="#_foreachcollection-iteratee_identity">`_.forEach－－－－－`</a>
+* <a href="#_foreachrightcollection-iteratee_identity">`_.forEachRight－－－－－`</a>
+* <a href="#_groupbycollection-iteratee_identity">`_.groupBy－－－－－`</a>
+* <a href="#_includescollection-value-fromindex0">`_.includes－－－－－`</a>
+* <a href="#_invokemapcollection-path-args">`_.invokeMap－－－－－`</a>
+* <a href="#_keybycollection-iteratee_identity">`_.keyBy－－－－－`</a>
+* <a href="#_mapcollection-iteratee_identity">`_.map－－－－－`</a>
+* <a href="#_orderbycollection-iteratees_identity-orders">`_.orderBy－－－－－`</a>
+* <a href="#_partitioncollection-predicate_identity">`_.partition－－－－－`</a>
+* <a href="#_reducecollection-iteratee_identity-accumulator">`_.reduce－－－－－`</a>
+* <a href="#_reducerightcollection-iteratee_identity-accumulator">`_.reduceRight－－－－－`</a>
+* <a href="#_rejectcollection-predicate_identity">`_.reject－－－－－`</a>
+* <a href="#_samplecollection">`_.sample－－－－－`</a>
+* <a href="#_samplesizecollection-n1">`_.sampleSize－－－－－`</a>
+* <a href="#_shufflecollection">`_.shuffle－－－－－`</a>
+* <a href="#_sizecollection">`_.size－－－－－`</a>
+* <a href="#_somecollection-predicate_identity">`_.some－－－－－`</a>
+* <a href="#_sortbycollection-iteratees_identity">`_.sortBy－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Date`
-* <a href="#_now">`_.now`</a>
+* <a href="#_now">`_.now－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Function`
-* <a href="#_aftern-func">`_.after`</a>
-* <a href="#_aryfunc-nfunclength">`_.ary`</a>
-* <a href="#_beforen-func">`_.before`</a>
-* <a href="#_bindfunc-thisarg-partials">`_.bind`</a>
-* <a href="#_bindkeyobject-key-partials">`_.bindKey`</a>
-* <a href="#_curryfunc-arityfunclength">`_.curry`</a>
-* <a href="#_curryrightfunc-arityfunclength">`_.curryRight`</a>
-* <a href="#_debouncefunc-wait0-options">`_.debounce`</a>
-* <a href="#_deferfunc-args">`_.defer`</a>
-* <a href="#_delayfunc-wait-args">`_.delay`</a>
-* <a href="#_flipfunc">`_.flip`</a>
-* <a href="#_memoizefunc-resolver">`_.memoize`</a>
-* <a href="#_negatepredicate">`_.negate`</a>
-* <a href="#_oncefunc">`_.once`</a>
-* <a href="#_overargsfunc-transforms_identity">`_.overArgs`</a>
-* <a href="#_partialfunc-partials">`_.partial`</a>
-* <a href="#_partialrightfunc-partials">`_.partialRight`</a>
-* <a href="#_reargfunc-indexes">`_.rearg`</a>
-* <a href="#_restfunc-startfunclength-1">`_.rest`</a>
-* <a href="#_spreadfunc-start0">`_.spread`</a>
-* <a href="#_throttlefunc-wait0-options">`_.throttle`</a>
-* <a href="#_unaryfunc">`_.unary`</a>
-* <a href="#_wrapvalue-wrapperidentity">`_.wrap`</a>
+* <a href="#_aftern-func">`_.after－－－－－`</a>
+* <a href="#_aryfunc-nfunclength">`_.ary－－－－－`</a>
+* <a href="#_beforen-func">`_.before－－－－－`</a>
+* <a href="#_bindfunc-thisarg-partials">`_.bind－－－－－`</a>
+* <a href="#_bindkeyobject-key-partials">`_.bindKey－－－－－`</a>
+* <a href="#_curryfunc-arityfunclength">`_.curry－－－－－`</a>
+* <a href="#_curryrightfunc-arityfunclength">`_.curryRight－－－－－`</a>
+* <a href="#_debouncefunc-wait0-options">`_.debounce－－－－－`</a>
+* <a href="#_deferfunc-args">`_.defer－－－－－`</a>
+* <a href="#_delayfunc-wait-args">`_.delay－－－－－`</a>
+* <a href="#_flipfunc">`_.flip－－－－－`</a>
+* <a href="#_memoizefunc-resolver">`_.memoize－－－－－`</a>
+* <a href="#_negatepredicate">`_.negate－－－－－`</a>
+* <a href="#_oncefunc">`_.once－－－－－`</a>
+* <a href="#_overargsfunc-transforms_identity">`_.overArgs－－－－－`</a>
+* <a href="#_partialfunc-partials">`_.partial－－－－－`</a>
+* <a href="#_partialrightfunc-partials">`_.partialRight－－－－－`</a>
+* <a href="#_reargfunc-indexes">`_.rearg－－－－－`</a>
+* <a href="#_restfunc-startfunclength-1">`_.rest－－－－－`</a>
+* <a href="#_spreadfunc-start0">`_.spread－－－－－`</a>
+* <a href="#_throttlefunc-wait0-options">`_.throttle－－－－－`</a>
+* <a href="#_unaryfunc">`_.unary－－－－－`</a>
+* <a href="#_wrapvalue-wrapperidentity">`_.wrap－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Lang`
-* <a href="#_castarrayvalue">`_.castArray`</a>
-* <a href="#_clonevalue">`_.clone`</a>
-* <a href="#_clonedeepvalue">`_.cloneDeep`</a>
-* <a href="#_clonedeepwithvalue-customizer">`_.cloneDeepWith`</a>
-* <a href="#_clonewithvalue-customizer">`_.cloneWith`</a>
-* <a href="#_conformstoobject-source">`_.conformsTo`</a>
-* <a href="#_eqvalue-other">`_.eq`</a>
-* <a href="#_gtvalue-other">`_.gt`</a>
-* <a href="#_gtevalue-other">`_.gte`</a>
-* <a href="#_isargumentsvalue">`_.isArguments`</a>
-* <a href="#_isarrayvalue">`_.isArray`</a>
-* <a href="#_isarraybuffervalue">`_.isArrayBuffer`</a>
-* <a href="#_isarraylikevalue">`_.isArrayLike`</a>
-* <a href="#_isarraylikeobjectvalue">`_.isArrayLikeObject`</a>
-* <a href="#_isbooleanvalue">`_.isBoolean`</a>
-* <a href="#_isbuffervalue">`_.isBuffer`</a>
-* <a href="#_isdatevalue">`_.isDate`</a>
-* <a href="#_iselementvalue">`_.isElement`</a>
-* <a href="#_isemptyvalue">`_.isEmpty`</a>
-* <a href="#_isequalvalue-other">`_.isEqual`</a>
-* <a href="#_isequalwithvalue-other-customizer">`_.isEqualWith`</a>
-* <a href="#_iserrorvalue">`_.isError`</a>
-* <a href="#_isfinitevalue">`_.isFinite`</a>
-* <a href="#_isfunctionvalue">`_.isFunction`</a>
-* <a href="#_isintegervalue">`_.isInteger`</a>
-* <a href="#_islengthvalue">`_.isLength`</a>
-* <a href="#_ismapvalue">`_.isMap`</a>
-* <a href="#_ismatchobject-source">`_.isMatch`</a>
-* <a href="#_ismatchwithobject-source-customizer">`_.isMatchWith`</a>
-* <a href="#_isnanvalue">`_.isNaN`</a>
-* <a href="#_isnativevalue">`_.isNative`</a>
-* <a href="#_isnilvalue">`_.isNil`</a>
-* <a href="#_isnullvalue">`_.isNull`</a>
-* <a href="#_isnumbervalue">`_.isNumber`</a>
-* <a href="#_isobjectvalue">`_.isObject`</a>
-* <a href="#_isobjectlikevalue">`_.isObjectLike`</a>
-* <a href="#_isplainobjectvalue">`_.isPlainObject`</a>
-* <a href="#_isregexpvalue">`_.isRegExp`</a>
-* <a href="#_issafeintegervalue">`_.isSafeInteger`</a>
-* <a href="#_issetvalue">`_.isSet`</a>
-* <a href="#_isstringvalue">`_.isString`</a>
-* <a href="#_issymbolvalue">`_.isSymbol`</a>
-* <a href="#_istypedarrayvalue">`_.isTypedArray`</a>
-* <a href="#_isundefinedvalue">`_.isUndefined`</a>
-* <a href="#_isweakmapvalue">`_.isWeakMap`</a>
-* <a href="#_isweaksetvalue">`_.isWeakSet`</a>
-* <a href="#_ltvalue-other">`_.lt`</a>
-* <a href="#_ltevalue-other">`_.lte`</a>
-* <a href="#_toarrayvalue">`_.toArray`</a>
-* <a href="#_tofinitevalue">`_.toFinite`</a>
-* <a href="#_tointegervalue">`_.toInteger`</a>
-* <a href="#_tolengthvalue">`_.toLength`</a>
-* <a href="#_tonumbervalue">`_.toNumber`</a>
-* <a href="#_toplainobjectvalue">`_.toPlainObject`</a>
-* <a href="#_tosafeintegervalue">`_.toSafeInteger`</a>
-* <a href="#_tostringvalue">`_.toString`</a>
+* <a href="#_castarrayvalue">`_.castArray－－－－－`</a>
+* <a href="#_clonevalue">`_.clone－－－－－`</a>
+* <a href="#_clonedeepvalue">`_.cloneDeep－－－－－`</a>
+* <a href="#_clonedeepwithvalue-customizer">`_.cloneDeepWith－－－－－`</a>
+* <a href="#_clonewithvalue-customizer">`_.cloneWith－－－－－`</a>
+* <a href="#_conformstoobject-source">`_.conformsTo－－－－－`</a>
+* <a href="#_eqvalue-other">`_.eq－－－－－`</a>
+* <a href="#_gtvalue-other">`_.gt－－－－－`</a>
+* <a href="#_gtevalue-other">`_.gte－－－－－`</a>
+* <a href="#_isargumentsvalue">`_.isArguments－－－－－`</a>
+* <a href="#_isarrayvalue">`_.isArray－－－－－`</a>
+* <a href="#_isarraybuffervalue">`_.isArrayBuffer－－－－－`</a>
+* <a href="#_isarraylikevalue">`_.isArrayLike－－－－－`</a>
+* <a href="#_isarraylikeobjectvalue">`_.isArrayLikeObject－－－－－`</a>
+* <a href="#_isbooleanvalue">`_.isBoolean－－－－－`</a>
+* <a href="#_isbuffervalue">`_.isBuffer－－－－－`</a>
+* <a href="#_isdatevalue">`_.isDate－－－－－`</a>
+* <a href="#_iselementvalue">`_.isElement－－－－－`</a>
+* <a href="#_isemptyvalue">`_.isEmpty－－－－－`</a>
+* <a href="#_isequalvalue-other">`_.isEqual－－－－－`</a>
+* <a href="#_isequalwithvalue-other-customizer">`_.isEqualWith－－－－－`</a>
+* <a href="#_iserrorvalue">`_.isError－－－－－`</a>
+* <a href="#_isfinitevalue">`_.isFinite－－－－－`</a>
+* <a href="#_isfunctionvalue">`_.isFunction－－－－－`</a>
+* <a href="#_isintegervalue">`_.isInteger－－－－－`</a>
+* <a href="#_islengthvalue">`_.isLength－－－－－`</a>
+* <a href="#_ismapvalue">`_.isMap－－－－－`</a>
+* <a href="#_ismatchobject-source">`_.isMatch－－－－－`</a>
+* <a href="#_ismatchwithobject-source-customizer">`_.isMatchWith－－－－－`</a>
+* <a href="#_isnanvalue">`_.isNaN－－－－－`</a>
+* <a href="#_isnativevalue">`_.isNative－－－－－`</a>
+* <a href="#_isnilvalue">`_.isNil－－－－－`</a>
+* <a href="#_isnullvalue">`_.isNull－－－－－`</a>
+* <a href="#_isnumbervalue">`_.isNumber－－－－－`</a>
+* <a href="#_isobjectvalue">`_.isObject－－－－－`</a>
+* <a href="#_isobjectlikevalue">`_.isObjectLike－－－－－`</a>
+* <a href="#_isplainobjectvalue">`_.isPlainObject－－－－－`</a>
+* <a href="#_isregexpvalue">`_.isRegExp－－－－－`</a>
+* <a href="#_issafeintegervalue">`_.isSafeInteger－－－－－`</a>
+* <a href="#_issetvalue">`_.isSet－－－－－`</a>
+* <a href="#_isstringvalue">`_.isString－－－－－`</a>
+* <a href="#_issymbolvalue">`_.isSymbol－－－－－`</a>
+* <a href="#_istypedarrayvalue">`_.isTypedArray－－－－－`</a>
+* <a href="#_isundefinedvalue">`_.isUndefined－－－－－`</a>
+* <a href="#_isweakmapvalue">`_.isWeakMap－－－－－`</a>
+* <a href="#_isweaksetvalue">`_.isWeakSet－－－－－`</a>
+* <a href="#_ltvalue-other">`_.lt－－－－－`</a>
+* <a href="#_ltevalue-other">`_.lte－－－－－`</a>
+* <a href="#_toarrayvalue">`_.toArray－－－－－`</a>
+* <a href="#_tofinitevalue">`_.toFinite－－－－－`</a>
+* <a href="#_tointegervalue">`_.toInteger－－－－－`</a>
+* <a href="#_tolengthvalue">`_.toLength－－－－－`</a>
+* <a href="#_tonumbervalue">`_.toNumber－－－－－`</a>
+* <a href="#_toplainobjectvalue">`_.toPlainObject－－－－－`</a>
+* <a href="#_tosafeintegervalue">`_.toSafeInteger－－－－－`</a>
+* <a href="#_tostringvalue">`_.toString－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Math`
-* <a href="#_addaugend-addend">`_.add`</a>
-* <a href="#_ceilnumber-precision0">`_.ceil`</a>
-* <a href="#_dividedividend-divisor">`_.divide`</a>
-* <a href="#_floornumber-precision0">`_.floor`</a>
-* <a href="#_maxarray">`_.max`</a>
-* <a href="#_maxbyarray-iteratee_identity">`_.maxBy`</a>
-* <a href="#_meanarray">`_.mean`</a>
-* <a href="#_meanbyarray-iteratee_identity">`_.meanBy`</a>
-* <a href="#_minarray">`_.min`</a>
-* <a href="#_minbyarray-iteratee_identity">`_.minBy`</a>
-* <a href="#_multiplymultiplier-multiplicand">`_.multiply`</a>
-* <a href="#_roundnumber-precision0">`_.round`</a>
-* <a href="#_subtractminuend-subtrahend">`_.subtract`</a>
-* <a href="#_sumarray">`_.sum`</a>
-* <a href="#_sumbyarray-iteratee_identity">`_.sumBy`</a>
+* <a href="#_addaugend-addend">`_.add－－－－－`</a>
+* <a href="#_ceilnumber-precision0">`_.ceil－－－－－`</a>
+* <a href="#_dividedividend-divisor">`_.divide－－－－－`</a>
+* <a href="#_floornumber-precision0">`_.floor－－－－－`</a>
+* <a href="#_maxarray">`_.max－－－－－`</a>
+* <a href="#_maxbyarray-iteratee_identity">`_.maxBy－－－－－`</a>
+* <a href="#_meanarray">`_.mean－－－－－`</a>
+* <a href="#_meanbyarray-iteratee_identity">`_.meanBy－－－－－`</a>
+* <a href="#_minarray">`_.min－－－－－`</a>
+* <a href="#_minbyarray-iteratee_identity">`_.minBy－－－－－`</a>
+* <a href="#_multiplymultiplier-multiplicand">`_.multiply－－－－－`</a>
+* <a href="#_roundnumber-precision0">`_.round－－－－－`</a>
+* <a href="#_subtractminuend-subtrahend">`_.subtract－－－－－`</a>
+* <a href="#_sumarray">`_.sum－－－－－`</a>
+* <a href="#_sumbyarray-iteratee_identity">`_.sumBy－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Number`
-* <a href="#_clampnumber-lower-upper">`_.clamp`</a>
-* <a href="#_inrangenumber-start0-end">`_.inRange`</a>
-* <a href="#_randomlower0-upper1-floating">`_.random`</a>
+* <a href="#_clampnumber-lower-upper">`_.clamp－－－－－`</a>
+* <a href="#_inrangenumber-start0-end">`_.inRange－－－－－`</a>
+* <a href="#_randomlower0-upper1-floating">`_.random－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Object`
-* <a href="#_assignobject-sources">`_.assign`</a>
-* <a href="#_assigninobject-sources">`_.assignIn`</a>
-* <a href="#_assigninwithobject-sources-customizer">`_.assignInWith`</a>
-* <a href="#_assignwithobject-sources-customizer">`_.assignWith`</a>
-* <a href="#_atobject-paths">`_.at`</a>
-* <a href="#_createprototype-properties">`_.create`</a>
-* <a href="#_defaultsobject-sources">`_.defaults`</a>
-* <a href="#_defaultsdeepobject-sources">`_.defaultsDeep`</a>
-* <a href="#_topairsobject" class="alias">`_.entries` -> `toPairs`</a>
-* <a href="#_topairsinobject" class="alias">`_.entriesIn` -> `toPairsIn`</a>
-* <a href="#_assigninobject-sources" class="alias">`_.extend` -> `assignIn`</a>
-* <a href="#_assigninwithobject-sources-customizer" class="alias">`_.extendWith` -> `assignInWith`</a>
-* <a href="#_findkeyobject-predicate_identity">`_.findKey`</a>
-* <a href="#_findlastkeyobject-predicate_identity">`_.findLastKey`</a>
-* <a href="#_forinobject-iteratee_identity">`_.forIn`</a>
-* <a href="#_forinrightobject-iteratee_identity">`_.forInRight`</a>
-* <a href="#_forownobject-iteratee_identity">`_.forOwn`</a>
-* <a href="#_forownrightobject-iteratee_identity">`_.forOwnRight`</a>
-* <a href="#_functionsobject">`_.functions`</a>
-* <a href="#_functionsinobject">`_.functionsIn`</a>
-* <a href="#_getobject-path-defaultvalue">`_.get`</a>
-* <a href="#_hasobject-path">`_.has`</a>
-* <a href="#_hasinobject-path">`_.hasIn`</a>
-* <a href="#_invertobject">`_.invert`</a>
-* <a href="#_invertbyobject-iteratee_identity">`_.invertBy`</a>
-* <a href="#_invokeobject-path-args">`_.invoke`</a>
-* <a href="#_keysobject">`_.keys`</a>
-* <a href="#_keysinobject">`_.keysIn`</a>
-* <a href="#_mapkeysobject-iteratee_identity">`_.mapKeys`</a>
-* <a href="#_mapvaluesobject-iteratee_identity">`_.mapValues`</a>
-* <a href="#_mergeobject-sources">`_.merge`</a>
-* <a href="#_mergewithobject-sources-customizer">`_.mergeWith`</a>
-* <a href="#_omitobject-props">`_.omit`</a>
-* <a href="#_omitbyobject-predicate_identity">`_.omitBy`</a>
-* <a href="#_pickobject-props">`_.pick`</a>
-* <a href="#_pickbyobject-predicate_identity">`_.pickBy`</a>
-* <a href="#_resultobject-path-defaultvalue">`_.result`</a>
-* <a href="#_setobject-path-value">`_.set`</a>
-* <a href="#_setwithobject-path-value-customizer">`_.setWith`</a>
-* <a href="#_topairsobject">`_.toPairs`</a>
-* <a href="#_topairsinobject">`_.toPairsIn`</a>
-* <a href="#_transformobject-iteratee_identity-accumulator">`_.transform`</a>
-* <a href="#_unsetobject-path">`_.unset`</a>
-* <a href="#_updateobject-path-updater">`_.update`</a>
-* <a href="#_updatewithobject-path-updater-customizer">`_.updateWith`</a>
-* <a href="#_valuesobject">`_.values`</a>
-* <a href="#_valuesinobject">`_.valuesIn`</a>
+* <a href="#_assignobject-sources">`_.assign－－－－－`</a>
+* <a href="#_assigninobject-sources">`_.assignIn－－－－－`</a>
+* <a href="#_assigninwithobject-sources-customizer">`_.assignInWith－－－－－`</a>
+* <a href="#_assignwithobject-sources-customizer">`_.assignWith－－－－－`</a>
+* <a href="#_atobject-paths">`_.at－－－－－`</a>
+* <a href="#_createprototype-properties">`_.create－－－－－`</a>
+* <a href="#_defaultsobject-sources">`_.defaults－－－－－`</a>
+* <a href="#_defaultsdeepobject-sources">`_.defaultsDeep－－－－－`</a>
+* <a href="#_topairsobject" class="alias">`_.entries` -> `toPairs－－－－－`</a>
+* <a href="#_topairsinobject" class="alias">`_.entriesIn` -> `toPairsIn－－－－－`</a>
+* <a href="#_assigninobject-sources" class="alias">`_.extend` -> `assignIn－－－－－`</a>
+* <a href="#_assigninwithobject-sources-customizer" class="alias">`_.extendWith` -> `assignInWith－－－－－`</a>
+* <a href="#_findkeyobject-predicate_identity">`_.findKey－－－－－`</a>
+* <a href="#_findlastkeyobject-predicate_identity">`_.findLastKey－－－－－`</a>
+* <a href="#_forinobject-iteratee_identity">`_.forIn－－－－－`</a>
+* <a href="#_forinrightobject-iteratee_identity">`_.forInRight－－－－－`</a>
+* <a href="#_forownobject-iteratee_identity">`_.forOwn－－－－－`</a>
+* <a href="#_forownrightobject-iteratee_identity">`_.forOwnRight－－－－－`</a>
+* <a href="#_functionsobject">`_.functions－－－－－`</a>
+* <a href="#_functionsinobject">`_.functionsIn－－－－－`</a>
+* <a href="#_getobject-path-defaultvalue">`_.get－－－－－`</a>
+* <a href="#_hasobject-path">`_.has－－－－－`</a>
+* <a href="#_hasinobject-path">`_.hasIn－－－－－`</a>
+* <a href="#_invertobject">`_.invert－－－－－`</a>
+* <a href="#_invertbyobject-iteratee_identity">`_.invertBy－－－－－`</a>
+* <a href="#_invokeobject-path-args">`_.invoke－－－－－`</a>
+* <a href="#_keysobject">`_.keys－－－－－`</a>
+* <a href="#_keysinobject">`_.keysIn－－－－－`</a>
+* <a href="#_mapkeysobject-iteratee_identity">`_.mapKeys－－－－－`</a>
+* <a href="#_mapvaluesobject-iteratee_identity">`_.mapValues－－－－－`</a>
+* <a href="#_mergeobject-sources">`_.merge－－－－－`</a>
+* <a href="#_mergewithobject-sources-customizer">`_.mergeWith－－－－－`</a>
+* <a href="#_omitobject-props">`_.omit－－－－－`</a>
+* <a href="#_omitbyobject-predicate_identity">`_.omitBy－－－－－`</a>
+* <a href="#_pickobject-props">`_.pick－－－－－`</a>
+* <a href="#_pickbyobject-predicate_identity">`_.pickBy－－－－－`</a>
+* <a href="#_resultobject-path-defaultvalue">`_.result－－－－－`</a>
+* <a href="#_setobject-path-value">`_.set－－－－－`</a>
+* <a href="#_setwithobject-path-value-customizer">`_.setWith－－－－－`</a>
+* <a href="#_topairsobject">`_.toPairs－－－－－`</a>
+* <a href="#_topairsinobject">`_.toPairsIn－－－－－`</a>
+* <a href="#_transformobject-iteratee_identity-accumulator">`_.transform－－－－－`</a>
+* <a href="#_unsetobject-path">`_.unset－－－－－`</a>
+* <a href="#_updateobject-path-updater">`_.update－－－－－`</a>
+* <a href="#_updatewithobject-path-updater-customizer">`_.updateWith－－－－－`</a>
+* <a href="#_valuesobject">`_.values－－－－－`</a>
+* <a href="#_valuesinobject">`_.valuesIn－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Seq`
-* <a href="#_value">`_`</a>
-* <a href="#_chainvalue">`_.chain`</a>
-* <a href="#_tapvalue-interceptor">`_.tap`</a>
-* <a href="#_thruvalue-interceptor">`_.thru`</a>
-* <a href="#_prototypesymboliterator">`_.prototype[Symbol.iterator]`</a>
-* <a href="#_prototypeatpaths">`_.prototype.at`</a>
-* <a href="#_prototypechain">`_.prototype.chain`</a>
-* <a href="#_prototypecommit">`_.prototype.commit`</a>
-* <a href="#_prototypenext">`_.prototype.next`</a>
-* <a href="#_prototypeplantvalue">`_.prototype.plant`</a>
-* <a href="#_prototypereverse">`_.prototype.reverse`</a>
-* <a href="#_prototypevalue" class="alias">`_.prototype.toJSON` -> `value`</a>
-* <a href="#_prototypevalue">`_.prototype.value`</a>
-* <a href="#_prototypevalue" class="alias">`_.prototype.valueOf` -> `value`</a>
+* <a href="#_value">`_－－－－－`</a>
+* <a href="#_chainvalue">`_.chain－－－－－`</a>
+* <a href="#_tapvalue-interceptor">`_.tap－－－－－`</a>
+* <a href="#_thruvalue-interceptor">`_.thru－－－－－`</a>
+* <a href="#_prototypesymboliterator">`_.prototype[Symbol.iterator]－－－－－`</a>
+* <a href="#_prototypeatpaths">`_.prototype.at－－－－－`</a>
+* <a href="#_prototypechain">`_.prototype.chain－－－－－`</a>
+* <a href="#_prototypecommit">`_.prototype.commit－－－－－`</a>
+* <a href="#_prototypenext">`_.prototype.next－－－－－`</a>
+* <a href="#_prototypeplantvalue">`_.prototype.plant－－－－－`</a>
+* <a href="#_prototypereverse">`_.prototype.reverse－－－－－`</a>
+* <a href="#_prototypevalue" class="alias">`_.prototype.toJSON` -> `value－－－－－`</a>
+* <a href="#_prototypevalue">`_.prototype.value－－－－－`</a>
+* <a href="#_prototypevalue" class="alias">`_.prototype.valueOf` -> `value－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `String`
-* <a href="#_camelcasestring">`_.camelCase`</a>
-* <a href="#_capitalizestring">`_.capitalize`</a>
-* <a href="#_deburrstring">`_.deburr`</a>
-* <a href="#_endswithstring-target-positionstringlength">`_.endsWith`</a>
-* <a href="#_escapestring">`_.escape`</a>
-* <a href="#_escaperegexpstring">`_.escapeRegExp`</a>
-* <a href="#_kebabcasestring">`_.kebabCase`</a>
-* <a href="#_lowercasestring">`_.lowerCase`</a>
-* <a href="#_lowerfirststring">`_.lowerFirst`</a>
-* <a href="#_padstring-length0-chars">`_.pad`</a>
-* <a href="#_padendstring-length0-chars">`_.padEnd`</a>
-* <a href="#_padstartstring-length0-chars">`_.padStart`</a>
-* <a href="#_parseintstring-radix10">`_.parseInt`</a>
-* <a href="#_repeatstring-n1">`_.repeat`</a>
-* <a href="#_replacestring-pattern-replacement">`_.replace`</a>
-* <a href="#_snakecasestring">`_.snakeCase`</a>
-* <a href="#_splitstring-separator-limit">`_.split`</a>
-* <a href="#_startcasestring">`_.startCase`</a>
-* <a href="#_startswithstring-target-position0">`_.startsWith`</a>
-* <a href="#_templatestring-options">`_.template`</a>
-* <a href="#_tolowerstring">`_.toLower`</a>
-* <a href="#_toupperstring">`_.toUpper`</a>
-* <a href="#_trimstring-charswhitespace">`_.trim`</a>
-* <a href="#_trimendstring-charswhitespace">`_.trimEnd`</a>
-* <a href="#_trimstartstring-charswhitespace">`_.trimStart`</a>
-* <a href="#_truncatestring-options">`_.truncate`</a>
-* <a href="#_unescapestring">`_.unescape`</a>
-* <a href="#_uppercasestring">`_.upperCase`</a>
-* <a href="#_upperfirststring">`_.upperFirst`</a>
-* <a href="#_wordsstring-pattern">`_.words`</a>
+* <a href="#_camelcasestring">`_.camelCase－－－－－`</a>
+* <a href="#_capitalizestring">`_.capitalize－－－－－`</a>
+* <a href="#_deburrstring">`_.deburr－－－－－`</a>
+* <a href="#_endswithstring-target-positionstringlength">`_.endsWith－－－－－`</a>
+* <a href="#_escapestring">`_.escape－－－－－`</a>
+* <a href="#_escaperegexpstring">`_.escapeRegExp－－－－－`</a>
+* <a href="#_kebabcasestring">`_.kebabCase－－－－－`</a>
+* <a href="#_lowercasestring">`_.lowerCase－－－－－`</a>
+* <a href="#_lowerfirststring">`_.lowerFirst－－－－－`</a>
+* <a href="#_padstring-length0-chars">`_.pad－－－－－`</a>
+* <a href="#_padendstring-length0-chars">`_.padEnd－－－－－`</a>
+* <a href="#_padstartstring-length0-chars">`_.padStart－－－－－`</a>
+* <a href="#_parseintstring-radix10">`_.parseInt－－－－－`</a>
+* <a href="#_repeatstring-n1">`_.repeat－－－－－`</a>
+* <a href="#_replacestring-pattern-replacement">`_.replace－－－－－`</a>
+* <a href="#_snakecasestring">`_.snakeCase－－－－－`</a>
+* <a href="#_splitstring-separator-limit">`_.split－－－－－`</a>
+* <a href="#_startcasestring">`_.startCase－－－－－`</a>
+* <a href="#_startswithstring-target-position0">`_.startsWith－－－－－`</a>
+* <a href="#_templatestring-options">`_.template－－－－－`</a>
+* <a href="#_tolowerstring">`_.toLower－－－－－`</a>
+* <a href="#_toupperstring">`_.toUpper－－－－－`</a>
+* <a href="#_trimstring-charswhitespace">`_.trim－－－－－`</a>
+* <a href="#_trimendstring-charswhitespace">`_.trimEnd－－－－－`</a>
+* <a href="#_trimstartstring-charswhitespace">`_.trimStart－－－－－`</a>
+* <a href="#_truncatestring-options">`_.truncate－－－－－`</a>
+* <a href="#_unescapestring">`_.unescape－－－－－`</a>
+* <a href="#_uppercasestring">`_.upperCase－－－－－`</a>
+* <a href="#_upperfirststring">`_.upperFirst－－－－－`</a>
+* <a href="#_wordsstring-pattern">`_.words－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Util`
-* <a href="#_attemptfunc-args">`_.attempt`</a>
-* <a href="#_bindallobject-methodnames">`_.bindAll`</a>
-* <a href="#_condpairs">`_.cond`</a>
-* <a href="#_conformssource">`_.conforms`</a>
-* <a href="#_constantvalue">`_.constant`</a>
-* <a href="#_defaulttovalue-defaultvalue">`_.defaultTo`</a>
-* <a href="#_flowfuncs">`_.flow`</a>
-* <a href="#_flowrightfuncs">`_.flowRight`</a>
-* <a href="#_identityvalue">`_.identity`</a>
-* <a href="#_iterateefunc_identity">`_.iteratee`</a>
-* <a href="#_matchessource">`_.matches`</a>
-* <a href="#_matchespropertypath-srcvalue">`_.matchesProperty`</a>
-* <a href="#_methodpath-args">`_.method`</a>
-* <a href="#_methodofobject-args">`_.methodOf`</a>
-* <a href="#_mixinobjectlodash-source-options">`_.mixin`</a>
-* <a href="#_noconflict">`_.noConflict`</a>
-* <a href="#_noop">`_.noop`</a>
-* <a href="#_nthargn0">`_.nthArg`</a>
-* <a href="#_overiteratees_identity">`_.over`</a>
-* <a href="#_overeverypredicates_identity">`_.overEvery`</a>
-* <a href="#_oversomepredicates_identity">`_.overSome`</a>
-* <a href="#_propertypath">`_.property`</a>
-* <a href="#_propertyofobject">`_.propertyOf`</a>
-* <a href="#_rangestart0-end-step1">`_.range`</a>
-* <a href="#_rangerightstart0-end-step1">`_.rangeRight`</a>
-* <a href="#_runincontextcontextroot">`_.runInContext`</a>
-* <a href="#_stubarray">`_.stubArray`</a>
-* <a href="#_stubfalse">`_.stubFalse`</a>
-* <a href="#_stubobject">`_.stubObject`</a>
-* <a href="#_stubstring">`_.stubString`</a>
-* <a href="#_stubtrue">`_.stubTrue`</a>
-* <a href="#_timesn-iteratee_identity">`_.times`</a>
-* <a href="#_topathvalue">`_.toPath`</a>
-* <a href="#_uniqueidprefix">`_.uniqueId`</a>
+* <a href="#_attemptfunc-args">`_.attempt－－－－－`</a>
+* <a href="#_bindallobject-methodnames">`_.bindAll－－－－－`</a>
+* <a href="#_condpairs">`_.cond－－－－－`</a>
+* <a href="#_conformssource">`_.conforms－－－－－`</a>
+* <a href="#_constantvalue">`_.constant－－－－－`</a>
+* <a href="#_defaulttovalue-defaultvalue">`_.defaultTo－－－－－`</a>
+* <a href="#_flowfuncs">`_.flow－－－－－`</a>
+* <a href="#_flowrightfuncs">`_.flowRight－－－－－`</a>
+* <a href="#_identityvalue">`_.identity－－－－－`</a>
+* <a href="#_iterateefunc_identity">`_.iteratee－－－－－`</a>
+* <a href="#_matchessource">`_.matches－－－－－`</a>
+* <a href="#_matchespropertypath-srcvalue">`_.matchesProperty－－－－－`</a>
+* <a href="#_methodpath-args">`_.method－－－－－`</a>
+* <a href="#_methodofobject-args">`_.methodOf－－－－－`</a>
+* <a href="#_mixinobjectlodash-source-options">`_.mixin－－－－－`</a>
+* <a href="#_noconflict">`_.noConflict－－－－－`</a>
+* <a href="#_noop">`_.noop－－－－－`</a>
+* <a href="#_nthargn0">`_.nthArg－－－－－`</a>
+* <a href="#_overiteratees_identity">`_.over－－－－－`</a>
+* <a href="#_overeverypredicates_identity">`_.overEvery－－－－－`</a>
+* <a href="#_oversomepredicates_identity">`_.overSome－－－－－`</a>
+* <a href="#_propertypath">`_.property－－－－－`</a>
+* <a href="#_propertyofobject">`_.propertyOf－－－－－`</a>
+* <a href="#_rangestart0-end-step1">`_.range－－－－－`</a>
+* <a href="#_rangerightstart0-end-step1">`_.rangeRight－－－－－`</a>
+* <a href="#_runincontextcontextroot">`_.runInContext－－－－－`</a>
+* <a href="#_stubarray">`_.stubArray－－－－－`</a>
+* <a href="#_stubfalse">`_.stubFalse－－－－－`</a>
+* <a href="#_stubobject">`_.stubObject－－－－－`</a>
+* <a href="#_stubstring">`_.stubString－－－－－`</a>
+* <a href="#_stubtrue">`_.stubTrue－－－－－`</a>
+* <a href="#_timesn-iteratee_identity">`_.times－－－－－`</a>
+* <a href="#_topathvalue">`_.toPath－－－－－`</a>
+* <a href="#_uniqueidprefix">`_.uniqueId－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Properties`
-* <a href="#_version">`_.VERSION`</a>
-* <a href="#_templatesettings">`_.templateSettings`</a>
-* <a href="#_templatesettingsescape">`_.templateSettings.escape`</a>
-* <a href="#_templatesettingsevaluate">`_.templateSettings.evaluate`</a>
-* <a href="#_templatesettingsimports">`_.templateSettings.imports`</a>
-* <a href="#_templatesettingsinterpolate">`_.templateSettings.interpolate`</a>
-* <a href="#_templatesettingsvariable">`_.templateSettings.variable`</a>
+* <a href="#_version">`_.VERSION－－－－－`</a>
+* <a href="#_templatesettings">`_.templateSettings－－－－－`</a>
+* <a href="#_templatesettingsescape">`_.templateSettings.escape－－－－－`</a>
+* <a href="#_templatesettingsevaluate">`_.templateSettings.evaluate－－－－－`</a>
+* <a href="#_templatesettingsimports">`_.templateSettings.imports－－－－－`</a>
+* <a href="#_templatesettingsinterpolate">`_.templateSettings.interpolate－－－－－`</a>
+* <a href="#_templatesettingsvariable">`_.templateSettings.variable－－－－－`</a>
 
 <!-- /div -->
 
 <!-- div -->
 
 ## `Methods`
-* <a href="#_templatesettingsimports_">`_.templateSettings.imports._`</a>
+* <a href="#_templatesettingsimports_">`_.templateSettings.imports._－－－－－`</a>
 
 <!-- /div -->
 
@@ -422,17 +422,16 @@
 <h3 id="_chunkarray-size1"><code>_.chunk(array, [size=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6670 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.chunk "查看Npm包") [&#x24C9;][1]
 
->Creates an array of elements split into groups the length of `size`. If `array` can't be split evenly, the final chunk will be the remaining elements.
 >按照指定长度切割一个数组放在新的数组中．如果数组不能均等的切分，则最后的块包含剩余部分．
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to process.要处理的数组.
-2. `[size=1]` *(number)*: The length of each chunk.每个块的长度
+1. `array` *(Array)*: 要处理的数组.
+2. `[size=1]` *(number)*: 每个块的长度
 
 #### 返回结果
-*(Array)*: Returns the new array of chunks.
+*(Array)*: 返回新的数组
 
 ####示例
 ```js
