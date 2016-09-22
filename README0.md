@@ -14,11 +14,11 @@
 * <a href="#_compactarray">`_.compact－－－－－数组过滤`</a>
 * <a href="#_concatarray-values">`_.concat－－－－－－数组合并`</a>
 * <a href="#_differencearray-values">`_.difference－－－－－Ａ与Ｂ做对比，取出Ａ数组中的不同部分`</a>
-* <a href="#_differencebyarray-values-iteratee_identity">`_.differenceBy－－－－－`</a>
-* <a href="#_differencewitharray-values-comparator">`_.differenceWith－－－－－`</a>
-* <a href="#_droparray-n1">`_.drop－－－－－`</a>
-* <a href="#_droprightarray-n1">`_.dropRight－－－－－`</a>
-* <a href="#_droprightwhilearray-predicate_identity">`_.dropRightWhile－－－－－`</a>
+* <a href="#_differencebyarray-values-iteratee_identity">`_.differenceBy－－－－－两个数组按照指定方式比较`</a>
+* <a href="#_differencewitharray-values-comparator">`_.differenceWith－－－－－包含对象的两个数组按照指定方法比较`</a>
+* <a href="#_droparray-n1">`_.drop－－－－－从开始位置剔除掉指定位置的元素`</a>
+* <a href="#_droprightarray-n1">`_.dropRight－－－－－从最后位置倒序剔除掉指定位置的元素`</a>
+* <a href="#_droprightwhilearray-predicate_identity">`_.dropRightWhile－－－－－按照指定的方法剔除元素`</a>
 * <a href="#_dropwhilearray-predicate_identity">`_.dropWhile－－－－－`</a>
 * <a href="#_fillarray-value-start0-endarraylength">`_.fill－－－－－`</a>
 * <a href="#_findindexarray-predicate_identity-fromindex0">`_.findIndex－－－－－`</a>
@@ -535,7 +535,7 @@ _.difference([2, 1], [2, 3]);
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6810 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.differenceby "查看Npm包") [&#x24C9;][1]
 
 这个方法类似于 `_.difference` 的排除，他用`iteratee` 作为`array` 和 `values` 的比较标准
-结果值是从第一数组中选出，iteratee比较时调用一个参数:<br>
+结果值是从第一数组中选出，这种方法比较时调用一个参数:<br>
 *(value)*.
 <br>
 <br>
@@ -572,7 +572,7 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 <h3 id="_differencewitharray-values-comparator"><code>_.differenceWith(array, [values], [comparator])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6843 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.differencewith "查看Npm包") [&#x24C9;][1]
 
-这个方法类似于 `_.difference` 的去除， 它接受`array` to `values中的元素比较`. 结果值是从第一数组中选出. 这种比较使用两个参数: *(arrVal, othVal)*.
+这个方法类似于 `_.difference` 的去除， 它接受`array`中的元素比较`. 结果值是从第一数组中选出. 这种比较使用两个参数: *(arrVal, othVal)*.
 <br>
 <br>
 **提示:** 不同于 `_.pullAllWith`, 这个方法返回新的数组．
@@ -585,7 +585,7 @@ _.differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x');
 3. `[comparator]` *(Function)*: 每个元素比较调用。
 
 #### 返回结果
-*(Array)*: Returns the new array of filtered values.
+*(Array)*:返回过滤后的新数组
 
 ####示例
 ```js
@@ -603,16 +603,16 @@ _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
 <h3 id="_droparray-n1"><code>_.drop(array, [n=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6878 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.drop "查看Npm包") [&#x24C9;][1]
 
-Creates a slice of `array` with `n` elements dropped from the beginning.
+从开始位置剔除掉指定位置的元素，剩余部分放在新的数组．默认剔除第一位．
 
 #### 起始版本
 0.5.0
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[n=1]` *(number)*: The number of elements to drop.
+1. `array` *(Array)*: 处理的数组.
+2. `[n=1]` *(number)*: 结束位置.
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*: 返回去除之后的数组.
 
 ####示例
 ```js
@@ -637,16 +637,16 @@ _.drop([1, 2, 3], 0);
 <h3 id="_droprightarray-n1"><code>_.dropRight(array, [n=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6912 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.dropright "查看Npm包") [&#x24C9;][1]
 
-Creates a slice of `array` with `n` elements dropped from the end.
+从最后位置倒序剔除掉指定位置的元素，剩余部分放在新的数组．默认剔除第一位．
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[n=1]` *(number)*: The number of elements to drop.
+1. `array` *(Array)*: 处理的数组.
+2. `[n=1]` *(number)*: 结束位置.
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*: 剩余数组.
 
 ####示例
 ```js
@@ -671,18 +671,16 @@ _.dropRight([1, 2, 3], 0);
 <h3 id="_droprightwhilearray-predicate_identity"><code>_.dropRightWhile(array, [predicate=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6957 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.droprightwhile "查看Npm包") [&#x24C9;][1]
 
-Creates a slice of `array` excluding elements dropped from the end.
-Elements are dropped until `predicate` returns falsey. The predicate is
-invoked with three arguments: *(value, index, array)*.
+按照指定的方法剔除元素，需要三个参数: *(value, index, array)*.
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+1. `array` *(Array)*: 处理的数组.
+2. `[predicate=_.identity]` *(Function)*: 剔除规则.
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*:返回新的数组.
 
 ####示例
 ```js
@@ -695,15 +693,15 @@ var users = [
 _.dropRightWhile(users, function(o) { return !o.active; });
 // => objects for ['barney']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.dropRightWhile(users, { 'user': 'pebbles', 'active': false });
 // => objects for ['barney', 'fred']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.dropRightWhile(users, ['active', false]);
 // => objects for ['barney']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.dropRightWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
@@ -716,18 +714,16 @@ _.dropRightWhile(users, 'active');
 <h3 id="_dropwhilearray-predicate_identity"><code>_.dropWhile(array, [predicate=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L6999 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.dropwhile "查看Npm包") [&#x24C9;][1]
 
-Creates a slice of `array` excluding elements dropped from the beginning.
-Elements are dropped until `predicate` returns falsey. The predicate is
-invoked with three arguments: *(value, index, array)*.
+与dropWhile极其相似
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+1. `array` *(Array)*: 处理的数组.
+2. `[predicate=_.identity]` *(Function)*: 剔除标准.
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*: 返回的数组
 
 ####示例
 ```js
