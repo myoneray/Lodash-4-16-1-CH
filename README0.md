@@ -19,8 +19,8 @@
 * <a href="#_droparray-n1">`_.drop－－－－－从开始位置剔除掉指定位置的元素`</a>
 * <a href="#_droprightarray-n1">`_.dropRight－－－－－从最后位置倒序剔除掉指定位置的元素`</a>
 * <a href="#_droprightwhilearray-predicate_identity">`_.dropRightWhile－－－－－按照指定的方法剔除元素`</a>
-* <a href="#_dropwhilearray-predicate_identity">`_.dropWhile－－－－－`</a>
-* <a href="#_fillarray-value-start0-endarraylength">`_.fill－－－－－`</a>
+* <a href="#_dropwhilearray-predicate_identity">`_.dropWhile－－－－－－－－－－按照指定的方法剔除元素`</a>
+* <a href="#_fillarray-value-start0-endarraylength">`_.fill－－－－－用指定字符从开始位置替换到结束位置`</a>
 * <a href="#_findindexarray-predicate_identity-fromindex0">`_.findIndex－－－－－`</a>
 * <a href="#_findlastindexarray-predicate_identity-fromindexarraylength-1">`_.findLastIndex－－－－－`</a>
 * <a href="#_headarray" class="alias">`_.first` -> `head－－－－－`</a>
@@ -736,15 +736,15 @@ var users = [
 _.dropWhile(users, function(o) { return !o.active; });
 // => objects for ['pebbles']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.dropWhile(users, { 'user': 'barney', 'active': false });
 // => objects for ['fred', 'pebbles']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.dropWhile(users, ['active', false]);
 // => objects for ['pebbles']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.dropWhile(users, 'active');
 // => objects for ['barney', 'fred', 'pebbles']
 ```
@@ -757,22 +757,22 @@ _.dropWhile(users, 'active');
 <h3 id="_fillarray-value-start0-endarraylength"><code>_.fill(array, value, [start=0], [end=array.length])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7034 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.fill "查看Npm包") [&#x24C9;][1]
 
-Fills elements of `array` with `value` from `start` up to, but not
-including, `end`.
+用指定字符从开始位置替换到结束位置，但不包括结束位置.
+
 <br>
 <br>
-**提示:** This method mutates `array`.
+**提示:** 这个方法会使得数组发生变化.
 
 #### 起始版本
 3.2.0
 #### 参数
-1. `array` *(Array)*: The array to fill.
-2. `value` *(&#42;)*: The value to fill `array` with.
-3. `[start=0]` *(number)*: The start position.
-4. `[end=array.length]` *(number)*: The end position.
+1. `array` *(Array)*: 要替换的数组.
+2. `value` *(&#42;)*: 替换的值.
+3. `[start=0]` *(number)*: 开始位置.
+4. `[end=array.length]` *(number)*: 结束位置，不会替换改位置的元素.
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*: 返回数组.
 
 ####示例
 ```js
@@ -797,18 +797,17 @@ _.fill([4, 6, 8, 10], '*', 1, 3);
 <h3 id="_findindexarray-predicate_identity-fromindex0"><code>_.findIndex(array, [predicate=_.identity], [fromIndex=0])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7082 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.findindex "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.find` except that it returns the index of the first
-element `predicate` returns truthy for instead of the element itself.
+这个方法类似`_.find` 返回的是找到的该元素的位置，而不是元素本身．
 
 #### 起始版本
 1.1.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
-3. `[fromIndex=0]` *(number)*: The index to search from.
+1. `array` *(Array)*: 查找的数组.
+2. `[predicate=_.identity]` *(Function)*: 查找的条件.
+3. `[fromIndex=0]` *(number)*: 查找的起始位置.
 
 #### 返回结果
-*(number)*: Returns the index of the found element, else `-1`.
+*(number)*: 找到返回位置，否则返回-1．
 
 ####示例
 ```js
@@ -821,15 +820,15 @@ var users = [
 _.findIndex(users, function(o) { return o.user == 'barney'; });
 // => 0
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.findIndex(users, { 'user': 'fred', 'active': false });
 // => 1
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.findIndex(users, ['active', false]);
 // => 0
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.findIndex(users, 'active');
 // => 2
 ```
@@ -842,18 +841,18 @@ _.findIndex(users, 'active');
 <h3 id="_findlastindexarray-predicate_identity-fromindexarraylength-1"><code>_.findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7130 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.findlastindex "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.findIndex` except that it iterates over elements
-of `collection` from right to left.
+这个方法类似于 `_.findIndex`按照倒序的方式查找一个元素的位置．
+其实就是查找最后一个元素的位置．
 
 #### 起始版本
 2.0.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
-3. `[fromIndex=array.length-1]` *(number)*: The index to search from.
+1. `array` *(Array)*:查找的元素
+2. `[predicate=_.identity]` *(Function)*:查找的条件
+3. `[fromIndex=array.length-1]` *(number)*: 查找的起始位置
 
 #### 返回结果
-*(number)*: Returns the index of the found element, else `-1`.
+*(number)*:找到返回位置，没找到返回-1.
 
 ####示例
 ```js
@@ -866,15 +865,15 @@ var users = [
 _.findLastIndex(users, function(o) { return o.user == 'pebbles'; });
 // => 2
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.findLastIndex(users, { 'user': 'barney', 'active': true });
 // => 0
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.findLastIndex(users, ['active', false]);
 // => 2
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.findLastIndex(users, 'active');
 // => 0
 ```
@@ -887,15 +886,15 @@ _.findLastIndex(users, 'active');
 <h3 id="_flattenarray"><code>_.flatten(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7159 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.flatten "查看Npm包") [&#x24C9;][1]
 
-Flattens `array` a single level deep.
+给一个多级数组降级，弄平．
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to flatten.
+1. `array` *(Array)*: 要弄平的数组
 
 #### 返回结果
-*(Array)*: Returns the new flattened array.
+*(Array)*:弄平后的数组
 
 ####示例
 ```js
@@ -911,15 +910,15 @@ _.flatten([1, [2, [3, [4]], 5]]);
 <h3 id="_flattendeeparray"><code>_.flattenDeep(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7178 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.flattendeep "查看Npm包") [&#x24C9;][1]
 
-Recursively flattens `array`.
+推平数组
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to flatten.
+1. `array` *(Array)*: 要推平的数组
 
 #### 返回结果
-*(Array)*: Returns the new flattened array.
+*(Array)*: 推平后的数组
 
 ####示例
 ```js
@@ -935,16 +934,16 @@ _.flattenDeep([1, [2, [3, [4]], 5]]);
 <h3 id="_flattendeptharray-depth1"><code>_.flattenDepth(array, [depth=1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7203 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.flattendepth "查看Npm包") [&#x24C9;][1]
 
-Recursively flatten `array` up to `depth` times.
+按照指定深度扁平化数组
 
 #### 起始版本
 4.4.0
 #### 参数
-1. `array` *(Array)*: The array to flatten.
-2. `[depth=1]` *(number)*: The maximum recursion depth.
+1. `array` *(Array)*: 需要扁平的数组.
+2. `[depth=1]` *(number)*: 最大递归的深度
 
 #### 返回结果
-*(Array)*: Returns the new flattened array.
+*(Array)*: 返回扁平后的数组.
 
 ####示例
 ```js
@@ -965,16 +964,15 @@ _.flattenDepth(array, 2);
 <h3 id="_frompairspairs"><code>_.fromPairs(pairs)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7227 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.frompairs "查看Npm包") [&#x24C9;][1]
 
-The inverse of `_.toPairs`; this method returns an object composed
-from key-value `pairs`.
+通过键值对，返回键值对对象．
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `pairs` *(Array)*: The key-value pairs.
+1. `pairs` *(Array)*: 键值对
 
 #### 返回结果
-*(Object)*: Returns the new object.
+*(Object)*: 返回新的对象.
 
 ####示例
 ```js
@@ -990,7 +988,7 @@ _.fromPairs([['a', 1], ['b', 2]]);
 <h3 id="_headarray"><code>_.head(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7257 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.head "查看Npm包") [&#x24C9;][1]
 
-Gets the first element of `array`.
+返回数组的第一个元素
 
 #### 起始版本
 0.1.0
@@ -998,10 +996,10 @@ Gets the first element of `array`.
 *_.first*
 
 #### 参数
-1. `array` *(Array)*: The array to query.
+1. `array` *(Array)*: 数组
 
 #### 返回结果
-*(&#42;)*: Returns the first element of `array`.
+*(&#42;)*: 返回第一个元素组成的数组
 
 ####示例
 ```js
@@ -1020,20 +1018,17 @@ _.head([]);
 <h3 id="_indexofarray-value-fromindex0"><code>_.indexOf(array, value, [fromIndex=0])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7284 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.indexof "查看Npm包") [&#x24C9;][1]
 
-Gets the index at which the first occurrence of `value` is found in `array`
-using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-for equality comparisons. If `fromIndex` is negative, it's used as the
-offset from the end of `array`.
+找到value出现的指定位置，判断依据于[`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `value` *(&#42;)*: The value to search for.
-3. `[fromIndex=0]` *(number)*: The index to search from.
+1. `array` *(Array)*: 查找的数组
+2. `value` *(&#42;)*: 搜寻的值.
+3. `[fromIndex=0]` *(number)*: 搜索的起始位置.
 
 #### 返回结果
-*(number)*: Returns the index of the matched value, else `-1`.
+*(number)*: 返回下标, 没找到返回 `-1`.
 
 ####示例
 ```js
@@ -1053,15 +1048,15 @@ _.indexOf([1, 2, 1, 2], 2, 2);
 <h3 id="_initialarray"><code>_.initial(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7310 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.initial "查看Npm包") [&#x24C9;][1]
 
-Gets all but the last element of `array`.
+获取数组中除过最后一个元素的其他元素
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to query.
+1. `array` *(Array)*: 处理的数组.
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*: 返回切割后的数组.
 
 ####示例
 ```js
@@ -1077,23 +1072,25 @@ _.initial([1, 2, 3]);
 <h3 id="_intersectionarrays"><code>_.intersection([arrays])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7332 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.intersection "查看Npm包") [&#x24C9;][1]
 
-Creates an array of unique values that are included in all given arrays
-using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-for equality comparisons. The order and references of result values are
-determined by the first array.
+找出两个数组中的相同元素，存在新的数组中．新数组的元素和其顺序依据于第一个数组．
+判断依据 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `[arrays]` *(...Array)*: The arrays to inspect.
+1. `[arrays]` *(...Array)*: 处理的数组
 
 #### 返回结果
-*(Array)*: Returns the new array of intersecting values.
+*(Array)*: 返回新的数组
 
 ####示例
 ```js
-_.intersection([2, 1], [2, 3]);
-// => [2]
+_.intersection([2, 1], [2, 3]);
+// => [2]
+_.intersection([2, 1], [2, 1,2]);
+// => [2, 1]
+_.intersection([2,5,3,1], [1,2, 3,6]);
+// => [2, 3, 1]
 ```
 ---
 
@@ -1104,27 +1101,24 @@ _.intersection([2, 1], [2, 3]);
 <h3 id="_intersectionbyarrays-iteratee_identity"><code>_.intersectionBy([arrays], [iteratee=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7362 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.intersectionby "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.intersection` except that it accepts `iteratee`
-which is invoked for each element of each `arrays` to generate the criterion
-by which they're compared. The order and references of result values are
-determined by the first array. The iteratee is invoked with one argument:<br>
-*(value)*.
+找出两个数组中的相同元素，存在新的数组中．新数组的元素和其顺序依据于第一个数组．
+自定义判断依据
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `[arrays]` *(...Array)*: The arrays to inspect.
-2. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
+1. `[arrays]` *(...Array)*:处理的数组
+2. `[iteratee=_.identity]` *(Function)*: 每个元素比较时调用的方法
 
 #### 返回结果
-*(Array)*: Returns the new array of intersecting values.
+*(Array)*: 返回新的数组
 
 ####示例
 ```js
 _.intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // => [2.1]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }]
 ```
@@ -1137,19 +1131,18 @@ _.intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
 <h3 id="_intersectionwitharrays-comparator"><code>_.intersectionWith([arrays], [comparator])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7397 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.intersectionwith "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.intersection` except that it accepts `comparator`
-which is invoked to compare elements of `arrays`. The order and references
-of result values are determined by the first array. The comparator is
-invoked with two arguments: *(arrVal, othVal)*.
+找出两个数组中的相同元素，存在新的数组中．新数组的元素和其顺序依据于第一个数组．
+自定义判断依据
+这个方法需要两个参数: *(arrVal, othVal)*.
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `[arrays]` *(...Array)*: The arrays to inspect.
-2. `[comparator]` *(Function)*: The comparator invoked per element.
+1. `[arrays]` *(...Array)*: 待处理的数组
+2. `[comparator]` *(Function)*: 每个元素判断的依据
 
 #### 返回结果
-*(Array)*: Returns the new array of intersecting values.
+*(Array)*: 返回新数组
 
 ####示例
 ```js
@@ -1168,21 +1161,23 @@ _.intersectionWith(objects, others, _.isEqual);
 <h3 id="_joinarray-separator-"><code>_.join(array, [separator=','])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7426 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.join "查看Npm包") [&#x24C9;][1]
 
-Converts all elements in `array` into a string separated by `separator`.
+用指定字符串串联数组里面的元素，返回字符串
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to convert.
-2. `[separator=',']` *(string)*: The element separator.
+1. `array` *(Array)*:需要串联的数组
+2. `[separator=',']` *(string)*: 串联的字符
 
 #### 返回结果
-*(string)*: Returns the joined string.
+*(string)*: 返回合并的数组
 
 ####示例
 ```js
-_.join(['a', 'b', 'c'], '~');
-// => 'a~b~c'
+console.log(_.join(['a', 'b', 'c'], '~'));
+// => 'a~b~c'
+console.log(_.join(['a', 'b', 'c'], ','));
+// => "a,b,c"
 ```
 ---
 
@@ -1193,15 +1188,15 @@ _.join(['a', 'b', 'c'], '~');
 <h3 id="_lastarray"><code>_.last(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7444 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.last "查看Npm包") [&#x24C9;][1]
 
-Gets the last element of `array`.
+返回数组的最后一个元素
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to query.
+1. `array` *(Array)*: 处理的数组.
 
 #### 返回结果
-*(&#42;)*: Returns the last element of `array`.
+*(&#42;)*: 返回最后一个元素组成的数组
 
 ####示例
 ```js
@@ -1217,18 +1212,17 @@ _.last([1, 2, 3]);
 <h3 id="_lastindexofarray-value-fromindexarraylength-1"><code>_.lastIndexOf(array, value, [fromIndex=array.length-1])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7470 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.lastindexof "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.indexOf` except that it iterates over elements of
-`array` from right to left.
+返回想要找的元素的最后一次出现的位置
 
 #### 起始版本
 0.1.0
 #### 参数
-1. `array` *(Array)*: The array to inspect.
-2. `value` *(&#42;)*: The value to search for.
-3. `[fromIndex=array.length-1]` *(number)*: The index to search from.
+1. `array` *(Array)*: 查找的数组
+2. `value` *(&#42;)*: 寻找的值.
+3. `[fromIndex=array.length-1]` *(number)*: 起始位置
 
 #### 返回结果
-*(number)*: Returns the index of the matched value, else `-1`.
+*(number)*: 返回位置，没找到返回-1
 
 ####示例
 ```js
@@ -1593,7 +1587,7 @@ var objects = [{ 'x': 4 }, { 'x': 5 }];
 _.sortedIndexBy(objects, { 'x': 4 }, function(o) { return o.x; });
 // => 0
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.sortedIndexBy(objects, { 'x': 4 }, 'x');
 // => 0
 ```
@@ -1680,7 +1674,7 @@ var objects = [{ 'x': 4 }, { 'x': 5 }];
 _.sortedLastIndexBy(objects, { 'x': 4 }, function(o) { return o.x; });
 // => 1
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.sortedLastIndexBy(objects, { 'x': 4 }, 'x');
 // => 1
 ```
@@ -1886,15 +1880,15 @@ var users = [
 _.takeRightWhile(users, function(o) { return !o.active; });
 // => objects for ['fred', 'pebbles']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.takeRightWhile(users, { 'user': 'pebbles', 'active': false });
 // => objects for ['pebbles']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.takeRightWhile(users, ['active', false]);
 // => objects for ['fred', 'pebbles']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.takeRightWhile(users, 'active');
 // => []
 ```
@@ -1931,15 +1925,15 @@ var users = [
 _.takeWhile(users, function(o) { return !o.active; });
 // => objects for ['barney', 'fred']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.takeWhile(users, { 'user': 'barney', 'active': false });
 // => objects for ['barney']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.takeWhile(users, ['active', false]);
 // => objects for ['barney', 'fred']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.takeWhile(users, 'active');
 // => []
 ```
@@ -1998,7 +1992,7 @@ array in which the value occurs. The iteratee is invoked with one argument:<br>
 _.unionBy([2.1], [1.2, 2.3], Math.floor);
 // => [2.1, 1.2]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.unionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }, { 'x': 2 }]
 ```
@@ -2090,7 +2084,7 @@ order they occur in the array. The iteratee is invoked with one argument:<br>
 _.uniqBy([2.1, 1.2, 2.3], Math.floor);
 // => [2.1, 1.2]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }, { 'x': 2 }]
 ```
@@ -2269,7 +2263,7 @@ argument: *(value)*.
 _.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 // => [1.2, 3.4]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.xorBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 2 }]
 ```
@@ -2444,7 +2438,7 @@ iteratee is invoked with one argument: *(value)*.
 _.countBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': 1, '6': 2 }
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.countBy(['one', 'two', 'three'], 'length');
 // => { '3': 2, '5': 1 }
 ```
@@ -2486,15 +2480,15 @@ var users = [
   { 'user': 'fred',   'age': 40, 'active': false }
 ];
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.every(users, { 'user': 'barney', 'active': false });
 // => false
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.every(users, ['active', false]);
 // => true
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.every(users, 'active');
 // => false
 ```
@@ -2533,15 +2527,15 @@ var users = [
 _.filter(users, function(o) { return !o.active; });
 // => objects for ['fred']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.filter(users, { 'age': 36, 'active': true });
 // => objects for ['barney']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.filter(users, ['active', false]);
 // => objects for ['fred']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.filter(users, 'active');
 // => objects for ['barney']
 ```
@@ -2579,15 +2573,15 @@ var users = [
 _.find(users, function(o) { return o.age < 40; });
 // => object for 'barney'
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.find(users, { 'age': 1, 'active': true });
 // => object for 'pebbles'
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.find(users, ['active', false]);
 // => object for 'fred'
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.find(users, 'active');
 // => object for 'barney'
 ```
@@ -2814,7 +2808,7 @@ key. The iteratee is invoked with one argument: *(value)*.
 _.groupBy([6.1, 4.2, 6.3], Math.floor);
 // => { '4': [4.2], '6': [6.1, 6.3] }
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.groupBy(['one', 'two', 'three'], 'length');
 // => { '3': ['one', 'two'], '5': ['three'] }
 ```
@@ -2977,7 +2971,7 @@ var users = [
   { 'user': 'fred' }
 ];
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.map(users, 'user');
 // => ['barney', 'fred']
 ```
@@ -3052,15 +3046,15 @@ var users = [
 _.partition(users, function(o) { return o.active; });
 // => objects for [['fred'], ['barney', 'pebbles']]
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.partition(users, { 'age': 1, 'active': false });
 // => objects for [['pebbles'], ['barney', 'fred']]
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.partition(users, ['active', false]);
 // => objects for [['barney', 'pebbles'], ['fred']]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.partition(users, 'active');
 // => objects for [['fred'], ['barney', 'pebbles']]
 ```
@@ -3174,15 +3168,15 @@ var users = [
 _.reject(users, function(o) { return !o.active; });
 // => objects for ['fred']
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.reject(users, { 'age': 40, 'active': true });
 // => objects for ['barney']
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.reject(users, ['active', false]);
 // => objects for ['fred']
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.reject(users, 'active');
 // => objects for ['barney']
 ```
@@ -3327,15 +3321,15 @@ var users = [
   { 'user': 'fred',   'active': false }
 ];
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.some(users, { 'user': 'barney', 'active': false });
 // => false
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.some(users, ['active', false]);
 // => true
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.some(users, 'active');
 // => true
 ```
@@ -6354,7 +6348,7 @@ var objects = [{ 'n': 1 }, { 'n': 2 }];
 _.maxBy(objects, function(o) { return o.n; });
 // => { 'n': 2 }
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.maxBy(objects, 'n');
 // => { 'n': 2 }
 ```
@@ -6411,7 +6405,7 @@ var objects = [{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }];
 _.meanBy(objects, function(o) { return o.n; });
 // => 5
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.meanBy(objects, 'n');
 // => 5
 ```
@@ -6472,7 +6466,7 @@ var objects = [{ 'n': 1 }, { 'n': 2 }];
 _.minBy(objects, function(o) { return o.n; });
 // => { 'n': 1 }
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.minBy(objects, 'n');
 // => { 'n': 1 }
 ```
@@ -6610,7 +6604,7 @@ var objects = [{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }];
 _.sumBy(objects, function(o) { return o.n; });
 // => 20
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.sumBy(objects, 'n');
 // => 20
 ```
@@ -7071,15 +7065,15 @@ var users = {
 _.findKey(users, function(o) { return o.age < 40; });
 // => 'barney' (iteration order is not guaranteed)
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.findKey(users, { 'age': 1, 'active': true });
 // => 'pebbles'
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.findKey(users, ['active', false]);
 // => 'fred'
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.findKey(users, 'active');
 // => 'barney'
 ```
@@ -7115,15 +7109,15 @@ var users = {
 _.findLastKey(users, function(o) { return o.age < 40; });
 // => returns 'pebbles' assuming `_.findKey` returns 'barney'
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.findLastKey(users, { 'age': 36, 'active': true });
 // => 'barney'
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.findLastKey(users, ['active', false]);
 // => 'fred'
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.findLastKey(users, 'active');
 // => 'pebbles'
 ```
@@ -7671,7 +7665,7 @@ var users = {
 _.mapValues(users, function(o) { return o.age; });
 // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.mapValues(users, 'age');
 // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
 ```
@@ -10105,15 +10099,15 @@ var users = [
   { 'user': 'fred',   'age': 40, 'active': false }
 ];
 
-// The `_.matches` iteratee shorthand.
+// The `_.matches` 的缩写
 _.filter(users, _.iteratee({ 'user': 'barney', 'active': true }));
 // => [{ 'user': 'barney', 'age': 36, 'active': true }]
 
-// The `_.matchesProperty` iteratee shorthand.
+// The `_.matchesProperty` 的缩写
 _.filter(users, _.iteratee(['user', 'fred']));
 // => [{ 'user': 'fred', 'age': 40 }]
 
-// The `_.property` iteratee shorthand.
+// The `_.property` 的缩写
 _.map(users, _.iteratee('user'));
 // => ['barney', 'fred']
 
