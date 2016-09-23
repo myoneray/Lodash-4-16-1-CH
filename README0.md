@@ -1242,17 +1242,16 @@ _.lastIndexOf([1, 2, 1, 2], 2, 2);
 <h3 id="_ntharray-n0"><code>_.nth(array, [n=0])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7506 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.nth "查看Npm包") [&#x24C9;][1]
 
-Gets the element at index `n` of `array`. If `n` is negative, the nth
-element from the end is returned.
+返回指定位置的元素．如果元素是负数则按照倒序取值．
 
 #### 起始版本
 4.11.0
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[n=0]` *(number)*: The index of the element to return.
+1. `array` *(Array)*:　处理的数组
+2. `[n=0]` *(number)*: 取值的位置
 
 #### 返回结果
-*(&#42;)*: Returns the nth element of `array`.
+*(&#42;)*: 指定位置元素的数组
 
 ####示例
 ```js
@@ -1273,30 +1272,33 @@ _.nth(array, -2);
 <h3 id="_pullarray-values"><code>_.pull(array, [values])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7533 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.pull "查看Npm包") [&#x24C9;][1]
 
-Removes all given values from `array` using
+移除数组中指定的所有元素，判断依据
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-for equality comparisons.
 <br>
 <br>
-**提示:** 不同于 `_.without`, this method mutates `array`. Use `_.remove`
-to remove elements from an array by predicate.
+**提示:** 不同于 `_.without`,这个方法使数组发生变化..使用 `_.remove`去删除数据的．
 
 #### 起始版本
 2.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `[values]` *(...&#42;)*: The values to remove.
+1. `array` *(Array)*:修改的数组
+2. `[values]` *(...&#42;)*: 移除的值
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*:返回数组
 
 ####示例
 ```js
-var array = ['a', 'b', 'c', 'a', 'b', 'c'];
-
-_.pull(array, 'a', 'c');
+var array = ['a', 'b', 'c', 'a', 'b', 'c',1,3,45,677,6];
+ 
+_.pull(array, 'a', 'c',1);
 console.log(array);
-// => ['b', 'b']
+// 0: "b"
+// 1: "b"
+// 2: 3
+// 3: 45
+// 4: 677
+// 5: 6
 ```
 ---
 
@@ -1307,19 +1309,18 @@ console.log(array);
 <h3 id="_pullallarray-values"><code>_.pullAll(array, values)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7555 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.pullall "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.pull` except that it accepts an array of values to remove.
+移除数组中指定的所有元素，接受参数为数组
 <br>
-<br>
-**提示:** 不同于 `_.difference`, this method mutates `array`.
+**提示:** 不同于 `_.difference`, 这个方法使数组发生变化.
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `values` *(Array)*: The values to remove.
+1. `array` *(Array)*: 修改的数组
+2. `values` *(Array)*: 移除的值
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*: 返回的数组
 
 ####示例
 ```js
