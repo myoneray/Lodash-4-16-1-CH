@@ -1339,22 +1339,20 @@ console.log(array);
 <h3 id="_pullallbyarray-values-iteratee_identity"><code>_.pullAllBy(array, values, [iteratee=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7585 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.pullallby "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.pullAll` except that it accepts `iteratee` which is
-invoked for each element of `array` and `values` to generate the criterion
-by which they're compared. The iteratee is invoked with one argument: *(value)*.
+移除数组中对象包含指定属性的对象．
 <br>
 <br>
-**提示:** 不同于 `_.differenceBy`, this method mutates `array`.
+**提示:** 不同于 `_.differenceBy`, 这个方法改变的是数组
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `values` *(Array)*: The values to remove.
-3. `[iteratee=_.identity]` *(Function)*: The iteratee invoked per element.
+1. `array` *(Array)*:修改的数组
+2. `values` *(Array)*: 移除的值
+3. `[iteratee=_.identity]` *(Function)*: 每个元素比对的方法
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*: 返回数组
 
 ####示例
 ```js
@@ -1373,22 +1371,19 @@ console.log(array);
 <h3 id="_pullallwitharray-values-comparator"><code>_.pullAllWith(array, values, [comparator])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7614 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.pullallwith "查看Npm包") [&#x24C9;][1]
 
-This method is like `_.pullAll` except that it accepts `comparator` which
-is invoked to compare elements of `array` to `values`. The comparator is
-invoked with two arguments: *(arrVal, othVal)*.
+移除数组中对象包含指定属性的对象．自定义判断标准这个方法需要两个参数．
 <br>
-<br>
-**提示:** 不同于 `_.differenceWith`, this method mutates `array`.
+**提示:** 不同于 `_.differenceWith`, 这个方法改变的是数组
 
 #### 起始版本
 4.6.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `values` *(Array)*: The values to remove.
-3. `[comparator]` *(Function)*: The comparator invoked per element.
+1. `array` *(Array)*: 修改的数组
+2. `values` *(Array)*: 移除的值
+3. `[comparator]` *(Function)*:每个元素比对的方法
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*: 返回新的数组
 
 ####示例
 ```js
@@ -1411,16 +1406,16 @@ Removes elements from `array` corresponding to `indexes` and returns an
 array of removed elements.
 <br>
 <br>
-**提示:** 不同于 `_.at`, this method mutates `array`.
+**提示:** 不同于 `_.at`, 这个方法改变的是数组
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `[indexes]` *(...(number|number&#91;&#93;))*: The indexes of elements to remove.
+1. `array` *(Array)*: 修改的数组
+2. `[indexes]` *(...(number|number&#91;&#93;))*: 这个位置的元素被移除．
 
 #### 返回结果
-*(Array)*: Returns the new array of removed elements.
+*(Array)*: 返回移除后的数组本身．参考实例可以取出移除的元素的数组．
 
 ####示例
 ```js
@@ -1442,22 +1437,19 @@ console.log(pulled);
 <h3 id="_removearray-predicate_identity"><code>_.remove(array, [predicate=_.identity])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7684 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.remove "查看Npm包") [&#x24C9;][1]
 
-Removes all elements from `array` that `predicate` returns truthy for
-and returns an array of the removed elements. The predicate is invoked
-with three arguments: *(value, index, array)*.
+按照指定的方法移除数组中的元素
 <br>
 <br>
-**提示:** 不同于 `_.filter`, this method mutates `array`. Use `_.pull`
-to pull elements from an array by value.
+**提示:** 不同于 `_.filter`, 这个方法改变的是数组 ．用`_.pull`去清除元素．
 
 #### 起始版本
 2.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+1. `array` *(Array)*: 修改的数组
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
-*(Array)*: Returns the new array of removed elements.
+*(Array)*: 返回移除元素后的数组
 
 ####示例
 ```js
@@ -1481,20 +1473,18 @@ console.log(evens);
 <h3 id="_reversearray"><code>_.reverse(array)</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7728 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.reverse "查看Npm包") [&#x24C9;][1]
 
-Reverses `array` so that the first element becomes the last, the second
-element becomes the second to last, and so on.
+翻转数组
 <br>
 <br>
-**提示:** This method mutates `array` and is based on
-[`Array#reverse`](https://mdn.io/Array/reverse).
+**提示:** 这个方法修改的是数组，是基于[`Array#reverse`](https://mdn.io/Array/reverse).
 
 #### 起始版本
 4.0.0
 #### 参数
-1. `array` *(Array)*: The array to modify.
+1. `array` *(Array)*: 修改的数组
 
 #### 返回结果
-*(Array)*: Returns `array`.
+*(Array)*: 返回数组．
 
 ####示例
 ```js
@@ -1515,22 +1505,21 @@ console.log(array);
 <h3 id="_slicearray-start0-endarraylength"><code>_.slice(array, [start=0], [end=array.length])</code></h3>
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.16.1/lodash.js#L7748 "查看源码") [&#x24C3;](https://www.npmjs.com/package/lodash.slice "查看Npm包") [&#x24C9;][1]
 
-Creates a slice of `array` from `start` up to, but not including, `end`.
+返回数组的起始位置到终止位置的元素．但不包括终止位置上的元素．
 <br>
 <br>
-**提示:** This method is used instead of
-[`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
-returned.
+**提示:** 这个方法用
+[`Array#slice`](https://mdn.io/Array/slice)确保数组返回．
 
 #### 起始版本
 3.0.0
 #### 参数
-1. `array` *(Array)*: The array to slice.
-2. `[start=0]` *(number)*: The start position.
-3. `[end=array.length]` *(number)*: The end position.
+1. `array` *(Array)*: 切割的数组
+2. `[start=0]` *(number)*: 起始位置
+3. `[end=array.length]` *(number)*:结束位置
 
 #### 返回结果
-*(Array)*: Returns the slice of `array`.
+*(Array)*: 返回数组.
 
 ---
 
@@ -1865,7 +1854,7 @@ three arguments: *(value, index, array)*.
 3.0.0
 #### 参数
 1. `array` *(Array)*: The array to query.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the slice of `array`.
@@ -1910,7 +1899,7 @@ three arguments: *(value, index, array)*.
 3.0.0
 #### 参数
 1. `array` *(Array)*: The array to query.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the slice of `array`.
@@ -2466,7 +2455,7 @@ elements of empty collections.
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(boolean)*: Returns `true` if all elements pass the predicate check, else `false`.
@@ -2513,7 +2502,7 @@ arguments: *(value, index|key, collection)*.
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the new filtered array.
@@ -2557,7 +2546,7 @@ arguments: *(value, index|key, collection)*.
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[fromIndex=0]` *(number)*: The index to search from.
 
 #### 返回结果
@@ -2602,7 +2591,7 @@ This method is like `_.find` except that it iterates over elements of
 2.0.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[fromIndex=collection.length-1]` *(number)*: The index to search from.
 
 #### 返回结果
@@ -2632,7 +2621,7 @@ with three arguments: *(value, index|key, collection)*.
 4.0.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the new flattened array.
@@ -2662,7 +2651,7 @@ mapped results.
 4.7.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the new flattened array.
@@ -2692,7 +2681,7 @@ mapped results up to `depth` times.
 4.7.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[depth=1]` *(number)*: The maximum recursion depth.
 
 #### 返回结果
@@ -2732,7 +2721,7 @@ or `_.forOwn` for object iteration.
 
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(&#42;)*: Returns `collection`.
@@ -2768,7 +2757,7 @@ This method is like `_.forEach` except that it iterates over elements of
 
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(&#42;)*: Returns `collection`.
@@ -2870,7 +2859,7 @@ for, and `this` bound to, each element in `collection`.
 4.0.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `path` *(Array|Function|string)*: The path of the method to invoke or the function invoked per iteration.
+2. `path` *(Array|Function|string)*: The path of the method to invoke or 每个元素判断的依据.
 3. `[args]` *(...&#42;)*: The arguments to invoke each method with.
 
 #### 返回结果
@@ -2950,7 +2939,7 @@ The guarded methods are:<br>
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the new mapped array.
@@ -3031,7 +3020,7 @@ invoked with one argument: *(value)*.
 3.0.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the array of grouped elements.
@@ -3088,7 +3077,7 @@ and `sortBy`
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[accumulator]` *(&#42;)*: The initial value.
 
 #### 返回结果
@@ -3123,7 +3112,7 @@ This method is like `_.reduce` except that it iterates over elements of
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[accumulator]` *(&#42;)*: The initial value.
 
 #### 返回结果
@@ -3154,7 +3143,7 @@ that `predicate` does **not** return truthy for.
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the new filtered array.
@@ -3307,7 +3296,7 @@ invoked with three arguments: *(value, index|key, collection)*.
 0.1.0
 #### 参数
 1. `collection` *(Array|Object)*: The collection to iterate over.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(boolean)*: Returns `true` if any element passes the predicate check, else `false`.
@@ -7050,7 +7039,7 @@ element `predicate` returns truthy for instead of the element itself.
 1.1.0
 #### 参数
 1. `object` *(Object)*: The object to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(&#42;)*: Returns the key of the matched element, else `undefined`.
@@ -7094,7 +7083,7 @@ a collection in the opposite order.
 2.0.0
 #### 参数
 1. `object` *(Object)*: The object to inspect.
-2. `[predicate=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[predicate=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(&#42;)*: Returns the key of the matched element, else `undefined`.
@@ -7140,7 +7129,7 @@ iteration early by explicitly returning `false`.
 0.3.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns `object`.
@@ -7175,7 +7164,7 @@ This method is like `_.forIn` except that it iterates over properties of
 2.0.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns `object`.
@@ -7212,7 +7201,7 @@ early by explicitly returning `false`.
 0.3.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns `object`.
@@ -7247,7 +7236,7 @@ This method is like `_.forOwn` except that it iterates over properties of
 2.0.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns `object`.
@@ -7621,7 +7610,7 @@ with three arguments: *(value, key, object)*.
 3.8.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns the new mapped object.
@@ -7651,7 +7640,7 @@ by running each own enumerable string keyed property of `object` thru
 2.4.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Object)*: Returns the new mapped object.
@@ -8074,7 +8063,7 @@ Iteratee functions may exit iteration early by explicitly returning `false`.
 1.3.0
 #### 参数
 1. `object` *(Object)*: The object to iterate over.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 3. `[accumulator]` *(&#42;)*: The custom accumulator value.
 
 #### 返回结果
@@ -10804,7 +10793,7 @@ each invocation. The iteratee is invoked with one argument; *(index)*.
 0.1.0
 #### 参数
 1. `n` *(number)*: The number of times to invoke `iteratee`.
-2. `[iteratee=_.identity]` *(Function)*: The function invoked per iteration.
+2. `[iteratee=_.identity]` *(Function)*: 每个元素判断的依据.
 
 #### 返回结果
 *(Array)*: Returns the array of results.
